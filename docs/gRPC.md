@@ -1,5 +1,5 @@
 ---
-id: docs/gPRC.md
+id: gPRC
 title: gPRC
 ---
 
