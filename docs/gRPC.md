@@ -1,6 +1,6 @@
 ---
-id: gPRC
-title: gPRC
+id: gRPC
+title: gRPC
 ---
 
 ## gPRC
