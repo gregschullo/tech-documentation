@@ -1,9 +1,7 @@
 ---
-id: gPRC
+id: docs/gPRC.md
 title: gPRC
 ---
-
-My new content here..
 
 ## gPRC
 
