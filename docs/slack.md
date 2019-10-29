@@ -1,8 +1,6 @@
 ---
 id: slack-index
-title: slack
+title: Slack
 ---
-
-## Slack
 
 Placeholder for new Slack documentation. 

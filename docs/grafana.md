@@ -1,8 +1,6 @@
 ---
 id: grafana-index
-title: grafana
+title: Grafana
 ---
-
-## Grafana
 
 Placeholder for new Grafana documentation.  

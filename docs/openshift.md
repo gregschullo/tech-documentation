@@ -1,8 +1,6 @@
 ---
 id: openshift-index
-title: openshift
+title: Openshift
 ---
-
-## Openshift
 
 Placeholder for new Openshift documentation. 

@@ -1,8 +1,6 @@
 ---
 id: jaeger-index
-title: jaeger
+title: Jaeger
 ---
-
-## Jaeger
 
 Placeholder for new Jaeger documentation.  

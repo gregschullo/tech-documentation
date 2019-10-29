@@ -3,8 +3,6 @@ id: gRPC-index
 title: gRPC
 ---
 
-## gPRC
-
 [gRPC Documentation](https://grpc.io/)
 
 RPC - Remote Procedure Call
