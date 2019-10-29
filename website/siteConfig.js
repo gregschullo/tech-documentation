@@ -31,14 +31,14 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'test-site',
-  organizationName: '',
+  organizationName: 'facebook',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'gRPC'},
+    {doc: 'doc1', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
@@ -54,8 +54,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#1a5833',
-    secondaryColor: '#123d23',
+    primaryColor: '#7e643d',
+    secondaryColor: '#58462a',
   },
 
   /* Custom fonts for website */
