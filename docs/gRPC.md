@@ -1,5 +1,5 @@
 ---
-id: gRPC
+id: gRPC-index
 title: gRPC
 ---
 
