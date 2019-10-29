@@ -1,8 +1,6 @@
 ---
 id: prometheus-index
-title: prometheus
+title: Prometheus
 ---
-
-## Prometheus
 
 Placeholder for new Prometheus documentation.  

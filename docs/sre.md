@@ -1,8 +1,6 @@
 ---
 id: sre-index
-title: sre
+title: SRE
 ---
-
-## Site Reliability Engineering
 
 Placeholder for new SRE documentation. 

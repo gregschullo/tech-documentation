@@ -1,8 +1,6 @@
 ---
 id: kubernetes-index
-title: kubernetes
+title: Kubernetes
 ---
-
-## Kubernetes
 
 Placeholder for new Kubernetes documentation. 
