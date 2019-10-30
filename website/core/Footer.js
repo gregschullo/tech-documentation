@@ -47,7 +47,7 @@ class Footer extends React.Component {
               API Reference (or other categories)
             </a>
           </div>
-          <div>
+          {/* <div>
             <h5>Community</h5>
             <a href={this.pageUrl('users.html', this.props.language)}>
               User Showcase
@@ -65,7 +65,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Twitter
             </a>
-          </div>
+          </div> */}
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
