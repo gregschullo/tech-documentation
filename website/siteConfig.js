@@ -23,21 +23,22 @@ const users = [
 const siteConfig = {
   title: 'Documentation', // Title for your website.
   tagline: 'Tech Documentation and Writing',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://gregschullo.github.io', // Your website URL
+  baseUrl: '/documentation/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  //   url: 'https://<organization>.github.io',
+  //   baseUrl: '/<repository name>/',
 
   // Used for publishing and more
-  projectName: 'greg-documentation',
-  organizationName: 'facebook',
+  projectName: 'documentation',
+  organizationName: 'gregschullo',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'development-index', label: 'Development'},  
     {doc: 'prometheus-index', label: 'Prometheus'},
     {doc: 'grafana-index', label: 'Grafana'},
     {doc: 'gRPC-index', label: 'gRPC'},

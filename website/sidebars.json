@@ -1,10 +1,26 @@
 {
-  "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+  "development": {
+    "Development": [
+      "development-index",
+      {
+        "type": "subcategory",
+        "label": "Syntax",
+        "ids": [
+          "python-index"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Java",
+        "ids": [
+          "java-index"
+        ]
+      }
+    ]
   },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "prometheus": {
+    "Prometheus": [
+      "prometheus-index"
+    ]
   }
 }
