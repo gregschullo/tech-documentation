@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: 'Documentation', // Title for your website.
   tagline: 'Tech Documentation and Writing',
-  url: 'https://gregschullo.github.com', // Your website URL
+  url: 'https://gregschullo.github.io', // Your website URL
   baseUrl: '/documentation/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://<organization>.github.io',
