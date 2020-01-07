@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "networking": {
     "OSI Model": [
       "networking/osi-model"
@@ -19,5 +20,30 @@
   },
   "sre": {
 
+=======
+  "development": {
+    "Development": [
+      "development-index",
+      {
+        "type": "subcategory",
+        "label": "Syntax",
+        "ids": [
+          "python-index"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Java",
+        "ids": [
+          "java-index"
+        ]
+      }
+    ]
+  },
+  "prometheus": {
+    "Prometheus": [
+      "prometheus-index"
+    ]
+>>>>>>> 4847cf6ccb3cd7ed68c6ba2aca0a32530b1950c2
   }
 }
