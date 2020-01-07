@@ -22,7 +22,7 @@
   },
   "development": {
     "Development": [
-      "development-index",
+      "development/development-index",
       {
         "type": "subcategory",
         "label": "Syntax",

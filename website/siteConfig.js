@@ -40,7 +40,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'networking/osi-model', label: 'Networking'},
     {doc: 'prometheus-index', label: 'Monitoring'},
-    {doc: 'development-index', label: 'Development'},  
+    {doc: 'development/development-index', label: 'Development'},  
     {doc: 'grafana-index', label: 'Grafana'},
     {doc: 'gRPC-index', label: 'gRPC'},
     {doc: 'jaeger-index', label: 'Tracing'},
