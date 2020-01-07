@@ -38,13 +38,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-<<<<<<< HEAD
     {doc: 'networking/osi-model', label: 'Networking'},
     {doc: 'prometheus-index', label: 'Monitoring'},
-=======
     {doc: 'development-index', label: 'Development'},  
-    {doc: 'prometheus-index', label: 'Prometheus'},
->>>>>>> 4847cf6ccb3cd7ed68c6ba2aca0a32530b1950c2
     {doc: 'grafana-index', label: 'Grafana'},
     {doc: 'gRPC-index', label: 'gRPC'},
     {doc: 'jaeger-index', label: 'Tracing'},
