@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "networking": {
     "OSI Model": [
       "networking/osi-model"
@@ -19,8 +18,8 @@
     ]
   },
   "sre": {
-
-=======
+  
+  },
   "development": {
     "Development": [
       "development-index",
@@ -44,6 +43,5 @@
     "Prometheus": [
       "prometheus-index"
     ]
->>>>>>> 4847cf6ccb3cd7ed68c6ba2aca0a32530b1950c2
   }
 }
