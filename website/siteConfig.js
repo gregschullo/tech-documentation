@@ -38,12 +38,12 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'prometheus-index', label: 'Prometheus'},
+    {doc: 'networking/osi-model', label: 'Networking'},
+    {doc: 'prometheus-index', label: 'Monitoring'},
     {doc: 'grafana-index', label: 'Grafana'},
     {doc: 'gRPC-index', label: 'gRPC'},
-    {doc: 'jaeger-index', label: 'Jaeger'},
-    {doc: 'kubernetes-index', label: 'Kubernetes'},
-    {doc: 'openshift-index', label: 'Openshift'},
+    {doc: 'jaeger-index', label: 'Tracing'},
+    {doc: 'kubernetes-index', label: 'Containerization Platforms'},
     {doc: 'slack-index', label: 'Slack'},    
     {doc: 'sre-index', label: 'SRE'},
     {blog: true, label: 'Blog'},
