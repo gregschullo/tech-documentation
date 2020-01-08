@@ -1,25 +1,4 @@
 {
-  "networking": {
-    "OSI Model": [
-      "networking/osi-model"
-    ]
-  },
-  "monitoring": {
-    "Prometheus": [
-      "prometheus-index"
-    ]
-  },
-  "container-platforms": {
-    "Kubernetes": [
-      "kubernetes-index"
-    ],
-    "Openshift": [
-      "openshift-index"
-    ]
-  },
-  "sre": {
-  
-  },
   "development": {
     "Development": [
       "development/development-index",
@@ -39,9 +18,42 @@
       }
     ]
   },
-  "prometheus": {
+  "networking": {
+    "OSI Model": [
+      "networking/osi-model"
+    ]
+  },
+  "dashboarding": {
+    "Grafana": [
+      "dashboarding/grafana-index"
+    ]
+  },
+  "monitoring": {
     "Prometheus": [
-      "prometheus-index"
+      "monitoring/prometheus-index"
+    ]
+  },
+  "tracing": {
+    "Jaeger": [
+      "tracing/jaeger-index"
+    ]
+  },
+  "container-platforms": {
+    "Kubernetes": [
+      "container-platforms/kubernetes-index"
+    ],
+    "Openshift": [
+      "container-platforms/openshift-index"
+    ]
+  },
+  "sre": {
+    "SRE": [
+      "sre/sre-index"
+    ]
+  },
+  "books": {
+    "Phoenix Project": [
+      "books/phoenix-project"
     ]
   }
 }
