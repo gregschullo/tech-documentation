@@ -4,40 +4,46 @@
       "development/development-index",
       {
         "type": "subcategory",
-        "label": "Syntax",
+        "label": "Python",
         "ids": [
-          "python-index"
+          "development/python/python-index"
         ]
       },
       {
         "type": "subcategory",
         "label": "Java",
         "ids": [
-          "java-index"
+          "development/java/java-index"
         ]
       }
     ]
   },
+
   "networking": {
     "OSI Model": [
       "networking/osi-model"
     ]
   },
+
   "dashboarding": {
     "Grafana": [
       "dashboarding/grafana-index"
     ]
   },
+
   "monitoring": {
-    "Prometheus": [
-      "monitoring/prometheus-index"
+    "Monitoring": [
+      "monitoring/prometheus-index",
+      {
+        "type": "subcategory",
+        "label": "Tracing",
+        "ids": [
+          "monitoring/tracing/jaeger-index"
+        ]
+      }
     ]
   },
-  "tracing": {
-    "Jaeger": [
-      "tracing/jaeger-index"
-    ]
-  },
+
   "container-platforms": {
     "Kubernetes": [
       "container-platforms/kubernetes-index"

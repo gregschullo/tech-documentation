@@ -42,7 +42,6 @@ const siteConfig = {
     {doc: 'networking/osi-model', label: 'Networking'},
     {doc: 'dashboarding/grafana-index', label: 'Dashboarding'}, 
     {doc: 'monitoring/prometheus-index', label: 'Monitoring'},
-    {doc: 'tracing/jaeger-index', label: 'Tracing'},
     {doc: 'container-platforms/kubernetes-index', label: 'Containerization Platforms'},   
     {doc: 'sre/sre-index', label: 'SRE'},
     {doc: 'books/phoenix-project', label: 'Books'},
@@ -54,14 +53,14 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
+  headerIcon: 'img/book.png',
   footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/book.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#7e643d',
-    secondaryColor: '#58462a',
+    primaryColor: '#616664',
+    secondaryColor: '#90948C',
   },
 
   /* Custom fonts for website */
@@ -91,8 +90,6 @@ const siteConfig = {
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
-  // No .html extensions for paths.
-  cleanUrl: true,
 
   // Open Graph and Twitter card images.
   ogImage: 'img/undraw_online.svg',
@@ -114,3 +111,71 @@ const siteConfig = {
 };
 
 module.exports = siteConfig;
+
+// sample Config for converting to Docusaurus 2
+// docusaurus.config.js
+// module.exports = {
+  
+//   themeConfig: {
+//     navbar: {
+//       title: 'Documentation',
+//       logo: {
+//         alt: 'Docusaurus Logo',
+//         src: 'img/docusaurus.svg',
+//       },
+//       links: [
+//         {
+//           to: 'development/development-index', 
+//           label: 'Development', 
+//           position: 'left'
+//         },
+//         {to: 'help', label: 'Help', position: 'left'},
+//         {
+//           href: 'https://github.com/',
+//           label: 'GitHub',
+//           position: 'right',
+//         },
+//         {to: 'blog', label: 'Blog', position: 'left'},
+//       ],
+//     },
+//   },
+  
+//   themes: [
+//     '@docusaurus/theme-classic', 
+//     '@docusaurus/theme-live-codeblock'
+//   ],
+
+//   presets: [
+//     [
+//       '@docusaurus/preset-classic',
+//       {
+//         docs: {
+//           // Equivalent to `customDocsPath`.
+//           // path: 'docs',
+          
+//           // Equivalent to `editUrl` but should point to `website` dir instead of `website/docs`
+//           editUrl: 'https://github.com/gregschullo/documentation/edit/master/website',
+          
+//           // Equivalent to `docsUrl`.
+//           routeBasePath: 'docs',
+          
+//           // Remark and Rehype plugins passed to MDX. Replaces `markdownOptions` and `markdownPlugins`.
+//           remarkPlugins: [],
+//           rehypePlugins: [],
+          
+//           // Equivalent to `enableUpdateBy`.
+//           showLastUpdateAuthor: true,
+          
+//           // Equivalent to `enableUpdateTime`.
+//           showLastUpdateTime: true,
+          
+//           // docs folder path relative to website dir.
+//           path: '../docs',
+          
+//           // sidebars file relative to website dir.
+//           sidebarPath: require.resolve('./sidebars.json'),
+//         },
+//       },
+//     ],
+//   ],
+// };
