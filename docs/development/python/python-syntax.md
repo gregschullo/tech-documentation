@@ -35,10 +35,10 @@ Python variables can be assigned different types of data. One supported data typ
 
 Python supports different types of arithmetic operations. These operations can be performed on literal numbers, variables, or some combination. The primary arithmetic operations are:
 
-- + for addition
-- - for subtraction
-- / for division
-- * for multiplication
+- '+' for addition
+- '-' for subtraction
+- '/' for division
+- '*' for multiplication
 
 **Modulo Operator** - %  
 Python supports an operator to perform the modulo calculation. A modulo calculation returns the remainder of a division between the first and second number. For example:  
