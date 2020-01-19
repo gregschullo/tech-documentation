@@ -6,7 +6,8 @@
         "type": "subcategory",
         "label": "Python",
         "ids": [
-          "development/python/python-index"
+          "development/python/python-index",
+          "development/python/python-syntax"
         ]
       },
       {
