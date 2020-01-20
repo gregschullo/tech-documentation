@@ -59,10 +59,8 @@
     ]
   },
   "books": {
-    "Phoenix Project": [
-      "books/phoenix-project"
-    ],
-    "The Checklist Manifesto": [
+    "Book List": [
+      "books/phoenix-project",
       "books/the-checklist-manifesto"
     ]
   }
