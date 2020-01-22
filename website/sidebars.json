@@ -51,6 +51,9 @@
     ],
     "Openshift": [
       "container-platforms/openshift-index"
+    ],
+    "Docker": [
+      "container-platforms/docker-index"
     ]
   },
   "sre": {
