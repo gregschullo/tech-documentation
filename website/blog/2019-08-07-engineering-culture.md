@@ -3,8 +3,6 @@ title: Creating an Enterprise Engineering Culture
 author: Greg Schullo
 ---
 
-Originally Published: August 7th, 2019
-
 ## What is an Engineering Culture?
 
 What is engineering culture and what does it mean to large enterprises? Engineering culture is a term that is often heard at corporations, but is not specifically defined for those trying to live it. Putting it simply, an engineering culture is a common direction of views and values which drive innovation, planning, designing, architecting, and development behaviors. These behaviors can range from how software is developed, to how documentation is maintained, to how teams handle issues, and how and when work is done.
