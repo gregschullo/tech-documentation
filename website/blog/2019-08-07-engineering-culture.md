@@ -1,5 +1,5 @@
 ---
-title: Creating an Enterprise Engineering Culture
+title: Enterprise Engineering Culture
 author: Greg Schullo
 ---
 
@@ -11,7 +11,7 @@ While it's important to provide a clear vision and sense of direction for the or
 
 There are three main categories that drive a positive engineering culture: ownership, accountability, and transparency.
 
-## The Three Pillars of an Engineering Culture
+## Three Pillars of Engineering Culture
 
 ### Ownership
 
