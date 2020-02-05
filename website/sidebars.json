@@ -63,8 +63,30 @@
   },
   "books": {
     "Book List": [
-      "books/phoenix-project",
-      "books/the-checklist-manifesto"
+      {
+        "type": "subcategory",
+        "label": "Technology",
+        "ids": 
+        [
+          "books/phoenix-project"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Business",
+        "ids": 
+        [
+          "books/the-checklist-manifesto"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Healthcare",
+        "ids": 
+        [
+          "books/an-american-sickness"
+        ]
+      }
     ]
   }
 }
