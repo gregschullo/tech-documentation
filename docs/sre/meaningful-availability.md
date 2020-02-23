@@ -3,7 +3,7 @@ id: meaningful-availability
 title: Meaningful Availability
 ---
 
-[Meaningful Availability Article](https://www.usenix.org/system/files/nsdi20spring_hauer_prepub.pdf)  
+[Link to Article](https://www.usenix.org/system/files/nsdi20spring_hauer_prepub.pdf)  
 
 ## Abstract
 

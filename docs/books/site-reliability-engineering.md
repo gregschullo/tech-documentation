@@ -1,6 +1,6 @@
 ---
 id: google-site-reliability-engineering
-title: Google System Reliability Engineering
+title: Google Site Reliability Engineering
 ---
 
 ## Preface
