@@ -59,7 +59,8 @@
   "sre": {
     "SRE": [
       "sre/sre-index",
-      "sre/meaningful-availability"
+      "sre/meaningful-availability",
+      "sre/new-relic-sre"
     ]
   },
   "books": {
