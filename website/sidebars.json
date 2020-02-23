@@ -58,7 +58,8 @@
   },
   "sre": {
     "SRE": [
-      "sre/sre-index"
+      "sre/sre-index",
+      "sre/meaningful-availability"
     ]
   },
   "books": {
@@ -68,7 +69,7 @@
         "label": "Technology",
         "ids": 
         [
-          "books/phoenix-project"
+          "books/google-site-reliability-engineering"
         ]
       },
       {
@@ -76,6 +77,8 @@
         "label": "Business",
         "ids": 
         [
+          "books/phoenix-project",
+          "you-win-in-the-locker-room-first",
           "books/the-checklist-manifesto"
         ]
       },
