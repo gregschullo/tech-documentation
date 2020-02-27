@@ -141,27 +141,89 @@ In 2015 President Obama signed a bill requiring hospitals to notify patients rec
 
 ## Chapter 3 - The Age of Physicians
 
-Note:
+Surgeon pledge in 1990: "I will set my fees commensurate with the services rendered. I will take no part in any arrangement such as fee splitting or itinerant surgery.
+
+In 1990 the American College of Surgeons felt it was immoral to be an itinerant surgeon. The current surgeon pledge, adopted in 2004, had been amended to remove the ethical limitations.
+
+Surgeons are not the only group of doctors watering down their moral commitments. The American Medical Association's code of ethics has similarly been diluted.
 
 ### What is a Doctor's Work Worth?
 
+Being a doctor is deserving of reasonable compensation, but what is seen as reasonable has escalated to unusual heights. Doctors make more in the US than in other countries and the gap is high in specialties.
+
+* Primary care doctors make about 40% more in the US than their German counterparts.
+* US orthopedic surgeons make more than twice as much as similar German specialists.
+
+As the number of salaries of hospital administrators has risen, doctors have wanted a cut of the profits.
+
 ### The Price of a Cure: A Brief History of Doctors' Finances
+
+More competitors vying for business doesn't mean better prices; it can drive prices up, not down.
+
+According to the Medical Group Management Association, median physician income for all primary care doctors increased 9.9% from 2000 - 2004, compared with 15.8% increase for all non-primary care specialists. Median income for hematologists and oncologists increased 35.6% to $350,000 and median income for diagnostic radiologists increased 36.2% to $407,000. Average real income for all Americans dropped 3% during that time.
 
 ### Doctors Get the Key to the Vault
 
+With the new system, constant updates were needed to determine fair value and payment. Medicare assigned that task to the American Medical Association (AMA). Allowing the AMA to determine doctors' payments is similar to letting the American Petroleum Institute decide what BP, Shell, and Exxon Mobile can charge us not just for gas, but for wind and solar power as well. The AMA says the RUC represents the entire medical profession, but it is not really representative of practicing doctors.
+
+Researchers have determined the all-important "time" component assigned to procedures is often wildly inaccurate. Better surgical approaches, computerized equipment, and more effective anesthesia means surgical times have often declined dramatically since the RBRVS was first used in 1992. The RUC determines the time it takes to perform a service by polling several dozen specialists who do the procedure, which is essentially asking them if they want to be paid more or not...
+
 ### Strategy #1: Doctor-Entrepreneur-Owner
+
+Ambulatory surgery centers (ASCs) became increasingly popular over the 1980s, 1990s, and into the 2000s. More were owned and run by individual doctors and investors.
+
+Doctors saw new income potential, because they could charge facility fees; room rentals for the suites where they applied their trade.
+
+Neurologists opened sleep centers where patients could have their brain activity measured and breathing monitored for sleep apnea. Insurance was often billed from $5,000 to $10,000 a night. Regulators tried in vain to curb the practice by requiring physicians to disclose to patients in advance... But these disclosures usually came in a pile of paperwork to sign.
+
+Minor interventions doctors had once performed in the office were moved into their centers for financial benefit.
 
 ### Strategy #2: The Hidden Doctors and Their Mysterious Bills
 
+There are physicians who contribute to your care whom you may never see: pathologists, anesthesiologists, radiologists, and emergency medicine docs. The first three are often referred to as the NPC ("no patient contact:) specialists.  
+Historically, these physicians were hospital employees and their services were embedded in hospital charges just like bandages and beds. They were paid decent salaries but no more. It's surprising today they account for some of the highest, most confusing doctors' bills you're likely to get.
+
+By 2014, 65% of the nation's five thousand hospitals had contracted out their emergency department staffing/management function. For those in the industry, it was a win-win situation. Hospitals no longer had to buy malpractice or health insurance or figure out how to staff vacations. Doctors could charge what they thought they were worth. But for patients, this meant the proliferation of separate bills for these doctors' services, from companies with mysterious return addresses in distant states.
+
+The game with PARE specialists is they began to refuse to contract with any plan or insurer. "These guys decide not to contract, so they can charge whatever they want. The patient is over the barrel."
+
 ### Strategy #3: The Pacts Doctors Make
+
+In 1964 a statute called the Emergency Medical Treatment and Labor Act (EMTALA) was designed to force hospitals to remember their long standing obligations in an era of more commercialized healthcare. All patients who turned up at the emergency room had to be treated, regardless of their ability to pay. Hospitals couldn't turn away sick patients or pregnant women who were poor. But EMTALA doesn't apply to physicians, who are free to pick and choose which patients to accept.
 
 ### Strategy #4: One Doctor for the Price of Two
 
+Over the last 20 years many doctors have managed the feat of having two of themselves, at least for billing purposes. They do it with physician extenders. Physician extender is an umbrella term that refers to the trained ancillary personnel who help doctors and surgeons care for patients, including nurse practitioners, surgical technicians, physician assistants, and midwives.
+
+Extending has also become a useful billing construct, enabling doctors to bill for work done by the extenders who work for and with them, as if the doctors themselves were personally dispensing the care. Slowly but surely, the idea that extenders' work constituted as "billable hours" became commonplace.
+
+The doctor never saw the patient, never had any interaction with the patient, and yet a service can be billed under that physician? Under many private payers, it is not fraud.
+
 ### Strategy #5: Selling Stuff - Buy and Bill
+
+More treatment is always better. Default to the most expensive option.
+
+Whistle blower lawsuits filed against makers of drugs and devices, alleging bribes and kickbacks to induce doctors to use and overuse high priced products, have become a staple of legal dockets
+
+Oncologists prospered buying chemotherapy drugs from manufacturers and infusing them in the office, generally with a hefty markup, a practice known as "buy and bill." As the wholesale price of new drugs jumped again and again, doctors had little motivation to complain because they were allowed a markup that was often a set percentage of cost. Doctors who used more expensive drugs earned far more. The practice of buy and bill increased dramatically in the late 1990s and into the new century.
+
+As technologies age, prices can rise rather than fall.
+
+There is no free choice. Patients are stuck and they are stuck buying American.
 
 ### Strategy #6: Upgrades
 
+Medical progress had proved great for patients but not for ophthalmologists' incomes. Doctors have done their best to fix that shortfall.
+
+After discovering that ophthalmologic practices were advertising laser cataract surgery, Medicare issued a "guidance." Making an incision - whether by scalpel or laser - was considered part of the surgery fee and could not be billed separately. If patients really wanted "laser" surgery they would - once again - have to pay for it themselves.
+
+Amenities and marketing matter more than good care.
+
 ### Strategy #7: Adopt a Surgical Procedure - Money, Money Everywhere
+
+Thousands of physicians made more than $1,000,000 each from Medicare in 2012 and dozens more than $10,000,000.
+
+Medicine is a business. It won't police itself. People have lost faith in the American medical profession - that they would act differently than other businesses - but they were wrong.
 
 ## Chapter 4 - The Age of Pharmaceuticals
 
