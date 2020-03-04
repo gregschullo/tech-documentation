@@ -82,3 +82,178 @@ A NameError is reported by the Python interpreter when it detects a variable tha
 ### ZeroDivisionError
 
 A ZeroDivisionError is reported by the Python interpreter when it detects a division operation is being performed at the denominator (bottom number) is 0. In mathematics, dividing a number by zero has no defined value, so Python treats this as an error condition and will report a ZeroDivisionError and display the line of code where the division occurred. This can also happen if a variable is used as the denominator and its value has been set to or changed to zero.
+
+
+Python Basic Syntax
+
+Variables
+
+Variables are used to deal with data that changes over time. A variable allows you to store a value by assigning it to a name, which can be used to refer to the value later in the program.
+
+ 
+
+Variable names can contain only letters, numbers, and underscores. They can start with a letter or an underscore, but not with a number. For instance, you can call a variable message_1 but not 1_message. 
+
+ 
+
+Spaces are not allowed in variable names, but underscores can be used to separate words in variable names. For example, greeting_message works, but greeting message will cause errors. 
+
+ 
+
+Avoid using Python keywords and function names as variable names; that is, do not use words that Python has reserved for a particular programmatic purpose, such as the word print. 
+
+ 
+
+Variable names should be short but descriptive. For example, name is better than n, student_name is better than s_n, and name_length is better than length_of_persons_name. 
+
+ 
+
+Note: Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.
+
+ 
+
+To assign a variable, use one equals sign ( = ). Attempting to reference a variable you haven't assigned anything to causes an error.
+
+Example: 
+
+x = 7
+
+ 
+
+Variables can hold integers (whole numbers without decimals), numbers with decimals, boolean values, and strings.
+
+ 
+
+Variables can be used to do arithmetic.
+
+ 
+
+Variables can be reassigned as many times as you want to change their value. In Python, variables don't have specific types, so you can assign a string to a variable and later assign an integer (or other type) to the same variable.
+
+ 
+
+You can use the del statement to remove a variable, which means the reference from the name to the value is deleted, and trying to use the variable causes an error.
+
+ 
+
+Variable Names
+
+                • Only characters that are allowed are letters, numbers, and underscores
+
+                • Variables cannot start with numbers.
+
+                • Variables cannot contain spaces.
+
+ 
+
+valueError - Python automatically assigns a variable the appropriate datatype
+
+ 
+
+ 
+
+Comments
+
+Comments in python are expressed using the pound/hashtag symbol ( # )
+
+ 
+
+ 
+
+Simple Operations
+
+Python has the capability of carrying out calculations.
+
++ Addition
+
+- Subtraction
+
+* Multiplication
+
+/ Division
+
+// Floor Division (Quotient)
+
+% Modulo (Remainder)
+
+( ) Parentheses - Order of Operations
+
+ 
+
+In place operators allow you to write code like 'x = x + 3' more concisely, as 'x += 3'. 
+
+                • It's possible with other operators such as -, *, / and % as well.
+
+                • In place operators are possible with strings as well.
+
+ 
+
+ 
+
+New Line
+
+\n
+
+ 
+
+You can also use three sets of quotes and new lines created by enter to create new lines.
+
+ 
+
+ 
+
+Input and Output
+
+Usually, programs take input and process it to produce output. In Python, you can use the print function to produce output. This displays a textual representation of something to the screen.
+
+ 
+
+To get input from the user in Python, you can use the intuitively named input function. The input function prompts the user for input and returns (outputs) what they enter as a string.
+
+ 
+
+ 
+
+Type Conversion
+
+In Python, it's impossible to complete certain operations due to the types involved. For instance, you can't add two strings containing the numbers 2 and 3 together to produce the integer 5, as the operation will be performed on strings, resulting in '23' 
+
+The solution to this is type conversion.
+
+Example:
+
+'2' + '3'
+
+'23'
+
+ 
+
+int('2')+int('3')
+
+5
+
+ 
+
+You can also turn user input (which is a string) to numbers (integers or floats), to allow for the performance of calculations. 
+
+Example:
+
+float(input('Enter a number.'))+float(input('Enter another number.'))
+
+ 
+
+ 
+
+In-Place Operators 
+
+ 
+
+ 
+
+datetime
+
+datetime.now()
+
+now function contains .year, .month, .day, .hour, .minute, and .second
+
+ 

@@ -6,9 +6,13 @@
         "type": "subcategory",
         "label": "Python",
         "ids": [
-          "development/python/python-index",
+          "development/python/python-overview",
+          "development/python/python-keywords",
+          "development/python/python-datatypes",
           "development/python/python-syntax",
-          "development/python/python-control-structures"
+          "development/python/python-control-structures",
+          "development/python/python-useful-methods",
+          "development/python/python-debugging"
         ]
       },
       {
@@ -58,9 +62,14 @@
     ]
   },
   "sre": {
-    "SRE": [
+    "Availability": [
       "sre/sre-index",
-      "sre/meaningful-availability",
+      "sre/meaningful-availability"
+    ],
+    "Monitoring": [
+      "sre/the-four-golden-signals"
+    ],
+    "Vendor Resources": [
       "sre/new-relic-sre"
     ]
   },
