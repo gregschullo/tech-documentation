@@ -43,7 +43,7 @@ const siteConfig = {
     {doc: 'dashboarding/grafana-index', label: 'Dashboarding'}, 
     {doc: 'monitoring/prometheus-index', label: 'Monitoring'},
     {doc: 'container-platforms/kubernetes-index', label: 'Containerization Platforms'},   
-    {doc: 'sre/meaningful-availability', label: 'SRE'},
+    {doc: 'sre/availability/meaningful-availability', label: 'SRE'},
     {doc: 'books/phoenix-project', label: 'Books'},
     {blog: true, label: 'Blog'},
     {page: 'help', label: 'Help'},

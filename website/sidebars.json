@@ -62,15 +62,22 @@
     ]
   },
   "sre": {
+    "Reliability": [
+      "sre/reliability-roadmap"
+    ],
     "Availability": [
       "sre/sre-index",
-      "sre/meaningful-availability"
+      "sre/availability/meaningful-availability",
+      "sre/availability/availability-score"
     ],
     "Monitoring": [
-      "sre/the-four-golden-signals"
+      "sre/monitoring/the-four-golden-signals"
+    ],
+    "Alerting": [
+      "sre/alerting/alerting-strategy"
     ],
     "Vendor Resources": [
-      "sre/new-relic-sre"
+      "sre/vendor/new-relic-sre"
     ]
   },
   "books": {
