@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Availability Score · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Availability is dependent on optimal supportability.  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Availability Score · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gregschullo.github.io/documentation/index.html"/><meta property="og:description" content="Availability is dependent on optimal supportability.  "/><meta property="og:image" content="https://gregschullo.github.io/documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gregschullo.github.io/documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/img/book.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://gregschullo.github.io/documentation/blog/atom.xml" title="Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://gregschullo.github.io/documentation/blog/feed.xml" title="Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/><script src="/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/book.png" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/docs/development/development-index.html" target="_self">Development</a></li><li class=""><a href="/documentation/docs/networking/osi-model.html" target="_self">Networking</a></li><li class=""><a href="/documentation/docs/dashboarding/grafana-index.html" target="_self">Dashboarding</a></li><li class=""><a href="/documentation/docs/monitoring/prometheus-index.html" target="_self">Monitoring</a></li><li class=""><a href="/documentation/docs/container-platforms/kubernetes-index.html" target="_self">Containerization Platforms</a></li><li class="siteNavGroupActive"><a href="/documentation/docs/sre/availability/meaningful-availability.html" target="_self">SRE</a></li><li class=""><a href="/documentation/docs/books/phoenix-project.html" target="_self">Books</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li><li class=""><a href="/documentation/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Availability</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Reliability</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/reliability-roadmap.html">Reliability Roadmap</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Availability</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/sre-index.html">SRE</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/availability/meaningful-availability.html">Meaningful Availability</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/sre/availability/availability-score.html">Availability Score</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Monitoring</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/monitoring/the-four-golden-signals.html">The 4 Golden Signals</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Alerting</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/alerting/alerting-strategy.html">Alerting Strategy</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Vendor Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/vendor/new-relic-sre.html">New Relic SRE</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Availability Score</h1></header><article><div><span><p>Availability is dependent on optimal supportability.</p>
+<p>Monitoring improves service availability and MTTR by increasing supportability.</p>
+<p>What is supportability?<br>
+Supportability is an ongoing effort to:<br>
+Improve the accuracy and completeness of a service’s information<br>
+Reduce the time to engage, time to restore and impact to users during high priority incidents</p>
+<p>Scope: All High Priority Services<br>
+Ask: “Are we as ready as we can be?”<br>
+Murphy’s Law …..&quot;Anything that can go wrong, will go wrong.&quot;<br>
+It’s not a matter of IF, it’s a matter of WHEN impact will occur</p>
+<p>The true availability score (not Adjusted Down Time in Minutes (ADTM) represents 2 things:</p>
+<ol>
+<li>A measurement of the number of customers we disappointed today.</li>
+<li>A prediction of the number of customers we will disappoint tomorrow.</li>
+</ol>
+<p>Ability to measure this score depends heavily on following industry standards in monitoring.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/docs/sre/availability/meaningful-availability.html"><span class="arrow-prev">← </span><span>Meaningful Availability</span></a><a class="docs-next button" href="/documentation/docs/sre/monitoring/the-four-golden-signals.html"><span>The 4 Golden Signals</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Greg Schullo</section></footer></div></body></html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Reliability Roadmap · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## SRE Phases Uplift Alignment"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Reliability Roadmap · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gregschullo.github.io/documentation/index.html"/><meta property="og:description" content="## SRE Phases Uplift Alignment"/><meta property="og:image" content="https://gregschullo.github.io/documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gregschullo.github.io/documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/img/book.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://gregschullo.github.io/documentation/blog/atom.xml" title="Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://gregschullo.github.io/documentation/blog/feed.xml" title="Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/><script src="/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/book.png" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/docs/development/development-index.html" target="_self">Development</a></li><li class=""><a href="/documentation/docs/networking/osi-model.html" target="_self">Networking</a></li><li class=""><a href="/documentation/docs/dashboarding/grafana-index.html" target="_self">Dashboarding</a></li><li class=""><a href="/documentation/docs/monitoring/prometheus-index.html" target="_self">Monitoring</a></li><li class=""><a href="/documentation/docs/container-platforms/kubernetes-index.html" target="_self">Containerization Platforms</a></li><li class="siteNavGroupActive"><a href="/documentation/docs/sre/availability/meaningful-availability.html" target="_self">SRE</a></li><li class=""><a href="/documentation/docs/books/phoenix-project.html" target="_self">Books</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li><li class=""><a href="/documentation/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reliability</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Reliability</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/sre/reliability-roadmap.html">Reliability Roadmap</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Availability</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/sre-index.html">SRE</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/availability/meaningful-availability.html">Meaningful Availability</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/availability/availability-score.html">Availability Score</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Monitoring</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/monitoring/the-four-golden-signals.html">The 4 Golden Signals</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Alerting</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/alerting/alerting-strategy.html">Alerting Strategy</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Vendor Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/sre/vendor/new-relic-sre.html">New Relic SRE</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Reliability Roadmap</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="sre-phases-uplift-alignment"></a><a href="#sre-phases-uplift-alignment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SRE Phases Uplift Alignment</h2>
+<h3><a class="anchor" aria-hidden="true" id="phase-0-base-level-understanding-of-current-capabilities-categorization-of-application"></a><a href="#phase-0-base-level-understanding-of-current-capabilities-categorization-of-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 0 - Base-level understanding of current capabilities, categorization of application</h3>
+<p>Review current monitoring tools in place<br>
+Review current alerting strategy<br>
+Review Incident Response
+Review On Call strategy
+Review previous incidents for critical issues/known-problems<br>
+Review Application Architecture &amp; Design</p>
+<h3><a class="anchor" aria-hidden="true" id="phase-1-extinguish-immediate-fires-immediate-risk-mitigation-configure-basic-monitoring-if-missing"></a><a href="#phase-1-extinguish-immediate-fires-immediate-risk-mitigation-configure-basic-monitoring-if-missing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 1 - Extinguish immediate fires, immediate risk mitigation, configure basic monitoring if missing</h3>
+<p>Telemetry Monitoring<br>
+Host Level Checks - Multiple checks using tools like Sensu, Nagios, etc to check on various host statistics. (CPU, Memory/Heap, GC, Network I/O, Disk I/O, etc)<br>
+Log File Analysis - Use of a tool such as Splunk or ELK stack to parse log files in real-time<br>
+Application Performance Monitor configuration (APM)<br>
+Synthetics - Use of a custom agent to &quot;probe&quot; a web site, execute complex customer actions, and report on success/failure of those actions.<br>
+Implement emergency Architecture changes<br>
+Validate Readiness for Performance Testing<br>
+LTM Checks - HealthChecks<br>
+On-Call Rotation - Who is responsible for being notified of a potential problem<br>
+Alerting coverage &amp; MTTD - Ability for teams to be systematically notified when specific KPIs are outside normal operating thresholds<br>
+Validate Built/Hosted Environments (QA, Stage, Prod) are identical</p>
+<h3><a class="anchor" aria-hidden="true" id="phase-2-prepare-for-long-term-success"></a><a href="#phase-2-prepare-for-long-term-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 2 - Prepare for Long-Term Success</h3>
+<p>Metric Resolution &amp; Data Types - Ability for metrics to be collected and reviewed, in real time, with less than a 30 second delay<br>
+VIP-Level Checks - Multiple checks against the VIP level for Health-Check and Service availability<br>
+Real-User-Monitoring (RUM) - Capture of live, real-customer render timings, usage, analytics. Captured as Telemetry data and used for various purposes (Session monitoring, customer engagement, browser performance<br>
+Advanced Splunk Configuration (Splunk ITSI if available)  WHAT DOES THIS CONSIST OF?
+Advanced Data Visualization  WHAT DOES THIS CONSIST OF?
+Advanced Alerting and configuration  WHAT DOES THIS CONSIST OF?</p>
+<h3><a class="anchor" aria-hidden="true" id="phase-3-advanced-operations"></a><a href="#phase-3-advanced-operations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 3 - Advanced Operations</h3>
+<p>Automated Recovery<br>
+Automated Release<br>
+Advanced Machine-Learning analytics<br>
+GTM/LTM Control of Hosts - Is the LTM able to selective remove Application servers from it's eligibility pool?<br>
+Experimentation - What type of tests are conducted to validate application performance?<br>
+KPIs/Custom Metrics - Identification of Key-Performance-Indicators and custom metrics to support their measurement<br>
+KPI Predictions - Use of advanced techniques to predict KPI trends over X time</p>
+<h2><a class="anchor" aria-hidden="true" id="reliability-checklist"></a><a href="#reliability-checklist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reliability Checklist</h2>
+<h3><a class="anchor" aria-hidden="true" id="document-in-use-monitoring-tools"></a><a href="#document-in-use-monitoring-tools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document in-use monitoring tools</h3>
+<p>Identify and document all of the monitoring tools that are presently implemented to support the application for:</p>
+<ul>
+<li>Host Level Checks (CPU/Mem/Disk/Swap/etc)</li>
+<li>Up/Down Probes (assuming this means non-http checks such as snmp, ping/icmp, tcp, udp, etc)</li>
+<li>Synthetics</li>
+<li>Application Performance Monitoring (APM)</li>
+<li>Log file aggregation</li>
+<li>Telemetry</li>
+<li>Real User Monitoring (RUM)</li>
+<li>Javascript Front End Logging</li>
+<li>Dashboard solutions</li>
+<li>Any other relevant monitoring tools</li>
+</ul>
+<p>Completion Criteria: Produce a report with these findings articulated.</p>
+<h3><a class="anchor" aria-hidden="true" id="document-current-alerting-strategy"></a><a href="#document-current-alerting-strategy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document current alerting strategy</h3>
+<p>Analyze alerts configured in production to determine the following:</p>
+<ul>
+<li>What tools are being used to generate alerts? (SiteScope, Alertmanager, Splunk, etc)</li>
+<li>What metrics are being leveraged to generate alerts? (CPU Utilization, Response Time, HTTP 5xx, RER, etc)</li>
+<li>How are alerts distributed (OpsBridge, PagerDuty, direct email, sms, ChatOps, etc)</li>
+<li>Who do the alerts go to? (Distribution List, Individuals, on-call rotation, etc)</li>
+<li>How are alerts classified (P1/P2, Alert/Ticket, Sev1, etc)</li>
+<li>How does the team decide on alert thresholds?</li>
+<li>Are alert thresholds static or dynamic?</li>
+<li>How many alerts fire per week?</li>
+<li>What percentage of alerts are actionable?</li>
+<li>If able to determine, what is the Mean Time to Detect (MTTD)?</li>
+</ul>
+<p>Completion Criteria: Produce a report with these findings articulated.</p>
+<h3><a class="anchor" aria-hidden="true" id="document-supply-chain-and-dependencies"></a><a href="#document-supply-chain-and-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document Supply Chain and Dependencies</h3>
+<p>Identify and document all of the back end dependencies of the application.</p>
+<ul>
+<li>What applications does our application rely on?</li>
+<li>Who manages back end applications?</li>
+<li>What monitoring do back end dependencies leverage?</li>
+<li>How are alerts implemented in downstream applications?</li>
+<li>Implement observability of dependencies</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="establish-and-document-business-impact-measurements"></a><a href="#establish-and-document-business-impact-measurements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Establish and document business impact measurements</h3>
+<p>Determine and document last 6 months of the following metrics for the application:</p>
+<ul>
+<li>Raw Error Rate (ReR)</li>
+<li>Mean Time To Restore (MTTR) (including sub components if possible - MTTD, MTTA, MTTI, MTTF)</li>
+<li>Service Level Agreements / Service Level Objectives / Service Level Expectations</li>
+<li><a href="https://hub.uhg.com/sites/hub/Optum/Businesses/Optum-Technology/Support/ITSM/Incident-Management/Pages/ADTM_SN.aspx">Adjusted Down Time in Minutes</a> (ADTM)</li>
+<li><a href="https://en.wikipedia.org/wiki/Net_Promoter">Net Promoter Score</a> (NPS)</li>
+</ul>
+<p>Completion Criteria: Produce a report with these metrics articulated.</p>
+<h3><a class="anchor" aria-hidden="true" id="document-incident-response-procedures"></a><a href="#document-incident-response-procedures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document Incident Response Procedures</h3>
+<p>By using any available reporting and by working with the DevOps team, determine the following:</p>
+<ul>
+<li>Are there playbooks available for common tasks, if so where are they stored? (Application restart, DC traffic switching, etc).</li>
+<li>How does the team handle Post Incident Reviews (PIRs)?</li>
+<li>How successful are root cause analysis reviews?</li>
+<li>Average time to problem ticket closure</li>
+<li>Does the team leverage an &quot;Incident Commander&quot; or &quot;Technical Lead&quot; during war-rooms?</li>
+<li>Any other relevant info about Incident Response</li>
+</ul>
+<p>Completion Criteria: Produce a report with these findings articulated.</p>
+<h3><a class="anchor" aria-hidden="true" id="discover-and-document-application-architecture-design"></a><a href="#discover-and-document-application-architecture-design" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Discover and Document Application Architecture &amp; Design</h3>
+<p>Work with the application team and utilize any existing architectural documentation to determine the current design of the application. This should include:</p>
+<ul>
+<li>What is the hosting infrastructure (Public / Private cloud, Managed Services, XaaS, etc)</li>
+<li>Is this a commercial product, or are there commercial products in the ecosystem? (i.e. Adobe Experience Manager)</li>
+<li>Describe vendor support model and content</li>
+<li>Enumerate all the nodes in the eco system</li>
+<li>Document the network topology (Data Center, GTM, LTM, Web Servers, App Servers, DB Servers, Caching, Queuing, etc)</li>
+<li>How does traffic normally flow?</li>
+<li>What are the connections between nodes</li>
+<li>Is the app available in Navigator with configuration up to date</li>
+<li>Describe load balancing strategy</li>
+<li>DC load balancing</li>
+<li>App load balancing</li>
+<li>Describe any dependencies or single points of failure</li>
+<li>Any other relevant architectural considerations</li>
+</ul>
+<p>Completion Criteria: Produce a report with an overview of these findings, along with links to all the most updated documents and diagrams. Call out any obvious gaps that should be addressed in future phases.</p>
+<h3><a class="anchor" aria-hidden="true" id="implement-emergency-architecture-changes"></a><a href="#implement-emergency-architecture-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement emergency Architecture changes</h3>
+<p>Emergency architecture recommendations should address the following:</p>
+<ul>
+<li>Any system or network architecture that is a single point of failure and can be easily modified at low cost to reduce or eliminate SPOF risk</li>
+<li>Any system or network architecture change that can be implemented to enable High Availability</li>
+<li>Host level load balancing strategy</li>
+<li>Data Center Load balancing Strategy</li>
+<li>Cloud Region load balancing strategy</li>
+<li>Capacity concerns (vertical/horizontal scaling)</li>
+</ul>
+<p>Completion Criteria: All emergency architecture changes have been implemented and a document has been produced describing each of the recommended changes and validating it's completion.</p>
+<h3><a class="anchor" aria-hidden="true" id="document-on-call-strategy"></a><a href="#document-on-call-strategy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document On-Call strategy</h3>
+<p>Work with the DevOps team to determine the following:</p>
+<ul>
+<li>Does the team have a structure and plan for handling an on-call rotation</li>
+<li>Is it a single human?</li>
+<li>Do they have &quot;always on&quot; follow the sun?</li>
+<li>How are on-call schedules determined?</li>
+<li>How often is someone on call?</li>
+<li>How long is someone on call for?</li>
+<li>Are there defined SLAs for acknowledging a page?</li>
+<li>On average how many alerts fire during a given on-call shift?</li>
+<li>How do people find out if they are on-call or not?</li>
+<li>How are escalations handled?</li>
+<li>How are schedule overrides handled?</li>
+<li>If available, what is MTTA?</li>
+<li>Any other relevant info about On-Call strategy</li>
+</ul>
+<p>Completion Criteria: Produce a report with these findings articulated.</p>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-alerting-strategy"></a><a href="#review-and-improve-alerting-strategy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Alerting Strategy</h3>
+<pre><code class="hljs">- Produce an Alerting Strategy document that describes the strategy and approach the team will take when crafting alerts in each monitoring system. If necessary implement changes to the strategy that enable the following:
+- All alerts should be set with the SLA/SLE in mind
+- All alerts that page a human should be actionable
+- Alerts that are not actionable should be converted to either tickets or logging
+- Thresholds are set for alerts, and should be revisited
+- Dynamic thresholds for alerts should be utilized when appropriate
+- The team should construct alerts in service of the shortest reasonable MTTD (Strive for &lt;10 min)
+- Alerting strategy should minimize noise (alert storms / non-actionable alerts)
+- Who will alerts go to? Does this change under certain circumstances (Priority, service, etc)?
+- All members of the team have reviewed the alerting strategy document and have committed to following it in the future, or updating it as a team
+- Completion Criteria: SRE and the DevOps team should work together to produce a document that describes the teams Alerting Strategy. The epic is complete when the document has been completed and agreed to by the team.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-on-call-rotation"></a><a href="#review-and-improve-on-call-rotation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve On-Call Rotation</h3>
+<pre><code class="hljs">- Work with the team to set up an On-Call rotation that minimizes MTTA, while being realistic about the human factors. Produce a document that specifies the on-call process and expectations. The on-call rotation should have the following attributes:
+- On-call rotation should be in a system that the organization has access to.
+- This team as well as others must know who is on call at any given moment
+- One specific human being must be on call at any given time
+- No one should be on call all the time
+- There should be a clear delineation of when a person goes on-call and goes off-call
+- There should be a handoff procedure to share context between the person going off and the person coming on
+- Everyone in the rotation should have correct notification preferences/settings (email, SMS, etc)
+- There should be an escalation process
+- There should be an override process
+- There should be a clear definition about what it means to be on-call
+- Always have your laptop with you
+- Always have your phone with you and be in service area
+- Always be near an internet connection and able to leverage VPN
+- Can be online and connected in less than 20 minutes
+- MTTA less than 10 minutes
+- Be in a mental state conducive to complex problem solving
+- Determine if there are any special considerations for on-call employees
+- Do we need to pay them differently?
+- Do we need to provide phone/laptop, etc?
+- Ensure all team members understand the on-call process and the expectations of being on-call
+- Completion Criteria: An on-call rotation has been setup to SRE standards and is in practice. The SRE and the DevOps team have produced a document that describes the on-call process and expectations.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-host-level-checks"></a><a href="#review-and-improve-host-level-checks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Host-Level Checks</h3>
+<pre><code class="hljs">- Ensure that all hosts are observable in a tool like OpsBridge, Sensu or Nagios. Ensure critical host statistics are available:
+    - CPU
+    - Memory/Heap
+    - GC
+    - Network I/O
+    - Disk I/O
+- Any other relevant host level metrics
+- Additional required actions:
+- Alerts should be set up following the Alerting Strategy
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Completion Criteria: All hosts must have relevant statistics available in a monitoring tool and be configured to alert according to the E1.2 alerting strategy. . Preferably with the ability to view time-charts by host or in aggregate. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-synthetic-monitoring"></a><a href="#review-and-improve-synthetic-monitoring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Synthetic Monitoring</h3>
+<pre><code class="hljs">- Synthetic monitoring is an important part of the &quot;defense in depth&quot; strategy of observability. Depending on the &quot;customer&quot; of the app (internal or external) synthetic recommendations may vary. The App should utilize a tool like BSM, SiteScope, Dynatrace or Catchpoint for synthetic transactions. Identify the non-negotiable items and work to have them implemented.
+- Required:
+- The application must leverage simple internal synthetic transactions to validate expected response on a key endpoints (Up/Down).
+- The team must have a cadence and process to periodically review all synthetic transactions as they may change as the app evolves.
+- There must be no regularly occurring maintenance windows were transactions are paused.
+- Alerts should be set up following the Alerting Strategy
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- If the app is user facing (i.e. has a user interface for humans to interact with) it must leverage complex synthetic transactions to simulate critical customer journeys and exercise key integrations
+- If the app is internet facing it must leverage both internal synthetics (run from inside the network) and external synthetics (run from outside the network).
+- Additionally, the app should run external synthetics from at least two geographic regions (for example, east coast / west coast)
+- Synthetic probes / transactions should find a balance between testing individual hosts and validating VBFs and Customer Objectives
+- Synthetic transactions should be staggered so as to minimize gaps between runs, there by maximizing MTTD.
+- Synthetic transaction results should be visualized on a dashboard, preferably a time-series dashboard
+- Completion Required synthetic monitoring must be implemented and configured to alert according to the E1.2 alerting strategy. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-log-file-aggregation-solution"></a><a href="#review-and-improve-log-file-aggregation-solution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Log File Aggregation solution</h3>
+<pre><code class="hljs">- Identify the non-negotiable items and work to have them implemented.
+- Required:
+- The application must leverage a log file aggregation tool (Splunk / Elk), if not implement one.
+- All nodes in the app must be shipping logs to the aggregation tool
+- Log formats must comply with industry standards and Optum best practices
+- There should be no blind spots or gaps in logs
+- Logs should be properly parsed by the aggregation tool (status codes, response times, etc)
+- Build dashboards based on log data to visualize KPIs and VBFs
+- Must have an RER Dashboard
+- Alerts should be set up following the Alerting Strategy in E1.2
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- Prefer Splunk
+- Prefer phi-splunk instance
+- Gain access to all supply-chain log aggregation tools
+- Build app specific dashboards on supply chain log aggregation tools
+- Completion Criteria: All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-application-performance-monitor-apm-solution"></a><a href="#review-and-improve-application-performance-monitor-apm-solution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Application Performance Monitor (APM) solution</h3>
+<pre><code class="hljs">- Identify the non-negotiable items and work to have them implemented.
+- Required:
+- The application should leverage an APM solution (Dynatrace / New Relic). If the app and team are sufficiently mature, an APM may not be required, but this is rare and should be highly scrutinized. In most cases an APM solution should be utilized.
+- Asses the solution being used (DTSaaS, AppMon, etc) is it that right one for this app? Are changes needed? If so implement them.
+- All nodes should have the APM agent installed and properly configured
+- Ensure all KPIs and VBFs are observable in the APM
+- Build dashboards based to visualize KPIs and VBFs
+- Alerts should be set up following the Alerting Strategy in E1.2
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- Prefer Dynatrace
+- Gain Access to all supply-chain APM solutions
+- Build app specific dashboards on supply chain APM tools
+- Completion Criteria: All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-web-app-analytics-solution"></a><a href="#review-and-improve-web-app-analytics-solution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Web/App Analytics solution</h3>
+<pre><code class="hljs">- This epic is only applicable if the application has a user interface used by humans. If it does, the app must leverage a front-end analytics solution of some kind (Adobe Analytics, Google Analytics etc). This is applicable for web applications, mobile applications and thick client applications. Identify the non-negotiable items and work to have them implemented. Front-end analytics are in important part of the defense-in-depth monitoring strategy. Front-end analytics enable observability at the node closest to the end customer.
+- Required:
+- The app must leverage a front-end analytics solution of some kind (Adobe Analytics, Google Analytics)
+- Ensure all KPIs and VBFs are observable in the analytics solution (all pages or screens should be tagged for inclusion
+- Build dashboards based to visualize KPIs and VBFs
+- All error pages must be tagged and included in the analytics solution (4xx, 5xx)
+- The team should understand how analytics indicators relate to NPS scores
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- Build dashboards to visualize key customer journeys (funnels)
+- Tag and track all error &quot;states&quot;. These are scenario's that result in a 200 status code, but an error of some kind is shown to the customer (invalid actions, etc)
+- Completion Criteria: All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-performance-testing-strategy"></a><a href="#review-and-improve-performance-testing-strategy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Performance Testing Strategy</h3>
+<pre><code class="hljs">- Determine if the team has a dedicated performance testing strategy and plan. Observe at least one production performance test and document any improvements that are identified. Identify the non-negotiable items and work to have them implemented.
+- Required:
+- Performance tests should be executed at least 4 times per year
+- The performance testing strategy must mirror real customer interactions as closely as possible
+- The application must be sufficiently instrumented with monitoring tools to draw conclusions from the performance test about the scalability of the application
+- The application should have a scaling strategy to meet additional load (horizontal scaling, vertical scaling, auto-scaling, manual scaling, etc)
+- Document and evaluate the metrics that trigger a scaling event
+- Performance test load should simulate 1x Peak Season predictions
+- Recommended:
+- There should be specific monitoring dashboards used to monitor KPI's during a performance test
+- Performance tests should be executed in production environments
+- Performance test load should simulate 2x Peak Season predictions
+- Completion Criteria: The SRE has observed at least one performance test and documented recommendations. All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-local-traffic-manager-ltm-checks"></a><a href="#review-and-improve-local-traffic-manager-ltm-checks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Local Traffic Manager (LTM) Checks</h3>
+<pre><code class="hljs">- Determine if/how the LTM is monitored. Generate and document recommendations.
+- Validate that monitoring exists for the Load Balancer LTM
+- If not, implement monitoring
+- Ensure load balancer is truly 'balanced' and not overworking nodes
+- Make sure all key teams have access to the monitoring tool or dashboard for the LTM
+- Completion Criteria: LTM is properly monitored. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-incident-response"></a><a href="#review-and-improve-incident-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Incident Response</h3>
+<pre><code class="hljs">- Observe at least one P1 or P2 War Room, then generate and document recommendations. Guide the team towards a culture of responsibility and ownership of their service that leads to urgency during a War Room. Identify the non-negotiable items and work to have them implemented.
+- Required:
+- The team is accurately measuring and analyzing MTTD and MTTR
+- There are playbooks available for common tasks stored in a common location. (Application restart, DC traffic switching, etc).
+- The team is following the Alerting Strategy from E1.2 to trigger war rooms
+- The team is following the On-Call Strategy from E1.3 to respond to Alerts
+- The team is conducting blameless Post Incident Reviews (PIRs) for every P1 or P2
+- Root Cause Analysis is completed for every P1 and P2
+- Findings and recommendations from PIRs and RCAs were shared with the team
+- A culture of learning is established recognizing every incident not as a failure but an opportunity to better understand our complex systems
+- Recommended:
+- The team designates an &quot;Incident Commander&quot; or &quot;Technical Lead&quot; during war-rooms
+- The team accurately measures and analyzes MTTR and all sub-components (MTTD, MTTA, MTTI, MTTF)
+- Completion Criteria: All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="review-and-improve-environmental-equivalency"></a><a href="#review-and-improve-environmental-equivalency" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review and Improve Environmental Equivalency</h3>
+<pre><code class="hljs">- Work with the team to understand the various relevant environments for the application (build, QA, Stage, Prod-Like, Productions, etc). Lower environments should be as similar to production as possible. Are there concerns from the team that testing is not valuable because lowers are too dis-similar from Prod? Generate and document recommendations.
+- Lower environments should be sufficiently similar to production to make testing in lowers valid
+- Ideally lower env config should be identical to production
+- Lower env should be refreshed at that same time as production
+- Lower env data should be refreshed on a regular schedule to closely mirror production schemas
+- If the lower env use stub services to simulate supply chain dependencies, the stubs should be periodically reviewed for equivalency to their production counterparts (data contract, response time, etc)
+- Completion Criteria: The SRE should assess that the environmental equivalency meets the needs of the application. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-real-user-monitoring-rum-solution"></a><a href="#implement-validate-real-user-monitoring-rum-solution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Real User Monitoring (RUM) Solution</h3>
+<pre><code class="hljs">- Generate and document recommendations for Real User Monitoring. The application should leverage some type of RUM Solution (Bucky.js, Dynatrace UEM, etc). RUM is an important tool in the defense-in-depth monitoring strategy. It serves to capture technical data on the clients actual device. It gives us the most accurate and actionable data about the Real User Experience. The Rum Solution should contain the following data / attributes:
+- Required:
+- Capture data at the client end (Browser, mobile device)
+- Capture data like:
+- Browser Type/Version/Capabilities
+- Browser Timings (Network Time, DOM Complete, Page Interactive, etc)
+- Have the ability to generate alerts based on the Alerting Strategy
+- The team should understand how RUM indicators relate to NPS scores
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- Implement dashboard to visualize RUM data, preferably Time-Series dashboards
+- Capture data in a mechanism consistent with monitoring telemetry. Store the data in a time series database like InfluxDB or Graphite
+- Leverage the RUM Solution to implement Front End Logging to catch client side errors
+- Completion Criteria: RUM data is being collected on all front end experiences. All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-telemetry-monitoring-solution"></a><a href="#implement-validate-telemetry-monitoring-solution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Telemetry Monitoring Solution</h3>
+<pre><code class="hljs">- Generate and document recommendations for Telemetry monitoring. Identify the non-negotiable items and work to have them implemented. The application should leverage some type of Telemetry Solution (TICK, Prometheus, etc). Telemetry is an important tool in the defense-in-depth monitoring strategy. It captures critical metrics about system state at a very high frequency and and resolution. Telemetry enables significantly improved MTTD, as well as advanced KPI observability.
+- Required:
+- Method to capture telemetry data at each host at a frequency every 30 seconds or less
+- TimeSeries Database to store the data collected from each host
+- Dashboard solution to visualize the telemetry data either by individual metric or in aggregate
+- Method to alert on the telemetry data in accordance with the Alerting Strategy defined in E1.2
+- Data should be able to be viewed in &quot;real-time&quot; with no more than a 1 minute lag.
+- Solution implemented on all application and web servers that support the app/service
+- Captured metrics should include host level data like CPU, Mem, Disk, etc
+- For web applications and services where applicable: Status codes, Response times, Threads, Workers
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Recommended:
+- Collect data at a frequency of every 10 seconds
+- Alert triggers configured to support a MTTD of less than 1 minute (assuming sufficient traffic loads)
+- Solution implemented on all nodes in the applications ecosystem
+- Custom Telemetry data implemented in the application for KPIs and VBFs
+- Solution should support zero-configuration for new hosts. Should be able to build the host with the agent and an endpoint and start collecting metrics.
+- This is required for auto-scaling applications
+- Completion Criteria: Telemetry data is being collected on all web and app servers, dashboards are available, and alerts are configured. All &quot;required&quot; items have been implemented or completed. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-vip-level-checks"></a><a href="#implement-validate-vip-level-checks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate VIP-Level Checks</h3>
+<pre><code class="hljs">- Determine if/how the VIP's are monitored. Generate and document recommendations.
+- Validate that monitoring exists for the associated VIP's
+- If not, implement monitoring
+- Make sure all key teams have access to the monitoring tool or dashboard for the VIP
+- Completion Criteria: VIP's are properly monitored. Produce a report that outlines all of the recommendation that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-splunk-configuration"></a><a href="#implement-validate-advanced-splunk-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced Splunk Configuration</h3>
+<pre><code class="hljs">- If the application is using a log file aggregation tool other than Splunk, get the app on-boarded to phi-splunk.optum.com. Enable advanced Splunk features like Splunk AI, and IT Service Intelligence (ITSI). Generate and document recommendations.
+- Application must on-boarded to phi-splunk.optum.com
+- Enable and configure ITSI and Glass Tables
+- Enable Splunk AI Event Analytics
+- Configure advanced dashboards that tie back to customer experiences and VBFs
+- Leverage high quality and efficient splunk searches (base search, selection boxes, etc)
+- Configure alerts in accordance with the Alerting Strategy defined in E1.2
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Completion Criteria: Splunk advanced features have been enabled and the team understands how they fit into the defense-in-depth monitoring strategy. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-data-visualization"></a><a href="#implement-validate-advanced-data-visualization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced Data Visualization</h3>
+<pre><code class="hljs">- Based on the all the previous epics, data acquired across multiple monitoring tools should be aggregated and visualized as dashboards to highlight KPIs and VBFs. Dashboards show actionable metrics &amp; avoid ego metrics. Generate and document recommendations.
+- Leverage a dashboard solution that can pull data from multiple sources, such as Grafana, Kibana, etc.
+- Integrate as many key metrics from different systems into the dashboard solutions as feasible to eliminate tools switching for high level observability
+- Focus on the metrics that matter. If you could pick only one metric to visualize the health of the system what would it be?
+- In e-commerce, this might be orders per minute. For Netflix it is Stream Starts per second
+- The metric should encapsulate many of the key services that make up the application
+- The metric should represent an action that you would sacrifice other pieces of functionality to preserve
+- Enable High Level dashboards with the ability to drill in
+- These dashboards should be open and available to anyone in the organization, promoting data transparency
+- Build clusters of dashboards around VBFs or activities (Release Dashboards, Incident Dashboards, etc)
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how it fits into the monitoring strategy
+- Completion Criteria: An advanced data visualization tool has been implemented. Useful dashboards have been built. The team knows how to use the dashboards, update them and create new ones. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-alerting"></a><a href="#implement-validate-advanced-alerting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced Alerting</h3>
+<p>Enable advanced alerting techniques. This is highly specific to the application, thus the SRE will need to generate and document specific recommendations for the team using the below items as guidelines.</p>
+<pre><code class="hljs">- The team leverages a persistent chat tool like flowdock or Slack or Cisco Spark
+- The team understands the core concepts of ChatOps
+- The team is leveraging bots in their chat tool to pipe in alerts and is able to take action like acknowledging or escalating them
+- Achieve &lt;10 min MTTD
+- The team is using dynamic thresholds for most alerts
+- Alerts configured on absence conditions (0 orders placed, etc)
+- Minimal false positive alerts
+- Majority of alerts are actionable
+- Alerts are consistently tuned as the applications changes over time
+- Confidence in alerts is high enough to enable automated actions
+</code></pre>
+<p>Completion Criteria: Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant tools, systems and dashboards.</p>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-incident-response"></a><a href="#implement-validate-advanced-incident-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced Incident response</h3>
+<pre><code class="hljs">- Observe at least one war room. Asses and shape the team's Incident response culture and performance. Generate and document recommendations.
+- The team is mature in their on-call rotation strategy, with only one person on call at a time
+- The team is leveraging a multi-modal user defined notification tool (sms, phone, push, chat, email, etc) with automatic timeout escalation
+- MTTA is less than 5 minutes
+- The team is using an Incident Commander model, clearly identifying the one person on the War Room who is responsible for making decisions
+- The Incident commander leverages resources at their disposal to nominate a second in command, scribe, external comms resource if necessary
+- The team focuses on fast path to resolution, making hard decisions in service of the customer experience
+- The team is fully engaged in the chat ops model. They keep track of timelines and execute actions via persistent chat, while also utilizing a voice call
+- The team is leveraging self-service war-rooms
+- The team is conducting simulated war-rooms at least 4 times a year
+- PIRs are blameless and productive learning sessions
+- Root cause or contributing causes are identified within one week
+- Completion Criteria: The team has demonstrated a mature Incident response process and culture. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="introduce-chaos-engineering"></a><a href="#introduce-chaos-engineering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduce Chaos Engineering</h3>
+<p>Based on all the previous epics, the application should be sufficiently reliable and resilient to meet it's SLA/SLEs. At this stage it is necessary to introduce the concepts of Chaos Engineering in order to better understand the behavior of the system.</p>
+<ul>
+<li>Teach and train the team on the core concepts of Chaos Engineering</li>
+<li>Pick a scenario for an initial Chaos Experiment</li>
+<li>This should be a relatively simple and well controlled experiment like switching traffic from one data center to the other</li>
+<li>Plan out the experiment</li>
+<li>Hypothesis</li>
+<li>Simulated P1 incident</li>
+<li>Playbook for actions</li>
+<li>Identify and limit blast radius</li>
+<li>Indicator metrics</li>
+<li>Roll back steps</li>
+<li>Success criteria</li>
+<li>Table Top Chaos Experiment</li>
+<li>Production Chaos Experiment</li>
+<li>Procedure and rhythm established for future chaos experiments</li>
+</ul>
+<p>Completion Criteria: A successful Chaos Experiment has been conducted in production. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.</p>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-automated-recovery"></a><a href="#implement-validate-automated-recovery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Automated Recovery</h3>
+<pre><code class="hljs">- Based on the all the previous epics, identify the top 3 likely conditions to result in an incident and implement an automated recovery process. Generate and document recommendations.
+- Leverage advanced alerting techniques to identify issues
+- Implement a fully automated recovery process
+- Ensure proper logging of the automated recovery
+- Define a fall back recovery process if the automated process fails
+- Execute a Chaos Experiment to validate performance of the recovery process
+- Completion Criteria: A successful Chaos Experiment has been conducted to validate the automated recovery process works as expected. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-ai-ml"></a><a href="#implement-validate-advanced-ai-ml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced AI/ML</h3>
+<pre><code class="hljs">- Identify areas to implement AI/ML and advanced heuristics for analyzing trends and war room avoidance. Generate and document recommendations.
+- The team has implemented advanced heuristics and statistical models for alerting thresholds
+- Holt Winters Forecasting
+- Machine Learning algorithms to predict acceptable trend thresholds
+- Identify KPIs and make predictions about their trends and behaviors under certain circumstances
+- Leverage Change Control Risk Prediction
+- Leverage intelligent agents to manage infrastructure
+- Completion Criteria: Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-gtm-ltm-control-of-hosts"></a><a href="#implement-validate-gtm-ltm-control-of-hosts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate GTM/LTM Control of Hosts</h3>
+<pre><code class="hljs">- Implement fine-grain GTM/LTM controls so that that the team can selectively remove hosts from the pool. Generate and document recommendations.
+- Team should be able to selectively remove any given host from the pool
+- Team should be able to route traffic to a DC, AZ or pool.
+- Make sure all key teams have access to the tool
+- Train all key teams on the tool and how to utilize it in an incident scenario
+- Execute a Chaos Experiment to validate fine grain controls
+- Completion Criteria: Successfully execute a chaos experiment that shows the ability to selectively remove a host from the pool. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-advanced-performance-testing"></a><a href="#implement-validate-advanced-performance-testing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Advanced Performance Testing</h3>
+<pre><code class="hljs">- Implement processes, procedures and controls to enable advanced performance testing practices. Observe at least one performance test. Generate and document recommendations.
+- Performance / Load tests should be run in the production environment
+- Performance test scripts should exercise all production dependencies
+- The team should be running a performance test after every release, or if CI/CD, every two weeks
+- Simulate at least 2x predicted Peak Season Load
+- At least four times a year, execute a performance test that pushes the application to the breaking point to determine max load
+- Completion Criteria: Perf testing in production at high frequency. At least one max load test has been performed. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-immutable-infrastructure"></a><a href="#implement-validate-immutable-infrastructure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Immutable Infrastructure</h3>
+<pre><code class="hljs">- If possible, the application should shift to an immutable infrastructure architecture. This eliminates config drift and drastically simplifies trouble-shooting. Generate and document recommendations.
+- NEVER make a change to a production instance.
+- Only make change to the Pod/Container/Image, then build a new instance and deploy the new instance
+- Completion Criteria: Only immutable infrastructure is used in production. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-validate-supply-chain-observability"></a><a href="#implement-validate-supply-chain-observability" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement / Validate Supply Chain Observability</h3>
+<pre><code class="hljs">- Leverage a common construct to pass context up and down the stack. Note: there is currently no Optum Standard for how this should be implemented, hopefully one is forthcoming. Generate and document recommendations.
+- The below items should be present and logged in every request. If the application doesn't receive them, it should generate them and pass them downstream.
+- Transaction GUID
+- Session GUID
+- Top Level First Seen Timestamp
+- Top Level Timeout
+- Additionally, if the application is anything other than the first hop, it should compare the current time with the remaining time left on the top level timeout and cancel the request if it can't be completed in time to meet the Top Level Timeout.
+- Completion Criteria: The above listed values are logged for captured, logged and sent to downstream requests for every transaction. Produce a report that outlines all of the recommendations that SRE made, along with whether or not they were implemented (If not, why not?). Include in the report links to the relevant reports, tools, systems and dashboards.
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/documentation/docs/sre/sre-index.html"><span>SRE</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sre-phases-uplift-alignment">SRE Phases Uplift Alignment</a><ul class="toc-headings"><li><a href="#phase-0-base-level-understanding-of-current-capabilities-categorization-of-application">Phase 0 - Base-level understanding of current capabilities, categorization of application</a></li><li><a href="#phase-1-extinguish-immediate-fires-immediate-risk-mitigation-configure-basic-monitoring-if-missing">Phase 1 - Extinguish immediate fires, immediate risk mitigation, configure basic monitoring if missing</a></li><li><a href="#phase-2-prepare-for-long-term-success">Phase 2 - Prepare for Long-Term Success</a></li><li><a href="#phase-3-advanced-operations">Phase 3 - Advanced Operations</a></li></ul></li><li><a href="#reliability-checklist">Reliability Checklist</a><ul class="toc-headings"><li><a href="#document-in-use-monitoring-tools">Document in-use monitoring tools</a></li><li><a href="#document-current-alerting-strategy">Document current alerting strategy</a></li><li><a href="#document-supply-chain-and-dependencies">Document Supply Chain and Dependencies</a></li><li><a href="#establish-and-document-business-impact-measurements">Establish and document business impact measurements</a></li><li><a href="#document-incident-response-procedures">Document Incident Response Procedures</a></li><li><a href="#discover-and-document-application-architecture-amp-design">Discover and Document Application Architecture &amp; Design</a></li><li><a href="#implement-emergency-architecture-changes">Implement emergency Architecture changes</a></li><li><a href="#document-on-call-strategy">Document On-Call strategy</a></li><li><a href="#review-and-improve-alerting-strategy">Review and Improve Alerting Strategy</a></li><li><a href="#review-and-improve-on-call-rotation">Review and Improve On-Call Rotation</a></li><li><a href="#review-and-improve-host-level-checks">Review and Improve Host-Level Checks</a></li><li><a href="#review-and-improve-synthetic-monitoring">Review and Improve Synthetic Monitoring</a></li><li><a href="#review-and-improve-log-file-aggregation-solution">Review and Improve Log File Aggregation solution</a></li><li><a href="#review-and-improve-application-performance-monitor-apm-solution">Review and Improve Application Performance Monitor (APM) solution</a></li><li><a href="#review-and-improve-web-app-analytics-solution">Review and Improve Web/App Analytics solution</a></li><li><a href="#review-and-improve-performance-testing-strategy">Review and Improve Performance Testing Strategy</a></li><li><a href="#review-and-improve-local-traffic-manager-ltm-checks">Review and Improve Local Traffic Manager (LTM) Checks</a></li><li><a href="#review-and-improve-incident-response">Review and Improve Incident Response</a></li><li><a href="#review-and-improve-environmental-equivalency">Review and Improve Environmental Equivalency</a></li><li><a href="#implement-validate-real-user-monitoring-rum-solution">Implement / Validate Real User Monitoring (RUM) Solution</a></li><li><a href="#implement-validate-telemetry-monitoring-solution">Implement / Validate Telemetry Monitoring Solution</a></li><li><a href="#implement-validate-vip-level-checks">Implement / Validate VIP-Level Checks</a></li><li><a href="#implement-validate-advanced-splunk-configuration">Implement / Validate Advanced Splunk Configuration</a></li><li><a href="#implement-validate-advanced-data-visualization">Implement / Validate Advanced Data Visualization</a></li><li><a href="#implement-validate-advanced-alerting">Implement / Validate Advanced Alerting</a></li><li><a href="#implement-validate-advanced-incident-response">Implement / Validate Advanced Incident response</a></li><li><a href="#introduce-chaos-engineering">Introduce Chaos Engineering</a></li><li><a href="#implement-validate-automated-recovery">Implement / Validate Automated Recovery</a></li><li><a href="#implement-validate-advanced-ai-ml">Implement / Validate Advanced AI/ML</a></li><li><a href="#implement-validate-gtm-ltm-control-of-hosts">Implement / Validate GTM/LTM Control of Hosts</a></li><li><a href="#implement-validate-advanced-performance-testing">Implement / Validate Advanced Performance Testing</a></li><li><a href="#implement-validate-immutable-infrastructure">Implement / Validate Immutable Infrastructure</a></li><li><a href="#implement-validate-supply-chain-observability">Implement / Validate Supply Chain Observability</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Greg Schullo</section></footer></div></body></html>
