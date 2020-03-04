@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Python Control Structures · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Lists"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Python Control Structures · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gregschullo.github.io/documentation/index.html"/><meta property="og:description" content="## Lists"/><meta property="og:image" content="https://gregschullo.github.io/documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gregschullo.github.io/documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/img/book.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://gregschullo.github.io/documentation/blog/atom.xml" title="Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://gregschullo.github.io/documentation/blog/feed.xml" title="Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/><script src="/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/book.png" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/documentation/docs/development/development-index.html" target="_self">Development</a></li><li class=""><a href="/documentation/docs/networking/osi-model.html" target="_self">Networking</a></li><li class=""><a href="/documentation/docs/dashboarding/grafana-index.html" target="_self">Dashboarding</a></li><li class=""><a href="/documentation/docs/monitoring/prometheus-index.html" target="_self">Monitoring</a></li><li class=""><a href="/documentation/docs/container-platforms/kubernetes-index.html" target="_self">Containerization Platforms</a></li><li class=""><a href="/documentation/docs/sre/sre-index.html" target="_self">SRE</a></li><li class=""><a href="/documentation/docs/books/phoenix-project.html" target="_self">Books</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li><li class=""><a href="/documentation/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Python</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Development</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/development/development-index.html">Development</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Python</h4><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-index.html">Python</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-syntax.html">Python Syntax</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/development/python/python-control-structures.html">Python Control Structures</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Java</h4><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/development/java/java-index.html">Java</a></li></ul></div></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Python Control Structures · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## if Statements"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Python Control Structures · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gregschullo.github.io/documentation/index.html"/><meta property="og:description" content="## if Statements"/><meta property="og:image" content="https://gregschullo.github.io/documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gregschullo.github.io/documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/img/book.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://gregschullo.github.io/documentation/blog/atom.xml" title="Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://gregschullo.github.io/documentation/blog/feed.xml" title="Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/><script src="/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/book.png" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/documentation/docs/development/development-index.html" target="_self">Development</a></li><li class=""><a href="/documentation/docs/networking/osi-model.html" target="_self">Networking</a></li><li class=""><a href="/documentation/docs/dashboarding/grafana-index.html" target="_self">Dashboarding</a></li><li class=""><a href="/documentation/docs/monitoring/prometheus-index.html" target="_self">Monitoring</a></li><li class=""><a href="/documentation/docs/container-platforms/kubernetes-index.html" target="_self">Containerization Platforms</a></li><li class=""><a href="/documentation/docs/sre/sre-index.html" target="_self">SRE</a></li><li class=""><a href="/documentation/docs/books/phoenix-project.html" target="_self">Books</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li><li class=""><a href="/documentation/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Python</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Development</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/docs/development/development-index.html">Development</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Python</h4><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-overview.html">Python Overview</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-keywords.html">Python Keywords</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-datatypes.html">Python Datatypes</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-syntax.html">Python Syntax</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/development/python/python-control-structures.html">Python Control Structures</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-useful-methods.html">Useful Python Methods</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/development/python/python-debugging.html">Python Debugging</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Java</h4><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/development/java/java-index.html">Java</a></li></ul></div></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,7 +54,57 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Python Control Structures</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="lists"></a><a href="#lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lists</h2>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Python Control Structures</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="if-statements"></a><a href="#if-statements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>if Statements</h2>
+<p>In Python, if statements are used to run code if a certain condition holds. If an expression evaluates to True, some statements are carried out. If an expression evaluates to False, they aren't carried out.</p>
+<p>An if statement looks like:</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">if</span> &lt;expression&gt;:
+    statements
+</code></pre>
+<p>Python uses indentation (white space at the beginning of a line) to delimit blocks of code. Other languages, such as C, use curly braces to accomplish this, but in Python indentation is mandatory; programs won't work without it.</p>
+<p>To perform more complex checks, if statements can be nested, one inside of the other. This means that the inner if statement is part of the outer one. This is one way to see whether multiple conditions are satisfied.</p>
+<h2><a class="anchor" aria-hidden="true" id="else-statements"></a><a href="#else-statements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>else Statements</h2>
+<p>In Python, an else statement follows an if statement and contains code that is called when the if statement evaluates to False. As with if statements, the code inside the block should be indented.</p>
+<p>An example of an else statement would be:</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">if</span> &lt;expression&gt;:
+    statement(s)
+
+<span class="hljs-keyword">else</span>:
+    statement(s)
+</code></pre>
+<p>You can chain if and else statements to determine which option in a series of possibilities is True.</p>
+<h2><a class="anchor" aria-hidden="true" id="elif-statements"></a><a href="#elif-statements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>elif Statements</h2>
+<p>elif (short for else if) statement is a shortcut to use when chaining if and else statements. A series of if elif statements can have a final else block, which is called if none of the if or elif expressions is True.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-python">num = <span class="hljs-number">7</span>
+
+<span class="hljs-keyword">if</span> num == <span class="hljs-number">5</span>:
+   print(<span class="hljs-string">"Number is 5"</span>)
+
+<span class="hljs-keyword">elif</span> num == <span class="hljs-number">11</span>:
+   print(<span class="hljs-string">"Number is 11"</span>)
+
+<span class="hljs-keyword">elif</span> num == <span class="hljs-number">7</span>:
+   print(<span class="hljs-string">"Number is 7"</span>)
+
+<span class="hljs-keyword">else</span>:
+   print(<span class="hljs-string">"Number isn't 5, 11 or 7"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="boolean-logic"></a><a href="#boolean-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean Logic</h2>
+<p>Boolean logic is used to make more complicated conditions for if statements that rely on more than one condition. Python's boolean operators are and, or, and not.</p>
+<p>The and operator takes two arguments and evaluates as True only of both arguments are True. Otherwise it evaluates to False.</p>
+<p>The or operator also takes two arguments and evaluates as True if either (or both) of its arguments are True. Otherwise it evaluates to False.</p>
+<p>The not operator only takes one argument and inverts it. The result of not True is False and the result of not False is true.</p>
+<h2><a class="anchor" aria-hidden="true" id="operator-precedence"></a><a href="#operator-precedence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operator Precedence</h2>
+<p>Operator precedence is an important concept in programming. It is an extension of the mathematical idea of order of operations (multiplication being performed before addition, etc.) to include other operators, such as those in Boolean logic.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-python"><span class="hljs-literal">False</span> == <span class="hljs-literal">False</span> <span class="hljs-keyword">or</span> <span class="hljs-literal">True</span>
+<span class="hljs-literal">True</span>
+<span class="hljs-literal">False</span> == (<span class="hljs-literal">False</span> <span class="hljs-keyword">or</span> <span class="hljs-literal">True</span>)
+<span class="hljs-literal">False</span>
+(<span class="hljs-literal">False</span> == <span class="hljs-literal">False</span>) <span class="hljs-keyword">or</span> <span class="hljs-literal">True</span>
+<span class="hljs-literal">True</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="lists"></a><a href="#lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lists</h2>
 <p>Lists are another type of object in Python. They are used to store an indexed list of items.</p>
 <p>A list is created using square brackets with commas separating items.</p>
 <p>The certain item in the list can be accessed by using its index in square brackets.</p>
@@ -255,4 +305,63 @@ hello
 hello
 </code></pre>
 <p>You don't need to call list on the range object when it is used in a for loop, because it isn't being indexed, so a list isn't required.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/docs/development/python/python-syntax.html"><span class="arrow-prev">← </span><span>Python Syntax</span></a><a class="docs-next button" href="/documentation/docs/development/java/java-index.html"><span>Java</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#lists">Lists</a><ul class="toc-headings"><li><a href="#list-operations">List Operations</a></li><li><a href="#list-functions">List Functions</a></li><li><a href="#range">Range</a></li></ul></li><li><a href="#for-loops">For Loops</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Greg Schullo</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="while-loops"></a><a href="#while-loops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>While Loops</h2>
+<p>A while statement is similar to an if statement, except it can be run more than once. The statements inside it are repeatedly executed as long as the condition holds. Once it evaluates to False, the next section of code is executed.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-python">i = <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">while</span> i &lt;=<span class="hljs-number">5</span>:
+
+   print(i)
+
+   i = i + <span class="hljs-number">1</span>
+
+print(<span class="hljs-string">"Finished"</span>)
+</code></pre>
+<p>The code in the body of a while loop is executed repeatedly. This is called iteration.</p>
+<p><strong>infinite loop</strong> - a special kind of while loop that never stops running. Its condition always remains True.</p>
+<p>Example of an infinite loop:</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">while</span> <span class="hljs-number">1</span>==<span class="hljs-number">1</span>:
+
+  print(<span class="hljs-string">"In the loop"</span>)
+</code></pre>
+<p>You can stop the program's execution by using the Ctrl-C shortcut or by closing the program.</p>
+<p>break</p>
+<p>To end a while loop prematurely the break statement can be used.</p>
+<p>When encountered inside a loop, the break statement causes the loop to finish immediately.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-python">i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> <span class="hljs-number">1</span>==<span class="hljs-number">1</span>:
+  print(i)
+  i = i + <span class="hljs-number">1</span>
+
+  <span class="hljs-keyword">if</span> i &gt;= <span class="hljs-number">5</span>:
+    print(<span class="hljs-string">"Breaking"</span>)
+
+    <span class="hljs-keyword">break</span>
+
+print(<span class="hljs-string">"Finished"</span>)
+</code></pre>
+<p>Using the break statement outside of a loop causes an error.</p>
+<p>continue</p>
+<p>Another statement that can be used within loops is continue.</p>
+<p>Unlike break, continue jumps back to the top of the loop, rather than stopping it.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-python">i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+   i = i +<span class="hljs-number">1</span>
+   <span class="hljs-keyword">if</span> i == <span class="hljs-number">2</span>:
+      print(<span class="hljs-string">"Skipping 2"</span>)
+      <span class="hljs-keyword">continue</span>
+
+   <span class="hljs-keyword">if</span> i == <span class="hljs-number">5</span>:
+      print(<span class="hljs-string">"Breaking"</span>)
+      <span class="hljs-keyword">break</span>
+
+   print(i)
+
+print(<span class="hljs-string">"Finished"</span>)
+</code></pre>
+<p>the continue statement stops the current iteration and continues with the next one.</p>
+<p>Using the continue statement outside of a loop causes an error.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/docs/development/python/python-syntax.html"><span class="arrow-prev">← </span><span>Python Syntax</span></a><a class="docs-next button" href="/documentation/docs/development/python/python-useful-methods.html"><span>Useful Python Methods</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#if-statements">if Statements</a></li><li><a href="#else-statements">else Statements</a></li><li><a href="#elif-statements">elif Statements</a></li><li><a href="#boolean-logic">Boolean Logic</a></li><li><a href="#operator-precedence">Operator Precedence</a></li><li><a href="#lists">Lists</a><ul class="toc-headings"><li><a href="#list-operations">List Operations</a></li><li><a href="#list-functions">List Functions</a></li><li><a href="#range">Range</a></li></ul></li><li><a href="#for-loops">For Loops</a></li><li><a href="#while-loops">While Loops</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Greg Schullo</section></footer></div></body></html>
