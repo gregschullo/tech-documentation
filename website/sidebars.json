@@ -7,7 +7,8 @@
         "label": "Python",
         "ids": [
           "development/python/python-index",
-          "development/python/python-syntax"
+          "development/python/python-syntax",
+          "development/python/python-control-structures"
         ]
       },
       {
