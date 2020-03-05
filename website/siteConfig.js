@@ -91,6 +91,8 @@ const siteConfig = {
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
 
+  docsSideNavCollapsible: true,
+
   // Open Graph and Twitter card images.
   ogImage: 'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
