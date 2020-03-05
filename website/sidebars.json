@@ -1,6 +1,6 @@
 {
   "development": {
-    "Development": [
+    "Languages": [
       "development/development-index",
       {
         "type": "subcategory",
@@ -20,6 +20,29 @@
         "label": "Java",
         "ids": [
           "development/java/java-index"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ruby",
+        "ids": [
+          "development/ruby/ruby-overview",
+          "development/ruby/ruby-keywords",
+          "development/ruby/ruby-datatypes",
+          "development/ruby/ruby-control-structures",
+          "development/ruby/ruby-useful-methods"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Javascript",
+        "ids": [
+          "development/javascript/javascript-overview",
+          "development/javascript/javascript-keywords",
+          "development/javascript/javascript-datatypes",
+          "development/javascript/javascript-syntax",
+          "development/javascript/javascript-control-structures",
+          "development/javascript/javascript-useful-methods"
         ]
       }
     ]
@@ -71,7 +94,8 @@
       "sre/availability/availability-score"
     ],
     "Monitoring": [
-      "sre/monitoring/the-four-golden-signals"
+      "sre/monitoring/the-four-golden-signals",
+      "sre/monitoring/monitoring-pattern"
     ],
     "Alerting": [
       "sre/alerting/alerting-strategy"
