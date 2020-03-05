@@ -44,7 +44,7 @@ These should be very dynamic in nature and specific to each application. This sh
 
 ## The 4 Golden Signals
 
-The 4 Golden Signals are the basis for any well monitored system and should be prioritized. More information on the 4 Golden Signals can be found [here](sre/monitoring/the-four-golden-signals) or in the [Google Site Reliability Engineering book](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/).
+The 4 Golden Signals are the basis for any well monitored system and should be prioritized. More information on the 4 Golden Signals can be found [here](the-four-golden-signals) or in the [Google Site Reliability Engineering book](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/).
  
 
 ## Types of Monitoring
