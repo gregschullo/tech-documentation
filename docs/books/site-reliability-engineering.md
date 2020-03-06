@@ -7,7 +7,9 @@ title: Google Site Reliability Engineering
 
 For the systems you look after, for the groups you work in, or for the organizations you’re building, please bear the SRE Way in mind: thoroughness and dedication, belief in the value of preparation and documentation, and an awareness of what could go wrong, coupled with a strong desire to prevent it. Welcome to our emerging profession
 
-## [Chapter 1 - Introduction](https://landing.google.com/sre/sre-book/chapters/introduction/)
+## Chapter 1 - Introduction
+
+https://landing.google.com/sre/sre-book/chapters/introduction/
 
 "Hope is not a strategy"
 
@@ -42,13 +44,17 @@ Monitoring
   1. Logging
   * No one needs to look at this information, but it is recorded for diagnostic or forensic purposes. The expectation is that no one reads logs unless something else prompts them to do so.
 
-## [Chapter 2 - The Production Environment at Google, from the Viewpoint of an SRE](https://landing.google.com/sre/sre-book/chapters/production-environment/)
+## Chapter 2 - The Production Environment at Google, from the Viewpoint of an SRE
+
+https://landing.google.com/sre/sre-book/chapters/production-environment/
 
 Goes into detail about hardware and how data centers are structured at Google
 
 * Whether it is at Google or elsewhere, monitoring is an absolutely essential component of doing the right thing in production.
 
-## [Chapter 3 - Embracing Risk](https://landing.google.com/sre/sre-book/chapters/embracing-risk/)
+## Chapter 3 - Embracing Risk
+
+https://landing.google.com/sre/sre-book/chapters/embracing-risk/
 
 * Again, shooting for 100% reliability is often not the best case scenario. A user cannot tell the difference between 99.99 and 99.999% uptime. With this in mind, rather than maximizing uptime, Site Reliability Engineering seeks to balance the risk of unavailability with the goals of rapid innovation and efficient service operations, so users' overall happiness with features, service, and performance is optimized.
 
@@ -66,7 +72,9 @@ Aggregate Availability
 * It is best practice to test a new release on a small subset of a typical workload. This is known as canarying.
 * Managing service reliability is largely about managing risk, and managing risk can be costly.
 
-## [Chapter 4 - Service Level Objects](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/)
+## Chapter 4 - Service Level Objects
+
+https://landing.google.com/sre/sre-book/chapters/service-level-objectives/
 
 * It is important to understand which behaviors really matter for a service and how to measure and evaluate those behaviors. We need to define and deliver a certain level of service to our users.
 
@@ -94,13 +102,17 @@ Choosing Targets
   1. If action is needed, figure out what needs to happen in order to meet the target.
   1. Take that action.
 
-## [Chapter 5 - Eliminating Toil](https://landing.google.com/sre/sre-book/chapters/eliminating-toil/)
+## Chapter 5 - Eliminating Toil
+
+https://landing.google.com/sre/sre-book/chapters/eliminating-toil/
 
 * Invent more, toil less
 * Toil - Operational work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.
   * Toil leads to career stagnation, low morale, creates confusion, slows progress, sets precedent, promotes attrition, and causes breaches in faith (specifically for those who join SRE roles from elsewhere)
 
-## [Chapter 6 - Monitoring Distributed Systems](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/)
+## Chapter 6 - Monitoring Distributed Systems
+
+https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/
 
 This section offers guidelines for what issues should interrupt a human via a page, and how to deal with issues that aren’t serious enough to trigger a page.
 
@@ -150,7 +162,9 @@ The 4 Golden Signals
 * Every page response should require intelligence. If a page merely merits a robotic response, it shouldn’t be a page.
 * Pages should be about a novel problem or an event that hasn’t been seen before.
 
-## [Chapter 7 - The Evolution of Automation at Google](https://landing.google.com/sre/sre-book/chapters/automation-at-google/)
+## Chapter 7 - The Evolution of Automation at Google
+
+https://landing.google.com/sre/sre-book/chapters/automation-at-google/
 
 The value of automation
 
@@ -158,27 +172,20 @@ Consistency: any action performed by a human or humans hundreds of times won’t
 
 A Platform: automatic systems can be extended and applied to more systems. A platform also centralizes mistakes.
 
-Faster Repairs
+Faster Repairs  
+Faster Action  
+Time Saving  
+The evolution of automation follows a path:  
+No automation  
+Externally maintained system specific automation  
+Externally maintained generic automation  
+Internally maintained system specific automation  
+Systems that don't need automation (automation is automatic)  
+Automate yourself out of a job: Automate ALL The Things  
 
-Faster Action
+## Chapter 8 - Release Engineering
 
-Time Saving
-
-The evolution of automation follows a path:
-
-No automation
-
-Externally maintained system specific automation
-
-Externally maintained generic automation
-
-Internally maintained system specific automation
-
-Systems that don't need automation (automation is automatic)
-
-Automate yourself out of a job: Automate ALL The Things
-
-## [Chapter 8 - Release Engineering](https://landing.google.com/sre/sre-book/chapters/release-engineering/)
+https://landing.google.com/sre/sre-book/chapters/release-engineering/
 
 Release engineering is a relatively new and fast-growing discipline of software engineering that can be described as building and delivering software.
 
@@ -200,7 +207,9 @@ Building, Branching, Testing, Packaging, Rapid, Deployment
 
 When equipped with the right tools, proper automation, and well-defined policies, developers and SREs shouldn’t have to worry about releasing software. Releases can be as painless as simply pressing a button.
 
-## [Chapter 9 - Simplicity](https://landing.google.com/sre/sre-book/chapters/simplicity/)
+## Chapter 9 - Simplicity
+
+https://landing.google.com/sre/sre-book/chapters/simplicity/
 
 Boring is a good thing in software
 
@@ -208,7 +217,9 @@ Remove code if it is not being run. Don't flag it. Don't comment it out. Remove 
 
 Software simplicity is a prerequisite to reliability.
 
-## [Chapter 10 - Practical Alerting from Time-Series Data](https://landing.google.com/sre/sre-book/chapters/practical-alerting/)
+## Chapter 10 - Practical Alerting from Time-Series Data
+
+https://landing.google.com/sre/sre-book/chapters/practical-alerting/
 
 "May the queries flow and the pager stay silent." - Traditional SRE Blessing
 
@@ -236,7 +247,9 @@ Mass data collection allows for cheap and efficient solutions where data can be 
 * service - a loosely defined collection of jobs that provide a service to the users, either internal or external 
 * zone - A Google convention that refers to the location (typically the datacenter) of the Borgmon that performed the collection of this variable. 
 
-## [Chapter 11 - Being On Call](https://landing.google.com/sre/sre-book/chapters/being-on-call/)
+## Chapter 11 - Being On Call
+
+https://landing.google.com/sre/sre-book/chapters/being-on-call/
 
 * SREs are typically have a diverse background in systems and software engineering as SREs place heavy emphasis on the use of engineering to approach problems previously experienced by operations teams that exist at a scale that would be intractable without software engineering solutions.
 * 50% of an SREs time should be allocated to engineering projects that further scale the impact of the team through automation, in addition to improving the service
@@ -288,7 +301,9 @@ Avoiding Inappropriate Operational Load
 * Silence duplicate or uninformative alerts generated by a single incident
 * SRE teams should be sized to allow every engineer to be on call at least once or twice a quarter. This allows for familiarity with the production system(s) and addresses an appropriate confidence level.
 
-## [Chapter 12 - Effective Troubleshooting](https://landing.google.com/sre/sre-book/chapters/effective-troubleshooting/)
+## Chapter 12 - Effective Troubleshooting
+
+https://landing.google.com/sre/sre-book/chapters/effective-troubleshooting/
 
 * We can think of the troubleshooting process as an application of the hypothetico-deductive method: given a set of observations about a system and a theoretical basis for understanding system behavior, we iteratively hypothesize potential causes for failure and try to test those hypotheses.
 * A process for troubleshooting
@@ -358,7 +373,9 @@ Making Troubleshooting Easier
 
 * The most fundamental ways to simplify and speed up troubleshooting are building observability and by designing systems with well understood and observable interfaces between components.
 
-## [Chapter 13 - Emergency Response](https://landing.google.com/sre/sre-book/chapters/emergency-response/)
+## Chapter 13 - Emergency Response
+
+https://landing.google.com/sre/sre-book/chapters/emergency-response/
 
 Things break; that's life.
 
@@ -389,7 +406,9 @@ Learn from the Past. Don't Repeat it.
 * Keep a history of outages. History is about learning from everyones' mistakes.
 * Ask the big, even improbable questions. What if...?
 
-## [Chapter 14 - Managing Incidents](https://landing.google.com/sre/sre-book/chapters/managing-incidents/)
+## Chapter 14 - Managing Incidents
+
+https://landing.google.com/sre/sre-book/chapters/managing-incidents/
 
 Effective incident management is key to limiting the disruption caused by an issue and restoring normal business operations as quickly as possible.
 
@@ -448,7 +467,9 @@ Practice - Use the process routinely so it becomes second nature.
 
 Change it around - Were you incident commander last time? Take on a different role this time. Encourage every team member to acquire familiarity with each role.
 
-## [Chapter 15 - Postmortem Culture: Learning from Failure](https://landing.google.com/sre/sre-book/chapters/postmortem-culture/)
+## Chapter 15 - Postmortem Culture: Learning from Failure
+
+https://landing.google.com/sre/sre-book/chapters/postmortem-culture/
 
 "The cost of failure is education."
 
@@ -500,7 +521,9 @@ Introducing a Postmortem Culture
 * Best Practice: Visibly Reward People for Doing the Right Thing.
 * Best Practice: Ask for Feedback on Postmortem Effectiveness
 
-## [Chapter 16 - Tracking Outages](https://landing.google.com/sre/sre-book/chapters/tracking-outages/)
+## Chapter 16 - Tracking Outages
+
+https://landing.google.com/sre/sre-book/chapters/tracking-outages/
 
 Escalator - all alert notifications require acknowledgement from a human. If no acknowledgment is received from the primary on call, the alert gets escalated to the secondary on-call.
 
@@ -531,7 +554,9 @@ Unexpected Benefits
 
 * Benefits of being able to identify an alert coincides with a given other outage has obvious benefits that include increasing the speed of diagnosis and reducing lead on other teams by acknowledging there is a real incident. Non-obvious benefits include improving cross team visibility, which makes a difference in incident resolution  and incident mitigation.
 
-## [Chapter 17 - Testing for Reliability](https://landing.google.com/sre/sre-book/chapters/testing-reliability/)
+## Chapter 17 - Testing for Reliability
+
+https://landing.google.com/sre/sre-book/chapters/testing-reliability/
 
 "If you haven't tried it, assume it's broken."
 
@@ -600,4 +625,6 @@ The amount of effort required to write good tests is substantial, as is the effo
 
 You can't fix a problem until you understand it, and in engineering, you can only understand a problem by measuring it.
 
-## [Chapter 18 - Software Engineering in SRE](https://landing.google.com/sre/sre-book/chapters/software-engineering-in-sre/)
+## Chapter 18 - Software Engineering in SRE
+
+https://landing.google.com/sre/sre-book/chapters/software-engineering-in-sre/

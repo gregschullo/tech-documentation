@@ -227,25 +227,103 @@ Medicine is a business. It won't police itself. People have lost faith in the Am
 
 ## Chapter 4 - The Age of Pharmaceuticals
 
-Note: 
+More competitors vying for business doesn't mean better prices; it can drive prices up, not down.
+
+As technologies age, prices can rise rather that fall.
+
+Nearly all American manufacturers of mesalamine products figured out ways to move their tax base overseas, using a controversial practice called an inversion that many legal experts regard as tax evasion.
 
 ### The Modest History of Making Medicines
 
+Brand makers ability to claim extended patent protection, coupled with generics competitors' constant challenges to weak patents, meant that the amendment instead ushered in an era in which multimillion dollar court battles over patents now precede (and delay) each generic entry, driving prices up in the process.
+
+A strong patent system and no pricing restriction led to a profound shift of pharmaceutical investment into the United States and away from Europe, where government price setting was increasingly common. By 2002 global drugmakers were spending 82 percent of their money in the United States. The US pharmaceutical industry has grown twice as fast as the economy at large since 1990.
+
+There is no free choice. Patients are stuck. And they're stuck buying American.
+
 ### New Policies Transform an Industry
+
+For much of medical history and into the 1980s, drugs were cheap. Vaccines cost pennies and antibiotics and epinephrine shots were a few dollars. Even the most exotic medicines couldn't list for more than a few hundred dollars a dose. The emergence of successful drug therapy in response of the crisis of HIV/AIDS permanently shifted the long-standing business paradigm of drug approval, pricing, and value.
+
+A lifetime of treatment is preferable to cure.
+
+Drug companies that used interim measures to prove the success of their products often made empty promises to do follow-up studies to makes sure products approved through these proxy targets actually yielded long-term improvement for patients.  
+An in-depth data investigation by the Milwaukee Journal Sentinel and MedPageToday in 2014 revealed that, thanks to surrogate endpoints, 74% of cancer drugs approved by the FDA during the previous decade ultimately did not extend life by even a single day.
+
+Direct-to-consumer drug advertising rose from $166 million in 1993 to $4.2 billion in 2005, and in 2006 it made up nearly 40% of total pharmaceutical promotional spending. In 2000 Merck spent more advertising its new painkiller, Vioxx ($160 million), than Budweiser ($146 million), Pepsi ($126 million), or Nike ($78 million).  
+In 2004 Merck withdrew Vioxx from the market. The company ultimately paid a criminal fine of $950 million for its marketing and sales tactics.
+
+Drug advertising is now a constant in our lives. The Supreme Court has protected drug advertising under the guise of free speech. The US one of two countries that allow it, along with New Zealand.
 
 ### Non-24; or, it Pays to Advertise
 
+Vanda, a boutique drugmaker based in Washington, DC, had developed a new molecule, called tasimelteon, which resembled melatonin and attached to a melatonin receptor, producing a similar effect.
+
+Dr. Sack was an expert on the panel that had unanimously recommended the approval a few months before. He explained he came out to thinking our system of drug approval doesn't make any sense. Because of the FDA's criterion we were following to determine efficacy, he was forced to vote yes, but it made him uncomfortable as the drug was not demonstrably better than melatonin.  
+FDA panels don't consider the cost of products they review. Vanada's Hetlioz was priced at $96,000 ($8,000 a month or $267 per dose)... Now there is a prescription drug that is not as effective as melatonin (which you can buy for $6 for a bottle of over 100 pills).  
+It's eye popping that we could get into this situation and that the new drug can be advertised on TV.  
+Because melatonin is a product of nature the molecule can't be patented. No company will go through the expensive testing and application process to get melatonin formulated as a prescription drug. It's sold as a nutritional supplement and not regulated or tested with great exactitude. The proper dosing of melatonin has never been studied to FDA standards.... But the chemically created analog tasimelteon can be patented.
+
+TL:DR Vanda and Hetlioz is a scam.
+
+Now that we rely on the profit incentive to motivate drug research, we learn only what the industry deems is profitable for us to find out.
+
 ### Patent Plays
+
+Drug manufacturers seized on the opportunity to get new patents for asthma inhalers with new propellants, removing from the market generic inhalers that had long been available. The usual price of the most common inhaled asthma medicine, albuterol, rose from about $10 to over $100. It costs $7 to $9 in Australia, where it's still generic and even sold over the counter.
+
+There are endless ways to extend your product's value through manipulating FDA policies and patent law.
+
+* File a lawsuit
+* Modify the delivery
+* Play to the FDA's weaknesses and blind spots
+* Take it over the counter
+* Create a combination
+
+**File a lawsuit** - Getting a patent only costs $20,000 and applications are unlimited. There's strong motivation for drug companies to file weak patents. Brand makers take out weak patents, generics challenge them, and the brand makers answer back with an objection. Under Hatch-Waxman, that objection alone sets off a mandatory thirty-month halt in the FDA's consideration of the generic entrant.
+
+**Modify the delivery** - Product hopping - moving products from one form to another. For example, changing a drug from a pill to a chewable tablet.  
+Since generics must be identical in dosage and form to the brand-name drug for a pharmacist to substitute, companies can make moves to succeeded in delaying competition from generics for years.  
+
+**Play to the FDA's weakness and blindspots** - Sprays, lotions, and creams don't have to play legal games to fend off competition from generics since these formulations are hard to replicate according to the FDA's extracting standards. For pills, it's relatively straightforward to show the chemical composition is equivalent to the brand and to measure that it produces the same level of medication in the blood.
+
+**Take it over the counter** - Changing a drug's legal status so it can be sold over the counter is sometimes a profitable patent play for pharmaceutical companies (known as an "OTC switch"), but it can be a risky decision.  Prescriptions are key to charging high prices (because insurers pay) and holding a pharmaceutical monopoly intact. In much of the world, products go over the counter when they are deemed safe enough to take without a doctor's intervention. In the US, it is a business calculation.  
+More treatment is always better, default to the most expensive option.  
+An OTC switch makes products available to a wider audience of buyers but manufacturers have to lower the price considerable because insurance is no longer involved. They also have to establish brand recognition with consumers.  
+According to US law, the same product cannot be on the market as both a prescription and an over-the-counter product.  
+FDA grants any company that takes a prescription drug to OTC status three years of market exclusivity for that sales route, during which other manufacturers are forbidden from making store-brand copies.  
+
+**Create a combination** - Patient outrage over the high price of patent plays was the last business barrier drugmakers had to resolve. As pharmaceutical prices increased, insurers imposed co-payments that were a percentage of the bill to encourage the use of cheaper alternatives.
 
 ### Desperate Patients and Bribes, or Charity?
 
+More competitors vying for business doesn't mean better prices. It can drive prices up, not down.
+
+Prices will rise to whatever the market will bear.
+
 ### The Rise of Invisible Robber Barons
+
+A different class of backroom mercenaries entered the medical fray in the late 1980s and early 1990s. The pharmacy benefit manager (PBM). Today there are a handful of huge PBMs - Express Scripts, CVS Caremark, OptumRX - and they have enormous sway over your care.
+
+PBMs are for profit companies that make money by pocketing a percentage of the discounts they negotiate. Items that end up on the formularies of covered drugs and devices aren't always the ones patients need most or those that work best, but rather the ones on which the PBM has wrangled the best deal, with the best negotiated profit margin.
 
 ### "We Regret to Inform You That the Generic Isn't Available
 
+Shortages of cheaper, affordable essential medicines in hospitals have become the new normal.
+
 ### Generic Sticker Shock at the Pharmacy Counter
 
+Over 80% of prescriptions in the US are filled with generics, which is a higher percentage than most developed countries. But some generics are no longer a bargain.
+
+Intense competition among manufacturers of generic drugs in the early twenty-first century had resulted in some rock-bottom prices for consumers. But the smaller profit margins, plus the lure of easier money to be made by producing more lucrative items, drove some of these manufacturers to quit making older cheap drugs, thereby handing near monopolies to those who remained in the market.  
+
+To really bring down prices through market competition, probably four or five generics would need to be on the shelves, and that level of competition was rare. As a result, after 2010 generics often settled into a price point just slightly below the brand-name drug.
+
 ### A Myth: At Least We Get Drugs First
+
+America pays double, sometimes triple, what other developed countries spend on drugs but takes comfort in getting new treatments and cures first. That is often true, but not always.
+
+Cost-saving new treatments have had a maddeningly hard time finding their way into the American bazaar, because lower prices for patients often translated into loss of income for someone with greater clout.
 
 ## Chapter 5 - The Age of Medical Devices
 
