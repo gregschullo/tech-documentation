@@ -30,7 +30,7 @@ const siteConfig = {
   //   baseUrl: '/<repository name>/',
 
   // Used for publishing and more
-  projectName: 'documentation',
+  projectName: 'tech documentation',
   organizationName: 'gregschullo',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -42,7 +42,7 @@ const siteConfig = {
     {doc: 'networking/osi-model', label: 'Networking'},
     {doc: 'dashboarding/grafana-index', label: 'Dashboarding'}, 
     {doc: 'monitoring/prometheus-index', label: 'Monitoring'},
-    {doc: 'container-platforms/kubernetes-index', label: 'Containerization Platforms'},   
+    {doc: 'container-platforms/kubernetes/kubernetes-index', label: 'Containerization Platforms'},   
     {doc: 'sre/availability/meaningful-availability', label: 'SRE'},
     {doc: 'books/phoenix-project', label: 'Books'},
     {blog: true, label: 'Blog'},
