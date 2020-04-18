@@ -28,17 +28,17 @@ A computer program is a list of "instructions" to be "executed" by a computer. I
 
 ## Javascript Functions and Events
 
-A Javascript function is a block of Javascript code that can be executed when "called" for. For example, a function can be called when an event occurs. You can use any number of scripts in an HTML document. Scripts can be placed in the <head>, <body>, or in both sections of an HTML page between <script> tags.
+A Javascript function is a block of Javascript code that can be executed when "called" for. For example, a function can be called when an event occurs. You can use any number of scripts in an HTML document. Scripts can be placed in the `<head>`, `<body>`, or in both sections of an HTML page between `<script>` tags.
 
-* Placing scripts at the bottom of the <body> element improves the display speed because script compilation slows down the display.
+* Placing scripts at the bottom of the `<body>` element improves the display speed because script compilation slows down the display.
 
 ## External Javascript
 
 * Scripts can be placed in external files
 * External scripts are practical when the same code is used in many different web pages
 * Javascript files have the file extension .js
-* To use an external script, put the name of the script file in the src (source) attribute of a <script> tag
-  * Example: <script src ="myScript.js"></script>
+* To use an external script, put the name of the script file in the src (source) attribute of a `<script>` tag
+  * Example: `<script src ="myScript.js"></script>`
 * Placing scripts in external files has some advantages
   * It separates HTML and code
   * It makes HTML and Javascript easier to read and maintain

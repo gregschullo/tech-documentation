@@ -48,7 +48,7 @@ Standard Structure:
 
 How to run:  
 
-- Ad-hoc - Call directly from the command line. Ansible \<inventory> -m
+- Ad-hoc - Call directly from the command line. Ansible 'inventory' -m
 - Playbook - ansible-playbook
 - Automation Framework - ansible tower
 
@@ -61,7 +61,7 @@ Dry run for ad-hoc commands and Playbooks
 ## Inventory
 
 - Defaults to being saved in /etc/ansible/hosts  
-- Specify different inventory using i\<path> option on the command line  
+- Specify different inventory using <path option on the command line  
 - The preferred practice in Ansible is to not store variables in the main inventory file.
 
 ## YAML

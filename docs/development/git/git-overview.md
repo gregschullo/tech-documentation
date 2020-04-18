@@ -201,19 +201,19 @@ guides.github.com/introduction/flow/ - An interactive review of the GitHub Workf
 
 git init  -- Initialized a new Git Repo
 
-git clone  <github url> --- Clones a Github repo to your local repo
+git clone  'github url' --- Clones a Github repo to your local repo
 
 git remote –v --- Displays communication path from the local to GitHub repos
 
 git status  --- Displays the status of modified files to be committed
 
-git add <filename> --- Prepares a specific file to be committed from your local repo
+git add 'filename' --- Prepares a specific file to be committed from your local repo
 
 git add *  --- Prepares all of your files in your local repo to be committed
 
 git commit –m ‘add your message’ --- Commits your file to GitHub with a version message
 
-git push origin <branch> --- Uploads  and commits file or files to the GitHub repos
+git push origin 'branch' --- Uploads  and commits file or files to the GitHub repos
 
 git pull
 
@@ -225,15 +225,15 @@ git config --global fetch.prune
 
 git branch --- Lists all branches in current repository
 
-git branch <branch name> --- Creates a new branch
+git branch 'branch name' --- Creates a new branch
 
-git checkout <branch name> --- Checks out branch and allows editing
+git checkout 'branch name' --- Checks out branch and allows editing
 
-git merge <branch name> --- Combines checked out branch back into master branch
+git merge 'branch name' --- Combines checked out branch back into master branch
 
 git branch --merged - see which branches are safe to delete
 
-git branch -d <branch-name> - delete local branch
+git branch -d 'branch-name' - delete local branch
 
 To set pruning the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: 
 
@@ -271,13 +271,13 @@ git rebase (Only use on local commits.)
 
 git reset HEAD~
 
-git reset <commit id>
+git reset 'commit id'
 
 ## Basic Tag Commands
 
 remove remote tags - git ls-remote --tags --refs origin | cut -f2 | xargs git push origin --delete
 
-remove local tags - git push --delete origin <tagname>
+remove local tags - git push --delete origin 'tagname'
 
 ## Github Jekyll
 
@@ -285,15 +285,15 @@ Install Ruby
 
 Install Jekyll
 
-Enable Admin Privileges 
+Enable Admin Privileges  
 
-Open Terminal
+Open Terminal  
 
-Run: 
+Run:  
 
 gem install bundle jekyll
 
-jekyll new <github repository> --force
+jekyll new 'github repository' --force
 
 Example:
 
@@ -395,7 +395,7 @@ Error
 
 Copied
 
-Tip: Your user name and email should match the default account set up in Outlook. A good trick is to start an email and then copy and paste your email address. It will look something like Last, First <you@optum.com>.
+Tip: Your user name and email should match the default account set up in Outlook. A good trick is to start an email and then copy and paste your email address. It will look something like Last, First 'you@optum.com'.
 
 ## Git Config Privacy for Public Repos
 
