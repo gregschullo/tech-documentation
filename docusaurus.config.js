@@ -118,14 +118,6 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // themeConfig: {
-        //   algolia: {
-        //     appId: 'app-id',
-        //     apiKey: 'api-key',
-        //     indexName: 'index-name',
-        //     algoliaOptions: {}, // Optional, if provided by Algolia
-        //   },
-        // },
       },
     ],
   ],
