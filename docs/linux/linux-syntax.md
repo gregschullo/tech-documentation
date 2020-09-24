@@ -369,3 +369,256 @@ j flag is an argument that tells tar to call bzip2
 
 Example: `tar -jcf folder.tb2 folder` - archives and compresses  
 Example: `tar -zxv folder.tb2` - decompresses and extracts  
+
+## Commands (Revisited)
+
+cat - displays the contents of a file
+less - reads a file
+head/tail - reads first 10 lines of a file or last 10 lines of a file
+find - locates files on a system
+grep - searches a string in a file
+sort - organizes text in a file
+cut - manipulates data by columns
+wc - can be used to do a word count on a file
+
+grep -i - flag tells grep not to care about case sensitivity
+grep -in - flag gives line number of search item
+
+- default sort is alphabetical
+- sort -r sorts backwards alphabetical
+- sort -n sorts numerically
+- the power of the cut command comes when using delimiters
+- cut -d " " -f2 file.txt
+  - this command shows the field 2 contents. The space is what separates the fields.
+- wc -c displays character count
+
+## Command Line Pipes
+
+input ---------> Command ----------> Output
+(stdin0)                             (stdin1)  
+
+string commands together with pipes  
+standard output is 1, standard input is 0, standard error is 2  
+
+## I/O Redirection
+
+Redirecting data by using > (greater than)  
+Example: Tail /var/log/messages > logtemp.txt
+
+- this will send the last 10 lines of /var/log/messages to logtemp.txt
+- if a files does not exist, Linux will create a new file to output to.
+- >> (two greater than signs) appends an existing file (adds output to the bottom of an existing file).  
+
+## Regular Expressions (Regex)
+
+\* Matches any character of  
+. Any single character  
+? Matches zero or one of the proceeding characters  
+^ Matches expression if it appears at the beginning  
+$ Matches expression if it appears at the end  
+[nnn] Matches any one character between the braces  
+[^nnn] Matches any expression that doesn't contain any one of the characters specified  
+[n-n] Matches any single character  
+[1-10] Any character between 1 and 1, or 0  
+
+Example: `grep cc$ file.txt`  
+Returns everything that ends in cc in the file.txt file.  
+
+## Basic Text Editors
+
+GNU nano  
+Kate  
+Gnome gedit  
+vim  
+vi  
+
+### nano
+
+ctrl+k - deletes current line  
+ctrl+x - saves file  
+
+### vi
+
+by default, vi opens in command (normal) mode.  
+different modes are command, command line, insert, and replace mode.  
+hitting the i key, insert key, s key, o key, or a key will put vi in insert mode.  
+while in insert mode, you can add, remove, or replace text. You cannot, however, perform any file operations. For example, you cannot save the file in insert mode.  
+navigation within vi is very powerful. You can page up and down with the page up and page down keys and use the home and end keys to navigate to the beginning and end of the line. There are also many more navigation commands you may use.  
+
+vi command mode  
+
+- command line mode - type a colon (:)  
+- save a file with w, example: `:w`  
+- save a file with a new name `:w newfilename.txt`  
+- :wq - saves and quits (exits)  
+- :q - closes the file without saving  
+- :e! - disregards changes made to the file (does not save)  
+
+vi insert mode  
+
+- dw - deletes entire word immediately after your cursor and the space  
+- de - deletes entire word immediately after your cursor without the space  
+- / - searches for string after /  
+
+## Hardware
+
+Processor (Central Processing Unit or CPU)  
+RAM (Random Access Memory)  
+
+- Primary Memory - place on the computer where programs currently in use, store data.  
+- CPU can access data in RAM and is very fast.  
+- RAM is non persistent. Will delete data if power is not sent to RAM every few milliseconds.  
+
+Graphics Cards  
+Mother Boards  
+Power Supply - Converts A/C current to D/C current and sends to various computer components  
+Hard Disks - Magnetic Disks, Solid State Drives  
+Optical Drives - CD/DVD/BlueRay Drives  
+Displays - CRT and LCD Displays  
+
+## Kernel
+
+The Linux Kernel is a Unix-like operating system.  
+Linux was developed and created by Linus Torvalds.  
+The Linux Kernel is the core of any Linux installation.  
+The Kernel is responsible for messaging every piece of software on a running Linux computer.  
+To maintain order on a chaotic Linux system of process, the Kernel imposes order by using hierarchy.  
+When the system boots, typically one process called the init process, starts up the /sbin/init that in turn manages child processes.  
+
+## Processes
+
+Every process has an associated process ID (PID)  
+Every parent process has a parent ID (PPID)  
+We can identify these PIDs and PPIDs with the `ps` command.  
+
+syslog, klog, dmesg  
+./var/log  
+
+- boot.log  
+- cron - Linux scheduling service  
+
+/lib, /usr/lib, /etc, /var/log  
+
+/lib - Linked library files used by binaries in /bin and /usr/bin  
+/usr/lib - Linked library files used by binaries in /bin and /usr/bin  
+/etc - Configuration files for our Linux operating system  
+/var/log - Log files for our Linux operating system  
+
+## Root and Standard Users
+
+Filesystem access controls
+
+- this is accomplished by using users, groups, ownership, and permissions.  
+
+Finger application  
+`yum install -y finger`  
+
+- gives information about a user  
+
+/etc/passwd  
+
+- used for local authentication and contains system users.  
+
+- gid - group ID number  
+- pwck utility - validates that files are in sync.  
+- pwconv utility -  
+
+/etc/shadow  
+
+- system password file  
+
+- sudo - similar to su, but works one command at a time.  
+- who - command run with flags to give information about system and users.  
+- last - user flag will show users last activity.  
+
+System Users
+
+- differences between system users and regular users.  
+
+User IDs
+
+- `id <username>` gives info on user given.  
+
+## User Commands  
+
+User add command - `useradd <username>`
+
+- creates a user with default values  
+- defaults for users added are found and can be edited in the /etc/default/useradd directory  
+- can also print out user defaults using the -D flag - `useradd -D`  
+- /etc/login.defs contains default values for the user when it is being created  
+- /etc/skel contains files that get copied to every new user created  
+  - more info and flags can be found at man useradd  
+
+## Group Commands
+
+/etc/group
+
+- default values for groups
+- /etc/gshadow file stores passwords for groups  
+- common commands are `groupadd`, `groupmod`, and `groupdel`
+
+## File/Directory Permissions and Owners
+
+Permissions, USER, Group, Other  
+drwxrwxr -x . 2 user user  
+-rwxrwxr -x . 2 user user  
+d = directory  
+\- = file  
+r = read  
+w = write  
+x = executable  
+
+rwx (binary permission numbers) or (octal notations)  
+421 -> 7  
+-rwxr-xr-x  
+
+On directories, X means we can change directories into it (cd)  
+On files, X means we can execute it.  
+
+-rw-r--r--  
+420400400  
+6  4  4  -> 644  
+
+Setting permissions using the octal notation:  
+`chmod 555 <filename>`  
+or  
+`chmod ugo+w <filename>` (this adds write permissions to the user, group, and other)  
+
+Before you can change the permissions of a file, you first either need to already be the owner of a file or you need to be the root account.  
+To change ownership of a file, you use the chown command.  
+`chown username.groupname <filename>`  
+Example: `chown stephen.accounting filename.txt`  
+
+Removing Permissions  
+
+- chmod o-r filename.txt (removes read permissions from the others)  
+- chmod g-w filename.txt (removes write permissions from groups)  
+- chmod u-r filename.txt (removes read permissions from users)  
+
+Adding Permissions  
+
+- chmod o+r filename.txt (adds read permissions to others)  
+- chmod g+w filename.txt (adds write permissions to groups)  
+- chmod u+r filename.txt (adds read permissions to users)  
+
+## Symbolic Links
+
+Creates a pointer or link to an actual file.  
+ln -s file.txt myfilelink.txt  
+link -> symbolic -> file linking to -> new file link name  
+
+Useful for linking to files deep in the system  
+
+## System Files, Special Files, and Sticky Bits  
+
+Special directories and files  
+
+- /var - contains files that change often, such as mail, logs, etc  
+- /var/tmp - contains files that do not get deleted on reboot  
+- /tmp - contains temporary files that get deleted on reboot.  
+  - Every user on a Linux system can write to or delete files on /tmp  
+
+The problem with temporary folders that have 777 permissions.  
+
+- We can add sticky bits to a folder which makes it so only users that create their own files and folders can delete theirs and not other users - even if the folder has 777 (rwx rwx rwx)  

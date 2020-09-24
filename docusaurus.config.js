@@ -8,34 +8,35 @@ module.exports = {
   projectName: 'tech-documentation', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Tech Doc',
+      title: '',
       logo: {
         alt: 'Book',
         src: 'img/book.png',
       },
       links: [
         {
-          to: 'docs/development/development-index',
+          to: 'docs/dev/development',
           activeBasePath: 'docs',
-          label: 'Development',
+          label: 'Dev',
           position: 'left',
+          items: 
+          [
+            {
+            label: 'Python',
+            to: 'docs/dev/python/python-overview',
+            },
+          ],
         }, 
         {
-          to: 'docs/networking/osi-model', 
+          to: 'docs/networking/networking-overview', 
           activeBasePath: 'docs',
           label: 'Networking',
           position: 'left',
         },
         {
-          to: 'docs/visualization/grafana-index', 
+          to: 'docs/monitoring-alerting/', 
           activeBasePath: 'docs',
-          label: 'Visualization',
-          position: 'left',
-        },
-        {
-          to: 'docs/monitoring/prometheus-index', 
-          activeBasePath: 'docs',
-          label: 'Monitoring',
+          label: 'Monitoring and Alerting',
           position: 'left',
         },
         {
@@ -51,10 +52,25 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/books/phoenix-project', 
+          to: 'docs/books/tech-books/phoenix-project', 
           activeBasePath: 'docs',
           label: 'Books',
           position: 'left',
+          items: 
+          [
+            {
+              label: 'Tech',
+              to: 'docs/books/tech-books/google-site-reliability-engineering',
+            },
+            {
+              label: 'Healthcare',
+              to: 'docs/books/healthcare-books/an-american-sickness',
+            },
+            {
+              label: 'Business',
+              to: 'docs/books/business-books/the-checklist-manifesto',
+            },
+          ],
         },
         {
           blog: true, 
@@ -70,39 +86,6 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      // links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Style Guide',
-        //       to: 'docs/doc1',
-        //     },
-        //     {
-        //       label: 'Second Doc',
-        //       to: 'docs/doc2',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Social',
-        //   items: [
-        //     {
-        //       label: 'Instagram',
-        //       href: 'https://www.instagram.com/greg.schullo/',
-        //     },
-        //   ],
-        // },
-      // ],
       copyright: `Copyright © Greg Schullo ${new Date().getFullYear()}`,
     },
   },
