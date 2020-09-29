@@ -8,38 +8,44 @@ import styles from './styles.module.css';
 
 const features = [
 {
-  title: <a href='https://github.com/gregschullo'>GitHub</a>,
-  // imageUrl: 'img/github-icon.svg',
-  // description: (
-  //   <>
-  //   </>
-  // ),
+  title: <></>,
+  imageUrl: 'img/instagram.png',
+  imageLink: 'https://www.instagram.com/greg.schullo/',
+  description: (
+    <>
+    </>
+  ),
 },
   {
-    title: <a href='https://www.linkedin.com/in/gregory-schullo/'>LinkedIn</a>,
-    // imageUrl: 'img/linkedin-icon.jpg',
-    // description: (
-    //   <>
-    //   </>
-    // ),
+    title: <></>,
+    imageUrl: 'img/linkedin.png',
+    imageLink: 'https://www.linkedin.com/in/gregory-schullo/',
+    description: (
+      <>
+      </>
+    ),
   },
+
   {
-    title: <a href="https://www.instagram.com/greg.schullo/">Instagram</a>,
-    // imageUrl: 'img/instagram-icon.jpg',
-    // description: (
-    //   <>
-    //   </>
-    // ),
+    title: <></>,
+    imageUrl: 'img/twitter.png',
+    imageLink: 'https://twitter.com/gregschullo',
+    description: (
+      <>
+      </>
+    ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({imageUrl, title, description, imageLink}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames('col col--4', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
+          <Link to={imageLink} target="_blank">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
+          </Link>
         </div>
       )}
       <h3>{title}</h3>
@@ -81,7 +87,7 @@ function Home() {
           </div> */}
         </div>
       </header>
-      {/* <main>
+      <main>
         {features && features.length && (
           <section className={styles.features}>
             <div className="container">
@@ -93,7 +99,7 @@ function Home() {
             </div>
           </section>
         )}
-      </main> */}
+      </main>
     </Layout>
   );
 }

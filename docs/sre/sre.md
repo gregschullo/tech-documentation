@@ -1,5 +1,5 @@
 ---
-id: sre-index
+id: sre
 title: SRE
 ---
 

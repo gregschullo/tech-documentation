@@ -1,8 +1,8 @@
 module.exports = {
   alerting: 
-  {
-
-  },
+  [
+    'monitoring-alerting/alerting/alerting-strategy',
+  ],
   angular: 
   {
 
@@ -12,9 +12,9 @@ module.exports = {
 
   },
   availability: 
-  {
-
-  },
+  [
+    'sre/availability/meaningful-availability',
+  ],
   docker: 
   {
 
@@ -27,6 +27,10 @@ module.exports = {
   {
 
   },
+  incidents:
+  [
+    'sre/incidents/incident-response',
+  ],
   java: 
   {
 
@@ -44,9 +48,11 @@ module.exports = {
 
   },
   monitoring: 
-  {
-
-  },
+  [
+    'monitoring-alerting/monitoring/monitoring-pattern',
+    'monitoring-alerting/monitoring/the-four-golden-signals',
+    'monitoring-alerting/monitoring/monitoring-glossary',
+  ],
   networking: 
   [
     'networking/networking-overview',
@@ -75,10 +81,20 @@ module.exports = {
       ],
     },
   ],
+  reliability:
+  [
+    'sre/reliability/reliability-roadmap'
+  ],
   ruby: 
   {
 
   },
+  sre:
+  [
+    'sre/sre',
+    'sre/new-relic-sre',
+    'sre/be-a-better-sre'
+  ],
   techbooks: 
   {
     Google:

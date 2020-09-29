@@ -34,10 +34,21 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/monitoring-alerting/', 
+          to: 'docs/monitoring-alerting/monitoring-alerting', 
           activeBasePath: 'docs',
           label: 'Monitoring and Alerting',
           position: 'left',
+          items:
+          [
+            {
+              label: 'Monitoring',
+              to: 'docs/monitoring-alerting/monitoring/monitoring-pattern',
+            },
+            {
+              label: 'Alerting',
+              to: 'docs/monitoring-alerting/alerting/alerting-strategy',
+            },
+          ],
         },
         {
           to: 'docs/containerization/kubernetes/kubernetes-index',
@@ -46,10 +57,25 @@ module.exports = {
           position: 'left',
         },   
         {
-          to: 'docs/sre/availability/meaningful-availability', 
+          to: 'docs/sre/sre', 
           activeBasePath: 'docs',
           label: 'SRE',
           position: 'left',
+          items: 
+          [
+            {
+            label: 'Availability',
+            to: 'docs/sre/availability/meaningful-availability',
+            },
+            {
+              label: 'Reliability',
+              to: 'docs/sre/reliability/reliability-roadmap',
+            },
+            {
+              label: 'Incident Response',
+              to: 'docs/sre/incidents/incident-response',
+            },
+          ],
         },
         {
           to: 'docs/books/tech-books/phoenix-project', 
@@ -75,17 +101,18 @@ module.exports = {
         {
           blog: true, 
           label: 'Blog', 
+          to: 'blog',
           position: 'right'
-        },
-        {
-          href: 'https://github.com/gregschullo',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
     footer: {
-      style: 'dark',
+    logo: {
+      alt: 'GitHub',
+      src: 'img/github.png',
+      href: 'https://github.com/gregschullo',
+    },
+      //style: 'dark',
       copyright: `Copyright © Greg Schullo ${new Date().getFullYear()}`,
     },
   },
