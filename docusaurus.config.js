@@ -7,6 +7,10 @@ module.exports = {
   organizationName: 'gregschullo', // Usually your GitHub org/user name.
   projectName: 'tech-documentation', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+    },
     navbar: {
       title: '',
       logo: {
@@ -28,34 +32,39 @@ module.exports = {
           ],
         }, 
         {
-          to: 'docs/networking/networking-overview', 
+          to: 'docs/infrastructure/infrastructure-overview', 
           activeBasePath: 'docs',
-          label: 'Networking',
+          label: 'Infrastructure',
           position: 'left',
+          items:
+          [
+            {
+              label: 'Networking',
+              to: 'docs/infrastructure/networking/networking-overview'
+            },
+            {
+              label: 'Containerization',
+              to: 'docs/infrastructure/containerization/kubernetes/kubernetes-index'
+            },
+          ],
         },
         {
-          to: 'docs/monitoring-alerting/monitoring-alerting', 
+          to: 'docs/monitor-alert/monitoring-alerting', 
           activeBasePath: 'docs',
-          label: 'Monitoring and Alerting',
+          label: 'Monitor and Alert',
           position: 'left',
           items:
           [
             {
               label: 'Monitoring',
-              to: 'docs/monitoring-alerting/monitoring/monitoring-pattern',
+              to: 'docs/monitor-alert/monitor/monitoring-pattern',
             },
             {
               label: 'Alerting',
-              to: 'docs/monitoring-alerting/alerting/alerting-strategy',
+              to: 'docs/monitor-alert/alert/alerting-strategy',
             },
           ],
-        },
-        {
-          to: 'docs/containerization/kubernetes/kubernetes-index',
-          activeBasePath: 'docs',
-          label: 'Containerization',
-          position: 'left',
-        },   
+        },  
         {
           to: 'docs/sre/sre', 
           activeBasePath: 'docs',
@@ -77,6 +86,23 @@ module.exports = {
             },
           ],
         },
+        {
+          to: 'docs/os/os-overview',
+          activeBasePath: 'docs',
+          label: 'OS',
+          position: 'left',
+          items:
+          [
+            {
+              label: 'Linux',
+              to: 'docs/os/linux/linux-overview'
+            },
+            {
+              label: 'MacOS',
+              to: 'docs/os/macos/macos-overview'
+            }
+          ],
+        }, 
         {
           to: 'docs/books/tech-books/phoenix-project', 
           activeBasePath: 'docs',
@@ -102,6 +128,11 @@ module.exports = {
           blog: true, 
           label: 'Blog', 
           to: 'blog',
+          position: 'right'
+        },
+        {
+          label: 'Résumé', 
+          to: 'docs/greg-schullo-resume',
           position: 'right'
         },
       ],
