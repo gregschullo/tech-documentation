@@ -9,21 +9,14 @@ Processed
 
 Emphasis
 
- 
 
 Emphasize or itallics
 
 *Emphasize* _emphasize_
 
- 
-
- 
-
 Bold or Strong
 
 **Strong** __Strong__
-
- 
 
 Some WordPress.com themes may have different formatting for these styles
 
@@ -43,8 +36,6 @@ Some text with [a link][1] and
 
 another [link][2].
 
- 
-
 [1]: http://example.com/ "Title"
 
 [2]: http://example.org/ "Title"
@@ -55,7 +46,7 @@ Some text with a link and another link.
 
 Inline Images
 
-Logo: [Alt](/wp.png "Title")
+`Logo: [Alt](/wp.png "Title")`
 
 The “Alt” text (alternative text) makes images accessible to visually impaired
 
@@ -65,15 +56,13 @@ Referenced Images
 
 Smaller logo: [Alt][1]
 
- 
-
-[1]: /wp-smaller.png "Title"
+`[1]: /wp-smaller.png "Title"`
 
 Smaller logo: 
 
 Linked Images
 
-Linked logo: [[alt text](/wp-smaller.png)]
+`Linked logo: [[alt text](/wp-smaller.png)]`
 
 (http://wordpress.com/ "Title")
 
@@ -91,13 +80,7 @@ Footnotes will be added to the bottom of the document, with a link back to the o
 
 I have more 1 to say up here.
 
- 
-
- 
-
 Line breaks
-
-<\br>
 
 \
 
