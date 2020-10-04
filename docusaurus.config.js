@@ -6,6 +6,7 @@ module.exports = {
   favicon: 'img/book.png',
   organizationName: 'gregschullo', // Usually your GitHub org/user name.
   projectName: 'tech-documentation', // Usually your repo name.
+  plugins: [require.resolve('docusaurus-lunr-search')],
   themeConfig: {
     announcementBar: {
       id: 'announcement', // Any value that will identify this message.
@@ -182,8 +183,5 @@ module.exports = {
         },
       },
     ],
-  ],
-  plugins: [
-    'docusaurus-lunr-search'
   ],
 };
