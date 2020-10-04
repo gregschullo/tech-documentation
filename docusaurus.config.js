@@ -7,9 +7,30 @@ module.exports = {
   organizationName: 'gregschullo', // Usually your GitHub org/user name.
   projectName: 'tech-documentation', // Usually your repo name.
   themeConfig: {
+    announcementBar: {
+      id: 'announcement', // Any value that will identify this message.
+      content:
+        'Sample Announcement Message',
+      backgroundColor: '#fafbfc', // Defaults to `#fff`.
+      textColor: '#091E42', // Defaults to `#000`.
+      isCloseable: false, // Defaults to `true`.
+    },
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
+      respectPrefersColorScheme: true,
+      switchConfig: {
+        darkIcon: '🌙',
+        lightIcon: '\u2600',
+        // React inline style object
+        // see https://reactjs.org/docs/dom-elements.html#style
+        darkIconStyle: {
+          marginLeft: '2px',
+        },
+        lightIconStyle: {
+          marginLeft: '1px',
+        },
+      },
     },
     navbar: {
       title: '',
