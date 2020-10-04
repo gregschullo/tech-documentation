@@ -14,7 +14,7 @@ The intention of this document is to help understand how to build a foundation f
 [Best Practices for Incident Commanders](#best-practices-for-incident-commanders)  
 [Other Roles in Incident Command](#other-roles-in-incident-command)  
 [Incident Response at Scale](#incident-response-at-scale)  
-[Incident Response Pitfalls and How to Avoid Them](incident-response-pitfalls-and-how-to-avoid-them)  
+[Incident Response Pitfalls and How to Avoid Them](#incident-response-pitfalls-and-how-to-avoid-them)  
 [Follow Up and Postmortem](#follow-up-and-postmortem)  
 [Summary](#summary)  
 [Other Incident Response Resources](#other-incident-response-resources)  
