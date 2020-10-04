@@ -38,7 +38,7 @@ module.exports = {
         alt: 'Book',
         src: 'img/book.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/dev/development',
           activeBasePath: 'docs',
