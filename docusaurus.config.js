@@ -8,30 +8,18 @@ module.exports = {
   projectName: 'tech-documentation', // Usually your repo name.
   plugins: [require.resolve('docusaurus-lunr-search')],
   themeConfig: {
-    announcementBar: {
-      id: 'announcement', // Any value that will identify this message.
-      content:
-        'Sample Announcement Message',
-      backgroundColor: '#fafbfc', // Defaults to `#fff`.
-      textColor: '#091E42', // Defaults to `#000`.
-      isCloseable: false, // Defaults to `true`.
-    },
+    // announcementBar: {
+    //   id: 'announcement', // Any value that will identify this message.
+    //   content:
+    //     'Sample Announcement Message',
+    //   backgroundColor: '#fafbfc', // Defaults to `#fff`.
+    //   textColor: '#091E42', // Defaults to `#000`.
+    //   isCloseable: true, // Defaults to `true`.
+    // },
     colorMode: {
-      defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
-      switchConfig: {
-        darkIcon: '🌙',
-        lightIcon: '\u2600',
-        // React inline style object
-        // see https://reactjs.org/docs/dom-elements.html#style
-        darkIconStyle: {
-          marginLeft: '2px',
-        },
-        lightIconStyle: {
-          marginLeft: '1px',
-        },
-      },
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: '',
