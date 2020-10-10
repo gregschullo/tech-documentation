@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.65">
 <title data-react-helmet="true">Python Syntax | Documentation</title><meta data-react-helmet="true" name="docsearch:version" content="current,latest"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Python Syntax | Documentation"><meta data-react-helmet="true" name="description" content="Basic Syntax"><meta data-react-helmet="true" property="og:description" content="Basic Syntax"><meta data-react-helmet="true" property="og:url" content="https://gregschullo.github.io/tech-documentation/docs/dev/python/python-syntax"><link data-react-helmet="true" rel="shortcut icon" href="/tech-documentation/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://gregschullo.github.io/tech-documentation/docs/dev/python/python-syntax"><link rel="stylesheet" href="/tech-documentation/styles.4d60fcff.css">
-<link rel="preload" href="/tech-documentation/styles.813dab04.js" as="script">
-<link rel="preload" href="/tech-documentation/runtime~main.7fca388a.js" as="script">
-<link rel="preload" href="/tech-documentation/main.40eb5eb7.js" as="script">
-<link rel="preload" href="/tech-documentation/1.d69e56d9.js" as="script">
-<link rel="preload" href="/tech-documentation/2.6aaa42f5.js" as="script">
-<link rel="preload" href="/tech-documentation/3.e97bc681.js" as="script">
-<link rel="preload" href="/tech-documentation/1be78505.d897b31f.js" as="script">
-<link rel="preload" href="/tech-documentation/107.3538b9c7.js" as="script">
-<link rel="preload" href="/tech-documentation/935f2afb.c2b397ec.js" as="script">
-<link rel="preload" href="/tech-documentation/17896441.044eaceb.js" as="script">
-<link rel="preload" href="/tech-documentation/291f3c9d.90675910.js" as="script">
+<link rel="preload" href="/tech-documentation/styles.29531567.js" as="script">
+<link rel="preload" href="/tech-documentation/runtime~main.2c4d938f.js" as="script">
+<link rel="preload" href="/tech-documentation/main.69744f1c.js" as="script">
+<link rel="preload" href="/tech-documentation/1.3ff23062.js" as="script">
+<link rel="preload" href="/tech-documentation/2.e880b264.js" as="script">
+<link rel="preload" href="/tech-documentation/3.05d485d4.js" as="script">
+<link rel="preload" href="/tech-documentation/1be78505.7ee108ab.js" as="script">
+<link rel="preload" href="/tech-documentation/105.f7378633.js" as="script">
+<link rel="preload" href="/tech-documentation/935f2afb.19f1a1f8.js" as="script">
+<link rel="preload" href="/tech-documentation/17896441.df9e8cb1.js" as="script">
+<link rel="preload" href="/tech-documentation/291f3c9d.cf1070be.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"dark")}()</script><div id="__docusaurus">
@@ -26,16 +26,16 @@ The result of the expression 7 % 3 would return 1, because 7 is not evenly divis
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">            • Variables cannot start with numbers.</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">            • Variables cannot contain spaces.</span></div></div></div></div></div><p>valueError - Python automatically assigns a variable the appropriate datatype</p><p>Comments</p><p>Comments in python are expressed using the pound/hashtag symbol ( # )</p><p>Simple Operations</p><p>Python has the capability of carrying out calculations.</p><ul><li>Addition</li></ul><ul><li>Subtraction</li></ul><ul><li>Multiplication</li></ul><p>/ Division</p><p>// Floor Division (Quotient)</p><p>% Modulo (Remainder)</p><p>( ) Parentheses - Order of Operations</p><p>In place operators allow you to write code like &#x27;x = x + 3&#x27; more concisely, as &#x27;x += 3&#x27;. </p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">            • It&#x27;s possible with other operators such as -, *, / and % as well.</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">            • In place operators are possible with strings as well.</span></div></div></div></div></div><p>New Line</p><p>\n</p><p>You can also use three sets of quotes and new lines created by enter to create new lines.</p><p>Input and Output</p><p>Usually, programs take input and process it to produce output. In Python, you can use the print function to produce output. This displays a textual representation of something to the screen.</p><p>To get input from the user in Python, you can use the intuitively named input function. The input function prompts the user for input and returns (outputs) what they enter as a string.</p><p>Type Conversion</p><p>In Python, it&#x27;s impossible to complete certain operations due to the types involved. For instance, you can&#x27;t add two strings containing the numbers 2 and 3 together to produce the integer 5, as the operation will be performed on strings, resulting in &#x27;23&#x27; </p><p>The solution to this is type conversion.</p><p>Example:</p><p>&#x27;2&#x27; + &#x27;3&#x27;</p><p>&#x27;23&#x27;</p><p>int(&#x27;2&#x27;)+int(&#x27;3&#x27;)</p><p>5</p><p>You can also turn user input (which is a string) to numbers (integers or floats), to allow for the performance of calculations. </p><p>Example:</p><p>float(input(&#x27;Enter a number.&#x27;))+float(input(&#x27;Enter another number.&#x27;))</p><p>In-Place Operators </p><p>datetime</p><p>datetime.now()</p><p>now function contains .year, .month, .day, .hour, .minute, and .second</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/facebook/docusaurus/edit/master/website/docs/dev/python/python-syntax.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#basic-syntax" class="table-of-contents__link">Basic Syntax</a><ul><li><a href="#print-function---print" class="table-of-contents__link">Print Function - print()</a></li><li><a href="#comments" class="table-of-contents__link">Comments</a></li><li><a href="#variables" class="table-of-contents__link">Variables</a></li><li><a href="#integers" class="table-of-contents__link">Integers</a></li><li><a href="#floating-point-numbers" class="table-of-contents__link">Floating Point Numbers</a></li><li><a href="#arithmetic-operations" class="table-of-contents__link">Arithmetic Operations</a></li><li><a href="#exponentiation" class="table-of-contents__link">Exponentiation</a></li><li><a href="#integer-division" class="table-of-contents__link">Integer Division</a></li><li><a href="#plus-equals-operator" class="table-of-contents__link">Plus-Equals Operator</a></li><li><a href="#strings" class="table-of-contents__link">Strings</a></li><li><a href="#string-concatenation" class="table-of-contents__link">String Concatenation</a></li><li><a href="#error-notification" class="table-of-contents__link">Error Notification</a></li><li><a href="#syntaxerror" class="table-of-contents__link">SyntaxError</a></li><li><a href="#nameerror" class="table-of-contents__link">NameError</a></li><li><a href="#zerodivisionerror" class="table-of-contents__link">ZeroDivisionError</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/tech-documentation/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
-<script src="/tech-documentation/styles.813dab04.js"></script>
-<script src="/tech-documentation/runtime~main.7fca388a.js"></script>
-<script src="/tech-documentation/main.40eb5eb7.js"></script>
-<script src="/tech-documentation/1.d69e56d9.js"></script>
-<script src="/tech-documentation/2.6aaa42f5.js"></script>
-<script src="/tech-documentation/3.e97bc681.js"></script>
-<script src="/tech-documentation/1be78505.d897b31f.js"></script>
-<script src="/tech-documentation/107.3538b9c7.js"></script>
-<script src="/tech-documentation/935f2afb.c2b397ec.js"></script>
-<script src="/tech-documentation/17896441.044eaceb.js"></script>
-<script src="/tech-documentation/291f3c9d.90675910.js"></script>
+<script src="/tech-documentation/styles.29531567.js"></script>
+<script src="/tech-documentation/runtime~main.2c4d938f.js"></script>
+<script src="/tech-documentation/main.69744f1c.js"></script>
+<script src="/tech-documentation/1.3ff23062.js"></script>
+<script src="/tech-documentation/2.e880b264.js"></script>
+<script src="/tech-documentation/3.05d485d4.js"></script>
+<script src="/tech-documentation/1be78505.7ee108ab.js"></script>
+<script src="/tech-documentation/105.f7378633.js"></script>
+<script src="/tech-documentation/935f2afb.19f1a1f8.js"></script>
+<script src="/tech-documentation/17896441.df9e8cb1.js"></script>
+<script src="/tech-documentation/291f3c9d.cf1070be.js"></script>
 </body>
 </html>
