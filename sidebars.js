@@ -29,7 +29,7 @@ module.exports = {
   },
   incidents:
   [
-    'sre/incidents/incident-response',
+    
   ],
   java: 
   {
@@ -83,7 +83,7 @@ module.exports = {
   ],
   reliability:
   [
-    'sre/reliability/reliability-roadmap'
+  
   ],
   ruby: 
   {

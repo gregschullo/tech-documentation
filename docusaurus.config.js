@@ -7,6 +7,7 @@ module.exports = {
   organizationName: 'gregschullo', // Usually your GitHub org/user name.
   projectName: 'tech-documentation', // Usually your repo name.
   plugins: [require.resolve('docusaurus-lunr-search')],
+  onbrokenlinks: 'ignore',
   themeConfig: {
     // announcementBar: {
     //   id: 'announcement', // Any value that will identify this message.
