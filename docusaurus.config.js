@@ -22,7 +22,7 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
     },
     navbar: {
       title: '',
@@ -30,6 +30,7 @@ module.exports = {
         alt: 'Book',
         src: 'img/book.png',
       },
+      style: 'primary',
       items: [
         {
           to: 'docs/dev/development',
@@ -166,8 +167,6 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

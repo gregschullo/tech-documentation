@@ -67,26 +67,6 @@ function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p> */}
           <h1 style={{ color: 'white'}}>{siteConfig.title}</h1>
           <p style={{ color: 'white'}}>{siteConfig.tagline}</p>
-          {/* <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={'https://www.instagram.com/greg.schullo/'}>
-              Instagram
-            </Link>
-          </div>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={'https://www.linkedin.com/in/gregory-schullo/'}>
-              LinkedIn
-            </Link>
-          </div> */}
         </div>
       </header>
       <main>
