@@ -1,8 +1,10 @@
 module.exports = {
   title: 'Documentation',
   tagline: 'Tech Documentation and Writing',
-  url: 'https://gregschullo.github.io',
-  baseUrl: '/tech-documentation/',
+  //url: 'https://gregschullo.github.io',
+  url: 'https://docs.gregschullo.io',
+  //baseUrl: '/tech-documentation/',
+  baseUrl: '/',
   favicon: 'img/book.png',
   organizationName: 'gregschullo', // Usually your GitHub org/user name.
   projectName: 'tech-documentation', // Usually your repo name.
