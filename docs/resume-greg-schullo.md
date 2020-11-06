@@ -1,6 +1,6 @@
 ---
-id: greg-schullo-resume
-title: Resume
+id: resume-greg-schullo
+title: Résumé - Greg Schullo
 ---
 
 Gregory Jerome Schullo  
@@ -18,7 +18,9 @@ B.B.A - Management of Information Systems - University of Minnesota Duluth - Sum
 
 - Support the MyUHC Application and drive resiliency best practices
 - Implement Telemetry Monitoring for various enterprise applications
-- Support Change Data Capture services and drive performance and resiliency efforts
+- Support Change Data Capture services and team with Site Reliability Engineering efforts such as improving monitoring, alerting, incident response, reliability, performance, and driving DevOps culture
+- Improve automation surrounding Change Data Capture infrastructure and processes through CI/CD practices and leveraging various APIs
+- Create technical documentation and writings to support self-service capabilities and scalability within the Change Data Capture tools and platform
 
 #### Application Performance Management Administrator | August 2014 to September 2019  
 
@@ -32,7 +34,7 @@ B.B.A - Management of Information Systems - University of Minnesota Duluth - Sum
 
 ### Essentia Health
 
-#### Business Intelligence Analyst Intern | December 2013 to August 2014 
+#### Business Intelligence Analyst Intern | December 2013 to August 2014
 
 - Write SQL code to extract specific information from databases
 - Generate reports for employees in the Essentia Health system
@@ -51,7 +53,7 @@ B.B.A - Management of Information Systems - University of Minnesota Duluth - Sum
 #### Information Technology Systems and Services Lab Consultant| May 2012 to May 2014  
 
 - Troubleshoot a wide variety of basic technology related issues
-- Assist customers with printing and scanning needs 
+- Assist customers with printing and scanning needs
 - Assist customers with installing software and removing viruses
 - Set up email on mobile devices for students and staff
 - Create tickets to document issues and repairs
@@ -60,12 +62,11 @@ B.B.A - Management of Information Systems - University of Minnesota Duluth - Sum
 
 #### Technology Services| May 2012 to June 2013
 
-- Assist customers with wireless internet and technology troubleshooting 
+- Assist customers with wireless internet and technology troubleshooting
 - Set up sound, video, and lighting for events/shows
-- Provided power for customers and companies for events
+- Provided power for customers and companies during events
 
 ## Awards and Acknowledgements
 
 - Boy Scouts of America Eagle Scout Award
 - National Agency Clearance
-- Optum Site Reliability Engineering Team Embedded Program

@@ -58,7 +58,7 @@ module.exports = {
             },
             {
               label: 'Containerization',
-              to: 'docs/infrastructure/containerization/kubernetes/kubernetes-index'
+              to: 'docs/infrastructure/containerization/kubernetes/kubernetes-overview'
             },
           ],
         },
@@ -96,7 +96,7 @@ module.exports = {
             },
             {
               label: 'Incident Response',
-              to: 'docs/sre/incidents/incident-response',
+              to: 'docs/sre/incident-response/incident-command-system',
             },
           ],
         },
@@ -146,7 +146,7 @@ module.exports = {
         },
         {
           label: 'Résumé', 
-          to: 'docs/greg-schullo-resume',
+          to: 'docs/resume-greg-schullo',
           position: 'right'
         },
       ],

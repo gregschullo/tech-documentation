@@ -27,7 +27,7 @@ module.exports = {
   {
 
   },
-  incidents:
+  incidentresponse:
   [
     
   ],
@@ -44,9 +44,16 @@ module.exports = {
 
   },
   kubernetes: 
-  {
-
-  },
+  [
+    'infrastructure/containerization/kubernetes/kubernetes-overview',
+    {
+      kubectl:
+      [
+        'infrastructure/containerization/kubernetes/kubectl/kubectl-overview',
+        'infrastructure/containerization/kubernetes/kubectl/installing-kubectl',
+      ],
+    },
+  ],
   monitor: 
   [
     'monitor-alert/monitor/monitoring-pattern',
@@ -83,7 +90,8 @@ module.exports = {
   ],
   reliability:
   [
-  
+    'sre/reliability/reliability-roadmap',
+    'sre/reliability/chaos-engineering'
   ],
   ruby: 
   {
@@ -107,12 +115,9 @@ module.exports = {
     ],
   },
   healthcarebooks: 
-  {
-    "Healthcare Industry":
-    [
+  [
     'books/healthcare-books/an-american-sickness',
-    ],
-  },
+  ],
   businessbooks: 
   [
     'books/business-books/the-checklist-manifesto',
