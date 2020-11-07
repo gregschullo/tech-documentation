@@ -14,7 +14,8 @@
     "classnames": "^2.2.6",
     "docusaurus-lunr-search": "^2.1.5",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-onclickoutside": "^6.9.0"
   },
   "browserslist": {
     "production": [

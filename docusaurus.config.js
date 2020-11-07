@@ -11,6 +11,7 @@ module.exports = {
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'ignore',
   themeConfig: {
+    sidebarCollapsible: true,
     // announcementBar: {
     //   id: 'announcement', // Any value that will identify this message.
     //   content:
@@ -24,7 +25,6 @@ module.exports = {
       disableSwitch: true,
       respectPrefersColorScheme: true,
     },
-    hideableSidebar: true,
     navbar: {
       title: '',
       logo: {
