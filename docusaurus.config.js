@@ -6,8 +6,8 @@ module.exports = {
   //baseUrl: '/tech-documentation/',
   baseUrl: '/',
   favicon: 'img/book.png',
-  organizationName: 'gregschullo', // Usually your GitHub org/user name.
-  projectName: 'tech-documentation', // Usually your repo name.
+  organizationName: 'gregschullo', // GitHub org/user name.
+  projectName: 'tech-documentation', // Repository Name.
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'ignore',
   themeConfig: {
@@ -24,6 +24,7 @@ module.exports = {
       disableSwitch: true,
       respectPrefersColorScheme: true,
     },
+    hideableSidebar: true,
     navbar: {
       title: '',
       logo: {

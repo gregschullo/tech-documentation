@@ -7,22 +7,23 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #18191a;
-  /* --ifm-color-primary: #ffffff; */
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(107, 107, 107);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-navbar-link-active-color: #ffffff;
+  --ifm-color-primary: #757575;
+  --ifm-background-color: #18191a;
   --ifm-link-color: #757575;
   --ifm-menu-color-active: #757575;
+  --ifm-menu-link-padding-horizontal: 0.75rem;
+  --ifm-menu-link-padding-vertical: 0.2rem;
   --ifm-footer-background-color: #18191a;
   --ifm-code-font-size: 95%;
 }
 
+.hero {
+  --ifm-hero-background-color: #18191a;
+}
+
+.navbar {
+  --ifm-navbar-background-color: #18191a;
+}
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
