@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Ansible Overview | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Ansible Overview | Documentation"><meta data-react-helmet="true" name="description" content="Playbooks"><meta data-react-helmet="true" property="og:description" content="Playbooks"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/dev/ansible/ansible-overview"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/dev/ansible/ansible-overview"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.1f083bf2.js" as="script">
-<link rel="preload" href="/runtime~main.df4c9a35.js" as="script">
-<link rel="preload" href="/main.d7582758.js" as="script">
-<link rel="preload" href="/1.83eb772d.js" as="script">
-<link rel="preload" href="/2.812473e7.js" as="script">
-<link rel="preload" href="/105.c7aec623.js" as="script">
-<link rel="preload" href="/107.8a9093c0.js" as="script">
-<link rel="preload" href="/935f2afb.10a055f3.js" as="script">
-<link rel="preload" href="/17896441.d11435be.js" as="script">
-<link rel="preload" href="/741a140f.a22fc6bc.js" as="script">
+<link rel="preload" href="/styles.dadbb72c.js" as="script">
+<link rel="preload" href="/runtime~main.8f494cc9.js" as="script">
+<link rel="preload" href="/main.361e1b58.js" as="script">
+<link rel="preload" href="/1.76ecacad.js" as="script">
+<link rel="preload" href="/2.7f5548bc.js" as="script">
+<link rel="preload" href="/109.3a8e71cf.js" as="script">
+<link rel="preload" href="/111.fe77c4a4.js" as="script">
+<link rel="preload" href="/935f2afb.189f401b.js" as="script">
+<link rel="preload" href="/17896441.6195eb4f.js" as="script">
+<link rel="preload" href="/741a140f.13388078.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -93,15 +93,15 @@ Ultimately, lists of things you want to automate across.  </p><ul><li>Playbooks 
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">https://github.com/fboender/ansible-cmdb</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">https://github.com/fboender/ansible-cmdb/blob/master/src/ansible-cmdb.py</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Plural Sight</span></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#playbooks" class="table-of-contents__link">Playbooks</a></li><li><a href="#variables" class="table-of-contents__link">Variables</a></li><li><a href="#inventories" class="table-of-contents__link">Inventories</a></li><li><a href="#modules" class="table-of-contents__link">Modules</a></li><li><a href="#using-ansible" class="table-of-contents__link">Using Ansible</a></li><li><a href="#check-mode" class="table-of-contents__link">Check Mode</a></li><li><a href="#inventory" class="table-of-contents__link">Inventory</a></li><li><a href="#yaml" class="table-of-contents__link">YAML</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
-<script src="/styles.1f083bf2.js"></script>
-<script src="/runtime~main.df4c9a35.js"></script>
-<script src="/main.d7582758.js"></script>
-<script src="/1.83eb772d.js"></script>
-<script src="/2.812473e7.js"></script>
-<script src="/105.c7aec623.js"></script>
-<script src="/107.8a9093c0.js"></script>
-<script src="/935f2afb.10a055f3.js"></script>
-<script src="/17896441.d11435be.js"></script>
-<script src="/741a140f.a22fc6bc.js"></script>
+<script src="/styles.dadbb72c.js"></script>
+<script src="/runtime~main.8f494cc9.js"></script>
+<script src="/main.361e1b58.js"></script>
+<script src="/1.76ecacad.js"></script>
+<script src="/2.7f5548bc.js"></script>
+<script src="/109.3a8e71cf.js"></script>
+<script src="/111.fe77c4a4.js"></script>
+<script src="/935f2afb.189f401b.js"></script>
+<script src="/17896441.6195eb4f.js"></script>
+<script src="/741a140f.13388078.js"></script>
 </body>
 </html>

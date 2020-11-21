@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.66">
+<title data-react-helmet="true">Linux Commands | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Linux Commands | Documentation"><meta data-react-helmet="true" name="description" content="System"><meta data-react-helmet="true" property="og:description" content="System"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/os/linux/linux-commands"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/os/linux/linux-commands"><link rel="stylesheet" href="/styles.5cd1be22.css">
+<link rel="preload" href="/styles.dadbb72c.js" as="script">
+<link rel="preload" href="/runtime~main.8f494cc9.js" as="script">
+<link rel="preload" href="/main.361e1b58.js" as="script">
+<link rel="preload" href="/1.76ecacad.js" as="script">
+<link rel="preload" href="/2.7f5548bc.js" as="script">
+<link rel="preload" href="/109.3a8e71cf.js" as="script">
+<link rel="preload" href="/111.fe77c4a4.js" as="script">
+<link rel="preload" href="/935f2afb.189f401b.js" as="script">
+<link rel="preload" href="/17896441.6195eb4f.js" as="script">
+<link rel="preload" href="/fd6f28dd.9812befa.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--fixed-top navbar--primary"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/dev/development">Dev</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/dev/python/python-overview">Python</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li><a class="dropdown__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/monitor-alert/monitoring-alerting">Monitor and Alert</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/monitor-alert/monitor/monitoring-pattern">Monitoring</a></li><li><a class="dropdown__link" href="/docs/monitor-alert/alert/alerting-strategy">Alerting</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/sre/sre">SRE</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li><a class="dropdown__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li><a class="dropdown__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/os/os-overview">OS</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/os/linux/linux-overview">Linux</a></li><li><a class="dropdown__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li><a class="dropdown__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li><a class="dropdown__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/resume-greg-schullo">Résumé</a><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/dev/development">Dev</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/dev/python/python-overview">Python</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/monitor-alert/monitoring-alerting">Monitor and Alert</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/monitor-alert/monitor/monitoring-pattern">Monitoring</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/monitor-alert/alert/alerting-strategy">Alerting</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/sre/sre">SRE</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/os/os-overview">OS</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-overview">Linux</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/blog">Blog</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/resume-greg-schullo">Résumé</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_1EkI"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">Linux Commands</h1></header><div class="markdown"><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="system"></a>System<a aria-hidden="true" tabindex="-1" class="hash-link" href="#system" title="Direct link to heading">#</a></h2><p>uname -a - display Linux system information<br>
+uname -r - display kernel release information<br>
+uptime - show how long the system has been running + load<br>
+hostname - show system host name<br>
+hostname -i - display the IP address of the host<br>
+last reboot - show system reboot history<br>
+date - show the current date and time<br>
+cal - show this month calendar<br>
+w - display who is online<br>
+whoami - who you are logged in as<br>
+finder user - display information about user  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="hardware"></a>Hardware<a aria-hidden="true" tabindex="-1" class="hash-link" href="#hardware" title="Direct link to heading">#</a></h2><p>dmesg -<br>
+cat /proc/cpuinfo -<br>
+cat /proc/meminfo -<br>
+cat /proc/interrupts -<br>
+lshw -<br>
+lsblk -<br>
+free -m -<br>
+lspci -tv -<br>
+lsusb -tv -<br>
+dmidecode -<br>
+hdparm -i /dev/sda -<br>
+hdparm -tT /dev/sda -<br>
+badblocks -s /dev/sda -  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="users"></a>Users<a aria-hidden="true" tabindex="-1" class="hash-link" href="#users" title="Direct link to heading">#</a></h2><p>id<br>
+last
+who
+groupadd admin
+useradd -c &quot;Firstname Lastname&quot;<br>
+userdel user
+adduser user<br>
+usermod</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file"></a>File<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file" title="Direct link to heading">#</a></h2><p>ls -al
+pwd
+mkdir directory-name<br>
+rm file-name
+rm -r directory-name
+rm -r file-name
+rm -rf directory-name - forcefully remove directory recursively<br>
+cp file1 file2<br>
+cp -r dir1 dir2<br>
+mv file1 file2 -
+ln -s /path/to/file-name link-name
+touch file
+cat &gt; file
+more file
+head file
+tail file
+tail -f file
+gpg -c file
+gpg file.gpg
+wc
+xargs</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="process"></a>Process<a aria-hidden="true" tabindex="-1" class="hash-link" href="#process" title="Direct link to heading">#</a></h2><p>ps
+ps aux | grep &#x27;telnet&#x27;
+pmap
+top
+killpid
+killall proc
+pkill proc
+pkill process-name
+bg
+fg
+fg n</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file-permission"></a>File Permission<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file-permission" title="Direct link to heading">#</a></h2><p>chmod </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="network"></a>Network<a aria-hidden="true" tabindex="-1" class="hash-link" href="#network" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="compression"></a>Compression<a aria-hidden="true" tabindex="-1" class="hash-link" href="#compression" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-package"></a>Install Package<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-package" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-from-source"></a>Install From Source<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-from-source" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="search"></a>Search<a aria-hidden="true" tabindex="-1" class="hash-link" href="#search" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="login"></a>Login<a aria-hidden="true" tabindex="-1" class="hash-link" href="#login" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="disk-usage"></a>Disk Usage<a aria-hidden="true" tabindex="-1" class="hash-link" href="#disk-usage" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="directory-traverse"></a>Directory Traverse<a aria-hidden="true" tabindex="-1" class="hash-link" href="#directory-traverse" title="Direct link to heading">#</a></h2></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#system" class="table-of-contents__link">System</a></li><li><a href="#hardware" class="table-of-contents__link">Hardware</a></li><li><a href="#users" class="table-of-contents__link">Users</a></li><li><a href="#file" class="table-of-contents__link">File</a></li><li><a href="#process" class="table-of-contents__link">Process</a></li><li><a href="#file-permission" class="table-of-contents__link">File Permission</a></li><li><a href="#network" class="table-of-contents__link">Network</a></li><li><a href="#compression" class="table-of-contents__link">Compression</a></li><li><a href="#install-package" class="table-of-contents__link">Install Package</a></li><li><a href="#install-from-source" class="table-of-contents__link">Install From Source</a></li><li><a href="#search" class="table-of-contents__link">Search</a></li><li><a href="#login" class="table-of-contents__link">Login</a></li><li><a href="#disk-usage" class="table-of-contents__link">Disk Usage</a></li><li><a href="#directory-traverse" class="table-of-contents__link">Directory Traverse</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
+<script src="/styles.dadbb72c.js"></script>
+<script src="/runtime~main.8f494cc9.js"></script>
+<script src="/main.361e1b58.js"></script>
+<script src="/1.76ecacad.js"></script>
+<script src="/2.7f5548bc.js"></script>
+<script src="/109.3a8e71cf.js"></script>
+<script src="/111.fe77c4a4.js"></script>
+<script src="/935f2afb.189f401b.js"></script>
+<script src="/17896441.6195eb4f.js"></script>
+<script src="/fd6f28dd.9812befa.js"></script>
+</body>
+</html>

@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Monitoring Pattern | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Monitoring Pattern | Documentation"><meta data-react-helmet="true" name="description" content="Context"><meta data-react-helmet="true" property="og:description" content="Context"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/monitor-alert/monitor/monitoring-pattern"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/monitor-alert/monitor/monitoring-pattern"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.1f083bf2.js" as="script">
-<link rel="preload" href="/runtime~main.df4c9a35.js" as="script">
-<link rel="preload" href="/main.d7582758.js" as="script">
-<link rel="preload" href="/1.83eb772d.js" as="script">
-<link rel="preload" href="/2.812473e7.js" as="script">
-<link rel="preload" href="/105.c7aec623.js" as="script">
-<link rel="preload" href="/107.8a9093c0.js" as="script">
-<link rel="preload" href="/935f2afb.10a055f3.js" as="script">
-<link rel="preload" href="/17896441.d11435be.js" as="script">
-<link rel="preload" href="/05c035e7.6e22d759.js" as="script">
+<link rel="preload" href="/styles.dadbb72c.js" as="script">
+<link rel="preload" href="/runtime~main.8f494cc9.js" as="script">
+<link rel="preload" href="/main.361e1b58.js" as="script">
+<link rel="preload" href="/1.76ecacad.js" as="script">
+<link rel="preload" href="/2.7f5548bc.js" as="script">
+<link rel="preload" href="/109.3a8e71cf.js" as="script">
+<link rel="preload" href="/111.fe77c4a4.js" as="script">
+<link rel="preload" href="/935f2afb.189f401b.js" as="script">
+<link rel="preload" href="/17896441.6195eb4f.js" as="script">
+<link rel="preload" href="/05c035e7.7734ec5d.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -22,15 +22,15 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Where failed requests are requests that are not successful or requests that return successfully, but not in an acceptable amount of time and where total requests are any and all observable requests.</span></div></div></div></div></div><p>Customer Success Rate is a more positive spin on Raw Error Rate. It is the inverse of Raw Error Rate... (1-RER) * 100 = Customer Success as a Percentage</p><p>More information on Raw Error Rate can be found on the <a href="https://hubconnect.uhg.com/groups/optum-system-reliability-engineering-sre/blog/2018/04/03/introducing-raw-error-rate" target="_blank" rel="noopener noreferrer">SRE HubConnect Blog</a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="mean-time-to-detect"></a>Mean Time to Detect<a aria-hidden="true" tabindex="-1" class="hash-link" href="#mean-time-to-detect" title="Direct link to heading">#</a></h2><p>Mean Time to Detect is a metric that measures the average time it takes to discover an issue or problem is occurring. Monitoring is the first and most essential component of having a low Mean Time to Detect as monitoring acts as the &quot;trip wire&quot; or notifier of a problem. The more accurate and detailed your monitoring is, the faster your mean time to detect score is, resulting in resolving issues or potential issues more quickly.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="vital-business-function-vbf-monitoring"></a>Vital Business Function (VBF) Monitoring<a aria-hidden="true" tabindex="-1" class="hash-link" href="#vital-business-function-vbf-monitoring" title="Direct link to heading">#</a></h2><p>These particular functions have been deemed essential to an application and the success of the business. It is extremely important that these functions perform well, so monitoring these should be priority over other functions or services.</p><p>Setting up monitoring to capture metrics surrounding error rate or increases in response time are beneficial to gaining insight quickly to when there may be an issue with a VBF, helping to reduce Mean Time to Detection (MTTD) and Mean Time to Restoration (MTTR). This helps ensure VBFs are performing well and giving a satisfactory customer experience.</p><p>More detailed information on Fundamental Monitoring Theory can be found at:<br>
 <a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/" target="_blank" rel="noopener noreferrer">Google SRE - Monitoring Distributed Systems</a><br>
 <a href="https://new-wiki.optum.com/display/EM/Fundamental+Monitoring+Theory" target="_blank" rel="noopener noreferrer">Optum Fundamental Monitoring Theory</a>  </p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/monitor-alert/monitor/the-four-golden-signals"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">The 4 Golden Signals »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#context" class="table-of-contents__link">Context</a></li><li><a href="#problem" class="table-of-contents__link">Problem</a></li><li><a href="#solution" class="table-of-contents__link">Solution</a></li><li><a href="#monitoring" class="table-of-contents__link">Monitoring</a><ul><li><a href="#goal-of-monitoring" class="table-of-contents__link">Goal of Monitoring</a></li><li><a href="#a-monitoring-system-should" class="table-of-contents__link">A Monitoring System Should</a></li></ul></li><li><a href="#the-4-golden-signals" class="table-of-contents__link">The 4 Golden Signals</a></li><li><a href="#types-of-monitoring" class="table-of-contents__link">Types of Monitoring</a></li><li><a href="#raw-error-rate" class="table-of-contents__link">Raw Error Rate</a></li><li><a href="#mean-time-to-detect" class="table-of-contents__link">Mean Time to Detect</a></li><li><a href="#vital-business-function-vbf-monitoring" class="table-of-contents__link">Vital Business Function (VBF) Monitoring</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
-<script src="/styles.1f083bf2.js"></script>
-<script src="/runtime~main.df4c9a35.js"></script>
-<script src="/main.d7582758.js"></script>
-<script src="/1.83eb772d.js"></script>
-<script src="/2.812473e7.js"></script>
-<script src="/105.c7aec623.js"></script>
-<script src="/107.8a9093c0.js"></script>
-<script src="/935f2afb.10a055f3.js"></script>
-<script src="/17896441.d11435be.js"></script>
-<script src="/05c035e7.6e22d759.js"></script>
+<script src="/styles.dadbb72c.js"></script>
+<script src="/runtime~main.8f494cc9.js"></script>
+<script src="/main.361e1b58.js"></script>
+<script src="/1.76ecacad.js"></script>
+<script src="/2.7f5548bc.js"></script>
+<script src="/109.3a8e71cf.js"></script>
+<script src="/111.fe77c4a4.js"></script>
+<script src="/935f2afb.189f401b.js"></script>
+<script src="/17896441.6195eb4f.js"></script>
+<script src="/05c035e7.7734ec5d.js"></script>
 </body>
 </html>
