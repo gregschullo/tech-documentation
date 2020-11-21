@@ -122,5 +122,6 @@ module.exports = {
   [
     'books/business-books/the-checklist-manifesto',
     'books/business-books/you-win-in-the-locker-room-first',
+    'books/business-books/deep-diversity',
   ],
 };

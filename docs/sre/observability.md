@@ -11,6 +11,7 @@ Observability is a necessary component of an application because with ever incre
 Events - Immutable record of discrete events that happen over time.  
 Metrics - Numbers describing a particular process or activity measured over intervals of time.  
 Tracing - Data that shows which line of code is failing to gain better visibility at the individual user level for events that have occurred.  
+Logs - 
 
 ## Observability vs Monitoring
 

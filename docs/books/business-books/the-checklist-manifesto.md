@@ -3,6 +3,9 @@ id: the-checklist-manifesto
 title: The Checklist Manifesto
 ---
 
+[The Checklist Manifesto](https://www.amazon.com/Checklist-Manifesto-How-Things-Right/dp/0312430000/ref=sr_1_2?crid=WENX8J5Z3ZDB&dchild=1&keywords=checklist+manifesto&qid=1605224226&sprefix=checklist+%2Caps%2C249&sr=8-2)  
+About the Author: [Atul Gawande](http://atulgawande.com/)  
+
 ## Introduction
 
 The reason avoidable failures are common and persistent is because the volume and complexity of what we know has exceeded our individual ability to deliver its benefits correctly, safely, or reliably. Knowledge has both saved us and burdened us.
@@ -39,7 +42,7 @@ Good checklists are precise. They are efficient, to the point, and easy to use e
 
 The power of checklists is limited. They can help experts remember how to manage a complex process or configure a complex machine. They can make priorities clearer and prompt people to function better as a team. __Checklists cannot make anyone follow them.__
 
-Pilots turn to their checklists for two reasons. First, they are trained to do so. They learn from the beginning of flight school that their __memory and judgement are unreliable and that lives depend on their recognizing that fact.__ Second, the checklists have proved their worth - they work. 
+Pilots turn to their checklists for two reasons. First, they are trained to do so. They learn from the beginning of flight school that their __memory and judgement are unreliable and that lives depend on their recognizing that fact.__ Second, the checklists have proved their worth - they work.  
 
 However much pilots are taught to trust their procedures more than their instincts, that doesn't mean they do so blindly.
 
