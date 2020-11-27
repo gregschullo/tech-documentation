@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Linux Commands | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Linux Commands | Documentation"><meta data-react-helmet="true" name="description" content="System"><meta data-react-helmet="true" property="og:description" content="System"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/os/linux/linux-commands"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/os/linux/linux-commands"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.dadbb72c.js" as="script">
-<link rel="preload" href="/runtime~main.8f494cc9.js" as="script">
-<link rel="preload" href="/main.361e1b58.js" as="script">
-<link rel="preload" href="/1.76ecacad.js" as="script">
-<link rel="preload" href="/2.7f5548bc.js" as="script">
-<link rel="preload" href="/109.3a8e71cf.js" as="script">
-<link rel="preload" href="/111.fe77c4a4.js" as="script">
-<link rel="preload" href="/935f2afb.189f401b.js" as="script">
-<link rel="preload" href="/17896441.6195eb4f.js" as="script">
-<link rel="preload" href="/fd6f28dd.9812befa.js" as="script">
+<link rel="preload" href="/styles.c45cf4bd.js" as="script">
+<link rel="preload" href="/runtime~main.3c217eee.js" as="script">
+<link rel="preload" href="/main.ea84b40f.js" as="script">
+<link rel="preload" href="/1.f01745ac.js" as="script">
+<link rel="preload" href="/2.f20838fa.js" as="script">
+<link rel="preload" href="/111.6e8a6045.js" as="script">
+<link rel="preload" href="/113.0cdf6c3f.js" as="script">
+<link rel="preload" href="/935f2afb.7f7bf4e1.js" as="script">
+<link rel="preload" href="/17896441.fb4b96e5.js" as="script">
+<link rel="preload" href="/fd6f28dd.1482fc4c.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
-<nav class="navbar navbar--fixed-top navbar--primary"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/dev/development">Dev</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/dev/python/python-overview">Python</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li><a class="dropdown__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/monitor-alert/monitoring-alerting">Monitor and Alert</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/monitor-alert/monitor/monitoring-pattern">Monitoring</a></li><li><a class="dropdown__link" href="/docs/monitor-alert/alert/alerting-strategy">Alerting</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/sre/sre">SRE</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li><a class="dropdown__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li><a class="dropdown__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/os/os-overview">OS</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/os/linux/linux-overview">Linux</a></li><li><a class="dropdown__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li><a class="dropdown__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li><a class="dropdown__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/resume-greg-schullo">Résumé</a><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/dev/development">Dev</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/dev/python/python-overview">Python</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/monitor-alert/monitoring-alerting">Monitor and Alert</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/monitor-alert/monitor/monitoring-pattern">Monitoring</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/monitor-alert/alert/alerting-strategy">Alerting</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/sre/sre">SRE</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/os/os-overview">OS</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-overview">Linux</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/blog">Blog</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/resume-greg-schullo">Résumé</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_1EkI"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">Linux Commands</h1></header><div class="markdown"><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="system"></a>System<a aria-hidden="true" tabindex="-1" class="hash-link" href="#system" title="Direct link to heading">#</a></h2><p>uname -a - display Linux system information<br>
+<nav class="navbar navbar--fixed-top navbar--primary"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/dev/development">Dev</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/dev/python/python-overview">Python</a></li><li><a class="dropdown__link" href="/docs/dev/javascript/javascript-overview">JavaScript</a></li><li><a class="dropdown__link" href="/docs/dev/ruby/ruby-overview">Ruby</a></li><li><a class="dropdown__link" href="/docs/dev/java/java-overview">Java</a></li><li><a class="dropdown__link" href="/docs/dev/angular/angularjs-overview">Angular</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li><a class="dropdown__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li><li><a class="dropdown__link" href="/docs/infrastructure/cloud/gcp/gcp-overview">Cloud</a></li><li><a class="dropdown__link" href="/docs/infrastructure/automation/terraform/terraform-overview">Automation</a></li><li><a class="dropdown__link" href="/docs/infrastructure/configuration/ansible/ansible-overview">Configuration</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/sre/sre">SRE</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/sre/monitoring/monitoring-pattern">Monitoring</a></li><li><a class="dropdown__link" href="/docs/sre/alerting/alerting-strategy">Alerting</a></li><li><a class="dropdown__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li><a class="dropdown__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li><a class="dropdown__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/os/os-overview">OS</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/os/linux/linux-overview">Linux</a></li><li><a class="dropdown__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li><a class="dropdown__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li><a class="dropdown__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/resume-greg-schullo">Résumé</a><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/dev/development">Dev</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/dev/python/python-overview">Python</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/javascript/javascript-overview">JavaScript</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/ruby/ruby-overview">Ruby</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/java/java-overview">Java</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/angular/angularjs-overview">Angular</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/containerization/kubernetes/kubernetes-overview">Containerization</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/cloud/gcp/gcp-overview">Cloud</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/automation/terraform/terraform-overview">Automation</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/configuration/ansible/ansible-overview">Configuration</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/sre/sre">SRE</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/sre/monitoring/monitoring-pattern">Monitoring</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/alerting/alerting-strategy">Alerting</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/os/os-overview">OS</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-overview">Linux</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/blog">Blog</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/resume-greg-schullo">Résumé</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_1EkI"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">Linux Commands</h1></header><div class="markdown"><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="system"></a>System<a aria-hidden="true" tabindex="-1" class="hash-link" href="#system" title="Direct link to heading">#</a></h2><p>uname -a - display Linux system information<br>
 uname -r - display kernel release information<br>
 uptime - show how long the system has been running + load<br>
 hostname - show system host name<br>
@@ -28,65 +28,98 @@ date - show the current date and time<br>
 cal - show this month calendar<br>
 w - display who is online<br>
 whoami - who you are logged in as<br>
-finder user - display information about user  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="hardware"></a>Hardware<a aria-hidden="true" tabindex="-1" class="hash-link" href="#hardware" title="Direct link to heading">#</a></h2><p>dmesg -<br>
-cat /proc/cpuinfo -<br>
-cat /proc/meminfo -<br>
-cat /proc/interrupts -<br>
-lshw -<br>
-lsblk -<br>
-free -m -<br>
-lspci -tv -<br>
-lsusb -tv -<br>
-dmidecode -<br>
-hdparm -i /dev/sda -<br>
-hdparm -tT /dev/sda -<br>
-badblocks -s /dev/sda -  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="users"></a>Users<a aria-hidden="true" tabindex="-1" class="hash-link" href="#users" title="Direct link to heading">#</a></h2><p>id<br>
-last
-who
-groupadd admin
-useradd -c &quot;Firstname Lastname&quot;<br>
-userdel user
-adduser user<br>
-usermod</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file"></a>File<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file" title="Direct link to heading">#</a></h2><p>ls -al
-pwd
-mkdir directory-name<br>
-rm file-name
-rm -r directory-name
-rm -r file-name
+finder user - display information about user  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="hardware"></a>Hardware<a aria-hidden="true" tabindex="-1" class="hash-link" href="#hardware" title="Direct link to heading">#</a></h2><p>dmesg - detected hardware and boot messages<br>
+cat /proc/cpuinfo - CPU model<br>
+cat /proc/meminfo - hardware memory<br>
+cat /proc/interrupts - lists the number of interrupts per CPU per I/O device<br>
+lshw - displays information on hardware configuration of the system<br>
+lsblk - displays block device related information in Linux<br>
+free -m - used and free memory (m for MB)<br>
+lspci -tv - shows PCI devices<br>
+lsusb -tv - shows USB devices<br>
+dmidecode - show hardware info from the BIOS<br>
+hdparm -i /dev/sda - show info about disk sda<br>
+hdparm -tT /dev/sda - do a read soeed test on disk sda<br>
+badblocks -s /dev/sda - test for unreadable blocks on disk sda  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="users"></a>Users<a aria-hidden="true" tabindex="-1" class="hash-link" href="#users" title="Direct link to heading">#</a></h2><p>id - show the active user id with login and group<br>
+last - show the logins on the system<br>
+who - show who is logged on the system<br>
+groupadd admin - add group &quot;admin&quot;<br>
+useradd -c &quot;Firstname Lastname&quot; - adds new user<br>
+userdel user - deletes &quot;user&quot; user<br>
+adduser user - adds &quot;user&quot; user<br>
+usermod - modify user information  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file"></a>File<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file" title="Direct link to heading">#</a></h2><p>ls -al - display all information about files/directories<br>
+pwd - show the path of current directory<br>
+mkdir directory-name - create a directory<br>
+rm file-name - delete file<br>
+rm -r directory-name - delete directory recursively<br>
+rm -f file-name - forcefully remove a file<br>
 rm -rf directory-name - forcefully remove directory recursively<br>
-cp file1 file2<br>
-cp -r dir1 dir2<br>
-mv file1 file2 -
-ln -s /path/to/file-name link-name
-touch file
-cat &gt; file
-more file
-head file
-tail file
-tail -f file
-gpg -c file
-gpg file.gpg
-wc
-xargs</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="process"></a>Process<a aria-hidden="true" tabindex="-1" class="hash-link" href="#process" title="Direct link to heading">#</a></h2><p>ps
-ps aux | grep &#x27;telnet&#x27;
-pmap
-top
-killpid
-killall proc
-pkill proc
-pkill process-name
-bg
-fg
-fg n</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file-permission"></a>File Permission<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file-permission" title="Direct link to heading">#</a></h2><p>chmod </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="network"></a>Network<a aria-hidden="true" tabindex="-1" class="hash-link" href="#network" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="compression"></a>Compression<a aria-hidden="true" tabindex="-1" class="hash-link" href="#compression" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-package"></a>Install Package<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-package" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-from-source"></a>Install From Source<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-from-source" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="search"></a>Search<a aria-hidden="true" tabindex="-1" class="hash-link" href="#search" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="login"></a>Login<a aria-hidden="true" tabindex="-1" class="hash-link" href="#login" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="disk-usage"></a>Disk Usage<a aria-hidden="true" tabindex="-1" class="hash-link" href="#disk-usage" title="Direct link to heading">#</a></h2><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="directory-traverse"></a>Directory Traverse<a aria-hidden="true" tabindex="-1" class="hash-link" href="#directory-traverse" title="Direct link to heading">#</a></h2></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#system" class="table-of-contents__link">System</a></li><li><a href="#hardware" class="table-of-contents__link">Hardware</a></li><li><a href="#users" class="table-of-contents__link">Users</a></li><li><a href="#file" class="table-of-contents__link">File</a></li><li><a href="#process" class="table-of-contents__link">Process</a></li><li><a href="#file-permission" class="table-of-contents__link">File Permission</a></li><li><a href="#network" class="table-of-contents__link">Network</a></li><li><a href="#compression" class="table-of-contents__link">Compression</a></li><li><a href="#install-package" class="table-of-contents__link">Install Package</a></li><li><a href="#install-from-source" class="table-of-contents__link">Install From Source</a></li><li><a href="#search" class="table-of-contents__link">Search</a></li><li><a href="#login" class="table-of-contents__link">Login</a></li><li><a href="#disk-usage" class="table-of-contents__link">Disk Usage</a></li><li><a href="#directory-traverse" class="table-of-contents__link">Directory Traverse</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
-<script src="/styles.dadbb72c.js"></script>
-<script src="/runtime~main.8f494cc9.js"></script>
-<script src="/main.361e1b58.js"></script>
-<script src="/1.76ecacad.js"></script>
-<script src="/2.7f5548bc.js"></script>
-<script src="/109.3a8e71cf.js"></script>
-<script src="/111.fe77c4a4.js"></script>
-<script src="/935f2afb.189f401b.js"></script>
-<script src="/17896441.6195eb4f.js"></script>
-<script src="/fd6f28dd.9812befa.js"></script>
+cp file1 file2 - copy file1 to file 2<br>
+cp -r dir1 dir2 - copy directory1 to directory2 if directory 2 doesn&#x27;t exist<br>
+mv file1 file2 - rename source to destination / move source to directory<br>
+ln -s /path/to/file-name link-name - creates symbolic link to file-name<br>
+touch file - create or update file<br>
+cat &gt; file - place standard input into a file<br>
+more file - output contents of a file<br>
+head file - output first 10 lines of a file<br>
+tail file - output last 10 lines of a file<br>
+tail -f file - output contents of file as it grows starting with last 10 lines<br>
+gpg -c file - encrypt file<br>
+gpg file.gpg - decrypt file<br>
+wc - print the number of bytes, words, and lines in files<br>
+xargs - execute command lines from standard input  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="process"></a>Process<a aria-hidden="true" tabindex="-1" class="hash-link" href="#process" title="Direct link to heading">#</a></h2><p>ps - display your currently active processes<br>
+ps aux | grep &#x27;telnet&#x27; - find all process ids related to telnet process<br>
+pmap - memory map of process<br>
+top - display all running processes<br>
+killpid - kill process with mentioned pid id<br>
+killall proc - kill all processes named proc<br>
+pkill process-name - send signal to a process with its name<br>
+bg - lists stopped or background jobs<br>
+fg - brings the most recent job to foreground<br>
+fg n - bring job n to the foreground  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file-permission"></a>File Permission<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file-permission" title="Direct link to heading">#</a></h2><p>chmod octal file-name - change the permissions of file to octal<br>
+chmod 777 - set rwx permissions for owner, group, everyone<br>
+chown owner-user file - change owner of the file<br>
+chown owner-user:owner-group file-name - change owner and group owner of the file<br>
+chown owner-user:owner-group directory - change owner and group owner of the directory  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="network"></a>Network<a aria-hidden="true" tabindex="-1" class="hash-link" href="#network" title="Direct link to heading">#</a></h2><p>ifconfig -a - display all network ports and ip address<br>
+ifconfig eth0 - displays specific ethernet port<br>
+ethtool eth0 - linux tool to show to show ethernet status<br>
+mii-tool eth0 - linux tool to show ethernet status<br>
+ping host - send echo request to test connect<br>
+whois domain - get who is information for domain<br>
+dig domain - get DNS information for domain<br>
+dig -x host - reverse lookup host<br>
+host google.com - lookup DNS ip address for the name<br>
+hostname -i - lookup local ip address<br>
+wget file - download file<br>
+netstat -tupl - list active connections to / from system</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="compression"></a>Compression<a aria-hidden="true" tabindex="-1" class="hash-link" href="#compression" title="Direct link to heading">#</a></h2><p>tar cf home.tar home - create tar named home.tar containing home/<br>
+tar xf file.tar - extract the files from file.tar<br>
+tar czf file.tar.gz files - create a tar with gzip compression<br>
+gzip file - compress file and renames it to file.gz  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-package"></a>Install Package<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-package" title="Direct link to heading">#</a></h2><p>rpm -i pkgname.rpm - install rpm based package<br>
+rpm -e pkgname - remove package  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="install-from-source"></a>Install From Source<a aria-hidden="true" tabindex="-1" class="hash-link" href="#install-from-source" title="Direct link to heading">#</a></h2><p>./configure
+make
+make install</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="search"></a>Search<a aria-hidden="true" tabindex="-1" class="hash-link" href="#search" title="Direct link to heading">#</a></h2><p>grep pattern files - search for pattern in files<br>
+grep -r pattern dir - search recursively for pattern in dir<br>
+locate file - find all instances of file<br>
+find /home/tom -name &#x27;index&#x27; - find file names that start with &quot;index&quot;<br>
+find /home -size +10000k - find files larger than 10000k in /home  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="login"></a>Login<a aria-hidden="true" tabindex="-1" class="hash-link" href="#login" title="Direct link to heading">#</a></h2><p>ssh user@host - connect to host as user<br>
+ssh -p port user@host - connect to host using specific port<br>
+telnet host - connect to the system using telnet port  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="file-transfer"></a>File Transfer<a aria-hidden="true" tabindex="-1" class="hash-link" href="#file-transfer" title="Direct link to heading">#</a></h2><p>scp file server:/tmp - secure copy file.txt to a remote host /tmp folder<br>
+rsync -a /home/apps /backup/ - synchronize source to destination  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="disk-usage"></a>Disk Usage<a aria-hidden="true" tabindex="-1" class="hash-link" href="#disk-usage" title="Direct link to heading">#</a></h2><p>df -h - show free space on mounted filesystems<br>
+df -i - show free inodes on mounted filesystems<br>
+fdisk -l - show disk partition sizes and types<br>
+du -ah - display disk usage in human readable form<br>
+du -sh - display total disk usage on the current directory  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="directory-traverse"></a>Directory Traverse<a aria-hidden="true" tabindex="-1" class="hash-link" href="#directory-traverse" title="Direct link to heading">#</a></h2><p>cd .. - go up one level of the directory tree<br>
+cd - go to $HOME directory<br>
+cd /test - change to /test directory  </p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#system" class="table-of-contents__link">System</a></li><li><a href="#hardware" class="table-of-contents__link">Hardware</a></li><li><a href="#users" class="table-of-contents__link">Users</a></li><li><a href="#file" class="table-of-contents__link">File</a></li><li><a href="#process" class="table-of-contents__link">Process</a></li><li><a href="#file-permission" class="table-of-contents__link">File Permission</a></li><li><a href="#network" class="table-of-contents__link">Network</a></li><li><a href="#compression" class="table-of-contents__link">Compression</a></li><li><a href="#install-package" class="table-of-contents__link">Install Package</a></li><li><a href="#install-from-source" class="table-of-contents__link">Install From Source</a></li><li><a href="#search" class="table-of-contents__link">Search</a></li><li><a href="#login" class="table-of-contents__link">Login</a></li><li><a href="#file-transfer" class="table-of-contents__link">File Transfer</a></li><li><a href="#disk-usage" class="table-of-contents__link">Disk Usage</a></li><li><a href="#directory-traverse" class="table-of-contents__link">Directory Traverse</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
+<script src="/styles.c45cf4bd.js"></script>
+<script src="/runtime~main.3c217eee.js"></script>
+<script src="/main.ea84b40f.js"></script>
+<script src="/1.f01745ac.js"></script>
+<script src="/2.f20838fa.js"></script>
+<script src="/111.6e8a6045.js"></script>
+<script src="/113.0cdf6c3f.js"></script>
+<script src="/935f2afb.7f7bf4e1.js"></script>
+<script src="/17896441.fb4b96e5.js"></script>
+<script src="/fd6f28dd.1482fc4c.js"></script>
 </body>
 </html>
