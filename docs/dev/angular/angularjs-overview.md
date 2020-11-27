@@ -1,6 +1,6 @@
 ---
-id: angularjs
-title: AngularJS
+id: angularjs-overview
+title: AngularJS Overview
 ---
 
 ## High Level

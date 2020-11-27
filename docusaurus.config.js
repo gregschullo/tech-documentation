@@ -44,6 +44,22 @@ module.exports = {
             label: 'Python',
             to: 'docs/dev/python/python-overview',
             },
+            {
+              label: 'JavaScript',
+              to: 'docs/dev/javascript/javascript-overview',
+            },
+            {
+              label: 'Ruby',
+              to: 'docs/dev/ruby/ruby-overview',
+            },
+            {
+              label: 'Java',
+              to: 'docs/dev/java/java-overview',
+            },
+            {
+              label: 'Angular',
+              to: 'docs/dev/angular/angularjs-overview',
+            },
           ],
         }, 
         {
@@ -61,25 +77,20 @@ module.exports = {
               label: 'Containerization',
               to: 'docs/infrastructure/containerization/kubernetes/kubernetes-overview'
             },
+            {
+              label: 'Cloud',
+              to: 'docs/infrastructure/cloud/gcp/gcp-overview'
+            },
+            {
+              label: 'Automation',
+              to: 'docs/infrastructure/automation/terraform/terraform-overview'
+            },
+            {
+              label: 'Configuration',
+              to: 'docs/infrastructure/configuration/ansible/ansible-overview'
+            },
           ],
         },
-        {
-          to: 'docs/monitor-alert/monitoring-alerting', 
-          activeBasePath: 'docs',
-          label: 'Monitor and Alert',
-          position: 'left',
-          items:
-          [
-            {
-              label: 'Monitoring',
-              to: 'docs/monitor-alert/monitor/monitoring-pattern',
-            },
-            {
-              label: 'Alerting',
-              to: 'docs/monitor-alert/alert/alerting-strategy',
-            },
-          ],
-        },  
         {
           to: 'docs/sre/sre', 
           activeBasePath: 'docs',
@@ -87,6 +98,14 @@ module.exports = {
           position: 'left',
           items: 
           [
+            {
+              label: 'Monitoring',
+              to: 'docs/sre/monitoring/monitoring-pattern',
+            },
+            {
+              label: 'Alerting',
+              to: 'docs/sre/alerting/alerting-strategy',
+            },
             {
             label: 'Availability',
             to: 'docs/sre/availability/meaningful-availability',

@@ -1,12 +1,12 @@
 module.exports = {
   alerting: 
   [
-    'monitor-alert/alert/alerting-strategy',
+    'sre/alerting/alerting-strategy',
   ],
   angular: 
-  {
-
-  },
+  [
+    'dev/angular/angularjs-overview',
+  ],
   ansible: 
   {
 
@@ -29,16 +29,33 @@ module.exports = {
   },
   incidentresponse:
   [
-    
+    'sre/incident-response/incident-command-system',
+    'sre/incident-response/postmortems',
   ],
   java: 
-  {
-
-  },
+  [
+    'dev/java/java-overview',
+    'dev/java/java-syntax',
+  ],
   javascript: 
-  {
-
-  },
+  [
+    {
+      JavaScript:
+      [
+      'dev/javascript/javascript-overview',
+      'dev/javascript/javascript-keywords',
+      'dev/javascript/javascript-syntax',
+      'dev/javascript/javascript-datatypes',
+      'dev/javascript/javascript-control-structures',
+      ],
+    },
+    {
+        "Node.js":
+        [
+        'dev/javascript/node.js/node.js-overview',
+        ],
+      },
+  ],
   jaeger: 
   {
 
@@ -56,9 +73,9 @@ module.exports = {
   ],
   monitor: 
   [
-    'monitor-alert/monitor/monitoring-pattern',
-    'monitor-alert/monitor/the-four-golden-signals',
-    'monitor-alert/monitor/monitoring-glossary',
+    'sre/monitoring/monitoring-pattern',
+    'sre/monitoring/the-four-golden-signals',
+    'sre/monitoring/monitoring-glossary',
   ],
   networking: 
   [
@@ -66,27 +83,24 @@ module.exports = {
     {
       OSI:
       [
-        'infrastructure/osi-model',
+        'infrastructure/networking/osi-model',
       ],
       gRPC:
       [
-        'infrastructure/grpc',
+        'infrastructure/networking/grpc',
       ]
     },
   ],
-  nodejs: 
-  {
-
-  },
   python: 
   [
     'dev/python/python-overview',
-    { 
-      "Control Structures": 
-      [
-        'dev/python/python-control-structures'
-      ],
-    },
+    'dev/python/python-keywords',
+    'dev/python/python-syntax',
+    'dev/python/python-datatypes',
+    'dev/python/python-control-structures',
+    'dev/python/python-useful-methods',
+    'dev/python/python-debugging',
+    'dev/python/changing-python-versions',
   ],
   reliability:
   [
@@ -94,9 +108,14 @@ module.exports = {
     'sre/reliability/chaos-engineering'
   ],
   ruby: 
-  {
-
-  },
+  [
+    'dev/ruby/ruby-overview',
+    'dev/ruby/ruby-keywords',
+    'dev/ruby/ruby-syntax',
+    'dev/ruby/ruby-datatypes',
+    'dev/ruby/ruby-control-structures',
+    'dev/ruby/ruby-useful-methods',
+  ],
   sre:
   [
     'sre/sre',
