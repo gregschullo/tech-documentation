@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.66">
+<title data-react-helmet="true">VI Cheatsheet | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="VI Cheatsheet | Documentation"><meta data-react-helmet="true" name="description" content="Starting vi:"><meta data-react-helmet="true" property="og:description" content="Starting vi:"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/os/linux/vi-cheatsheet"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/os/linux/vi-cheatsheet"><link rel="stylesheet" href="/styles.5cd1be22.css">
+<link rel="preload" href="/styles.2310396f.js" as="script">
+<link rel="preload" href="/runtime~main.9fee1590.js" as="script">
+<link rel="preload" href="/main.21013050.js" as="script">
+<link rel="preload" href="/1.4430d5c3.js" as="script">
+<link rel="preload" href="/2.80b2934a.js" as="script">
+<link rel="preload" href="/118.f63c79e9.js" as="script">
+<link rel="preload" href="/120.958b3788.js" as="script">
+<link rel="preload" href="/935f2afb.47eac958.js" as="script">
+<link rel="preload" href="/17896441.5b6abf01.js" as="script">
+<link rel="preload" href="/2d0c7ea4.e0f5943d.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--fixed-top navbar--primary"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/dev/development">Dev</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/dev/python/python-overview">Python</a></li><li><a class="dropdown__link" href="/docs/dev/javascript/javascript-overview">JavaScript</a></li><li><a class="dropdown__link" href="/docs/dev/ruby/ruby-overview">Ruby</a></li><li><a class="dropdown__link" href="/docs/dev/java/java-overview">Java</a></li><li><a class="dropdown__link" href="/docs/dev/angular/angularjs-overview">Angular</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li><a class="dropdown__link" href="/docs/infrastructure/containerization/containerization-overview">Containerization</a></li><li><a class="dropdown__link" href="/docs/infrastructure/cloud/gcp/gcp-overview">Cloud</a></li><li><a class="dropdown__link" href="/docs/infrastructure/automation/terraform/terraform-overview">Automation</a></li><li><a class="dropdown__link" href="/docs/infrastructure/configuration/ansible/ansible-overview">Configuration</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/sre/sre">SRE</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/sre/monitoring/monitoring-pattern">Monitoring</a></li><li><a class="dropdown__link" href="/docs/sre/alerting/alerting-strategy">Alerting</a></li><li><a class="dropdown__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li><a class="dropdown__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li><a class="dropdown__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/os/os-overview">OS</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/os/linux/linux-overview">Linux</a></li><li><a class="dropdown__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li><a class="dropdown__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li><a class="dropdown__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/resume-greg-schullo">Résumé</a><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/"><img class="navbar__logo" src="/img/book.png" alt="Book"><strong class="navbar__title"></strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/dev/development">Dev</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/dev/python/python-overview">Python</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/javascript/javascript-overview">JavaScript</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/ruby/ruby-overview">Ruby</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/java/java-overview">Java</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/dev/angular/angularjs-overview">Angular</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/infrastructure/infrastructure-overview">Infrastructure</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/networking/networking-overview">Networking</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/containerization/containerization-overview">Containerization</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/cloud/gcp/gcp-overview">Cloud</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/automation/terraform/terraform-overview">Automation</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/infrastructure/configuration/ansible/ansible-overview">Configuration</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/sre/sre">SRE</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/sre/monitoring/monitoring-pattern">Monitoring</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/alerting/alerting-strategy">Alerting</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/availability/meaningful-availability">Availability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/reliability/reliability-roadmap">Reliability</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/sre/incident-response/incident-command-system">Incident Response</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/os/os-overview">OS</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-overview">Linux</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/macos/macos-overview">MacOS</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a aria-current="page" class="menu__link menu__link--sublist navbar__link--active" role="button" href="/docs/books/tech-books/phoenix-project">Books</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/books/tech-books/google-site-reliability-engineering">Tech</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/healthcare-books/an-american-sickness">Healthcare</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/books/business-books/the-checklist-manifesto">Business</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/blog">Blog</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/resume-greg-schullo">Résumé</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><div class="docSidebarContainer_3_JD" role="complementary"><div class="sidebar_2urC"><div class="menu menu--responsive menu_5FrY"><button aria-label="Open Menu" aria-haspopup="true" class="button button--secondary button--sm menu__button" type="button"><svg aria-label="Menu" class="sidebarMenuIcon_Dm3K" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 32 32" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-overview">Linux Overview</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-syntax">Linux Syntax</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-commands">Linux Commands</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/linux-cheatsheet">Linux Cheatsheet</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/bash-scripting">Bash Scripting</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active active" href="/docs/os/linux/vi-cheatsheet">VI Cheatsheet</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/os/linux/regular-expression">Regular Expression</a></li></ul></div></div></div><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_1EkI"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">VI Cheatsheet</h1></header><div class="markdown"><p>Starting vi:
+vi filename 	start editing filename, create it if necessary
+Saving the file you&#x27;re working on and/or leaving vi:
+:wq 	write the file to disk and quit
+:q! 	quit without saving any changes
+:w! newfile 	write all lines from the entire current file into the file &#x27;newfile&#x27;, overwriting any existing newfile
+:n,m w! newfile 	write the lines from n to m, inclusive, into the file newfile, overwriting any existing newfile</p><p>Moving the Cursor
+Many commands take number prefixes; for example 5w moves to the right by 5 words.
+h 	one space to the left (also try left arrow)
+j 	one line down (also try down arrow)
+k 	one line up (also try up arrow)
+l 	one space to the right (also try right arrow)
+$ 	end of current line
+^ 	beginning of current line
+Enter 	beginning first word on the next line
+G 	end of file
+:n 	line n
+w 	beginning of next word
+e 	end of next word
+b 	beginning of previous word
+Ctrl-b 	one page up
+Ctrl-f 	one page down
+% 	the matching (, ), [, ], {, or } </p><p>Searching for Text
+/string 	search down for string
+?string 	search up for string
+n 	repeat last search from present position </p><p>Inserting Text
+a  	append starting right of cursor
+A  	append at the end of the current line
+i  	insert starting left of cursor
+I  	insert at beginning of the current line
+o  	open line below cursor, then enter insert mode
+O  	open line above cursor, then enter insert mode
+:r newfile  	add the contents of the file newfile starting below the current line </p><p>Deleting Text
+x 	delete single character; 5x deletes 5 characters
+dw 	delete word; 5dw deletes 5 words
+dd 	delete line; 5dd deletes ... well you get the idea!
+cw 	delete word, leaves you in insert mode (i.e. change word)
+cc 	change line -- delete line and start insert mode
+s 	change character -- delete character and start insert mode
+D 	delete from cursor to end of line
+C 	change from cursor to end of line -- delete and start insert mode
+u 	undo last change
+U 	undo all changes to current line
+J 	join current line with line that follows (press Enter in insert mode to split line)</p><p>Cutting and Pasting
+xp 	transpose two characters (two commands, x followed by p)
+yy	yank (i.e. copy) one line into a general buffer (5yy to yank 5 lines)
+&quot;ayy	yank into the buffer named a
+P	put the general buffer back before the current line
+&quot;aP	put from buffer a before current line
+p	put the general buffer back after the current line
+&quot;ap	put from buffer a after the current line</p><p>VI COMMANDS Cheat Sheet
+Modes</p><p>Vi has two modes insertion mode and command mode. The editor begins in command mode, where the cursor movement and text deletion and pasting occur. Insertion mode begins upon entering an insertion or change command. [ESC] returns the editor to command mode (where you can quit, for example by typing :q!). Most commands execute as soon as you type them except for &quot;colon&quot; commands which execute when you press the ruturn key. </p><p>Quitting</p><p>:x	Exit, saving changes
+:q	Exit as long as there have been no changes
+ZZ	Exit and save changes if any have been made
+:q!	Exit and ignore any changes</p><p>Inserting Text</p><p>i	Insert before cursor</p><p>I	Insert before line
+a	Append after cursor
+A	Append after line
+o	Open a new line after current line
+O	Open a new line before current line
+r	Replace one character
+R	Replace many characters</p><p>Motion</p><p>h	Move left
+j	Move down
+k	Move up
+l	Move right
+w	Move to next word
+W	Move to next blank delimited word
+b	Move to the beginning of the word
+B	Move to the beginning of blank delimted word
+e	Move to the end of the word
+E	Move to the end of Blank delimited word
+(	Move a sentence back
+)	Move a sentence forward
+{	Move a paragraph back
+}	Move a paragraph forward
+0	Move to the begining of the line
+$	Move to the end of the line
+1G	Move to the first line of the file
+G	Move to the last line of the file
+nG	Move to nth line of the file
+:n	Move to nth line of the file
+fc	Move forward to c
+Fc	Move back to c
+H	Move to top of screen
+M	Move to middle of screen
+L	Move to botton of screen
+%	Move to associated ( ), { }, [ ]</p><p>Deleting Text</p><p>Almost all deletion commands are performed by typing d followed by a motion. For example, dw deletes a word. A few other deletes are:
+x	Delete character to the right of cursor
+X	Delete character to the left of cursor
+D	Delete to the end of the line
+dd	Delete current line
+:d	Delete current line</p><p>Yanking Text</p><p>Like deletion, almost all yank commands are performed by typing y followed by a motion. For example, y$ yanks to the end of the line. Two other yank commands are:
+yy	Yank the current line
+:y	Yank the current line</p><p>Changing text</p><p>The change command is a deletion command that leaves the editor in insert mode. It is performed by typing c followed by a motion. For wxample cw changes a word. A few other change commands are:
+C	Change to the end of the line
+cc	Change the whole line</p><p>Putting text</p><p>p	Put after the position or after the line
+P	Put before the poition or before the line
+Buffers</p><p>Named buffers may be specified before any deletion, change, yank or put command. The general prefix has the form &quot;c where c is any lowercase character. for example, &quot;adw deletes a word into buffer a. It may thereafter be put back into text with an appropriate &quot;ap.</p><p>Markers</p><p>Named markers may be set on any line in a file. Any lower case letter may be a marker name. Markers may also be used as limits for ranges.
+mc	Set marker c on this line
+`c	Go to beginning of marker c line.
+&#x27;c	Go to first non-blank character of marker c line.</p><p>Search for strings</p><p>/string	Search forward for string
+?string	Search back for string
+n	Search for next instance of string
+N	Search for previous instance of string</p><p>Replace</p><p>The search and replace function is accomplished with the :s command. It is commonly used in combination with ranges or the :g command (below).
+:s/pattern/string/flags	Replace pattern with string according to flags.
+g	Flag - Replace all occurences of pattern
+c	Flag - Confirm replaces.
+&amp;	Repeat last :s command</p><p>Regular Expressions</p><p>. (dot)	Any single character except newline</p><ul><li>zero or more occurances of any character
+[...]	Any single character specified in the set
+<sup id="fnref-..."><a href="#fn-..." class="footnote-ref">...</a></sup>	Any single character not specified in the set
+^	Anchor - beginning of the line
+$	Anchor - end of line
+\&lt;	Anchor - begining of word
+&gt;	Anchor - end of word
+(...)	Grouping - usually used to group conditions
+\n	Contents of nth grouping</li></ul><p>[...] - Set Examples
+[A-Z]	The SET from Capital A to Capital Z
+[a-z]	The SET from lowercase a to lowercase z
+[0-9]	The SET from 0 to 9 (All numerals)
+[./=+]	The SET containing . (dot), / (slash), =, and +
+[-A-F]	The SET from Capital A to Capital F and the dash (dashes must be specified first)
+[0-9 A-Z]	The SET containing all capital letters and digits and a space
+[A-Z][a-zA-Z]	In the first position, the SET from Capital A to Capital Z
+In the second character position, the SET containing all letters</p><p>Regular Expression Examples
+/Hello/	Matches if the line contains the value Hello
+/^TEST$/	Matches if the line contains TEST by itself
+/^[a-zA-Z]/	Matches if the line starts with any letter
+/^[a-z].<em>/	Matches if the first character of the line is a-z and there is at least one more of any character following it
+/2134$/	Matches if line ends with 2134
+/(21|35)/	Matches is the line contains 21 or 35
+Note the use of ( ) with the pipe symbol to specify the &#x27;or&#x27; condition
+/[0-9]</em>/	Matches if there are zero or more numbers in the line
+/^<sup id="fnref-#"><a href="#fn-#" class="footnote-ref">#</a></sup>/	Matches if the first character is not a # in the line
+Notes:</p><ol><li>Regular expressions are case sensitive</li><li>Regular expressions are to be used where pattern is specified</li></ol><p>Counts</p><p>Nearly every command may be preceded by a number that specifies how many times it is to be performed. For example, 5dw will delete 5 words and 3fe will move the cursor forward to the 3rd occurence of the letter e. Even insertions may be repeated conveniently with thismethod, say to insert the same line 100 times.</p><p>Ranges</p><p>Ranges may precede most &quot;colon&quot; commands and cause them to be executed on a line or lines. For example :3,7d would delete lines 3-7. Ranges are commonly combined with the :s command to perform a replacement on several lines, as with :.,$s/pattern/string/g to make a replacement from the current line to the end of the file.
+:n,m	Range - Lines n-m
+:.	Range - Current line
+:$	Range - Last line
+:&#x27;c	Range - Marker c
+:%	Range - All lines in file
+:g/pattern/	Range - All lines that contain pattern</p><p>Files  </p><p>:w - Write to file<br>
+:r - Read file in after line<br>
+:n - Go to next file<br>
+:p - Go to previous file<br>
+:e - Edit file<br>
+!!program - Replace line with output from program  </p><p>Other  </p><p>~ - Toggle upp and lower case<br>
+J - Join lines<br>
+. - Repeat last text-changing command<br>
+u - Undo last change<br>
+U - Undo all changes to line  </p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/os/linux/bash-scripting"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Bash Scripting</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/os/linux/regular-expression"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Regular Expression »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2020</div></div></div></footer></div>
+<script src="/styles.2310396f.js"></script>
+<script src="/runtime~main.9fee1590.js"></script>
+<script src="/main.21013050.js"></script>
+<script src="/1.4430d5c3.js"></script>
+<script src="/2.80b2934a.js"></script>
+<script src="/118.f63c79e9.js"></script>
+<script src="/120.958b3788.js"></script>
+<script src="/935f2afb.47eac958.js"></script>
+<script src="/17896441.5b6abf01.js"></script>
+<script src="/2d0c7ea4.e0f5943d.js"></script>
+</body>
+</html>
