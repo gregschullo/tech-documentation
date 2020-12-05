@@ -75,7 +75,7 @@ module.exports = {
             },
             {
               label: 'Containerization',
-              to: 'docs/infrastructure/containerization/kubernetes/kubernetes-overview'
+              to: 'docs/infrastructure/containerization/containerization-overview'
             },
             {
               label: 'Cloud',

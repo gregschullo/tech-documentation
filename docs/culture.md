@@ -10,4 +10,4 @@ Social media has contributed to this.
 
 There needs to be a lot more apathy about a lot more things.  
 
-There's nothing wrong with owning possesions, accomplishing goals, traveling, or making money. Just don't think you're impressing anyone. At least not in the a meaningful way.  
+There's nothing wrong with owning possessions, accomplishing goals, traveling, or making money. Just don't think you're impressing anyone. At least not in the a meaningful way.  

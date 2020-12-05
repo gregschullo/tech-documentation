@@ -1,14 +1,9 @@
-# Operational Healing Practices
+---
+id: operational-healing
+title: Operational Healing
+---
 
-## Context
-
-This document provides operational healing, better thought about as "fault tolerance", best practices and guidance for application teams architecting for resiliency by outlining the operational practices of healing, automation, and self-healing.
-
-## Problem
-
-Application teams need to architect their applications in such a way where issues can be addressed and restored quickly and efficiently.
-
-## Solution
+Operational healing, better thought of as "fault tolerance", is the recovery from errors or issues in an application by some automated means. This page outlines the practices of healing, automation, and self-healing.
 
 Applications can only successfully heal from their failures when they have best in class monitoring infrastructure and a solid understanding of how the application functions. There is no "one size fits all" approach where operational healing is concerned and architecting for resiliency through operational healing will be unique for every application with a wide array of solutions as every application is different.
 
@@ -22,13 +17,13 @@ Know your application. This an important idea in many areas, not just where oper
 
 Basic questions to ask when starting to think about understanding your application, healing, and architecting for resiliency:
 
-* Is your application monitored?
-  * Deploy holistic logging and monitoring systems
-* Does your application have a fallback mechanism?
-* Does your application have a baseline established for what is "healthy”?
-  * Setting up automated alerts is a great starting point to understanding which errors or problematic scenarios are most common.
-  * Log and monitor failures to give operational insight
-* What measures are taken when the application fails?
+- Is your application monitored?
+  - Deploy holistic logging and monitoring systems
+- Does your application have a fallback mechanism?
+- Does your application have a baseline established for what is "healthy”?
+  - Setting up automated alerts is a great starting point to understanding which errors or problematic scenarios are most common.
+  - Log and monitor failures to give operational insight
+- What measures are taken when the application fails?
 
 Prevention is always better than cure, but trying to plan for and solve every contingency, while a noble goal, is unrealistic. It is important to consider this and not let attempting to plan for every possible scenario be a hinderance in delivering value to your application. Having a flexible and efficient resilience and recovery design is almost always better than attempting to prevent absolutely everything.
 

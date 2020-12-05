@@ -123,7 +123,34 @@ SREs are flexible. They can:
 - Work as a team lead
 - Communicate in all directions: Peers, staff, leadership.
 
-Pet Peeves
+Pet Peeves  
 
 - Blame, either on people of circumstances
 - Excuses
+
+## SRE Operational Excellence
+
+### Stability
+
+As a Site Reliability Engineer, focus must be put on the stability of your application.  
+
+### Availability
+
+As a Site Reliability Engineer, focus must be put on the availability of your application.  
+
+### Security
+
+As a Site Reliability Engineer, attention to detail and the security of your application must be prioritized.  
+
+### Scalability
+
+As a Site Reliability Engineer, efforts to automate processes and tasks must be taken to further enable the scalability of your application.  
+
+## Product Management
+
+Total cost of ownership of your application is measured and tracked  
+3-5 year vision  
+0-18 month roadmap  
+Rationalization of technologies for product / capability  
+Right workloads on the right products / right technologies  
+Product / capability NPS  

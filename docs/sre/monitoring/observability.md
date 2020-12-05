@@ -1,4 +1,7 @@
-# Observability
+---
+id: observability
+title: Observability
+---
 
 Observability is instrumenting systems and applications to collect events, metrics, and logs. It's designing and building applications with the idea that they will be watched and monitored.
 

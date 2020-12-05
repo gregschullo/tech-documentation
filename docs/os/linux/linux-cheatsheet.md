@@ -1,4 +1,7 @@
-# Unix Cheatsheet
+---
+id: linux-cheatsheet
+title: Linux Cheatsheet
+---
 
 cd - change directory
 ls - list

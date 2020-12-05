@@ -15,10 +15,23 @@ module.exports = {
   [
     'sre/availability/meaningful-availability',
   ],
-  docker: 
-  {
-
-  },
+  containerization:
+  [
+    'infrastructure/containerization/containerization-overview',
+    {
+      Kubernetes:
+      [
+        'infrastructure/containerization/kubernetes/kubernetes-overview',
+        'infrastructure/containerization/kubernetes/kubectl/kubectl-overview',
+        'infrastructure/containerization/kubernetes/kubectl/installing-kubectl',
+      ],
+      Docker:
+      [
+        'infrastructure/containerization/docker/docker-overview',
+        'infrastructure/containerization/docker/docker-commands',
+      ],
+    },
+  ],
   elastic: 
   {
 
@@ -60,21 +73,22 @@ module.exports = {
   {
 
   },
-  kubernetes: 
+  linux:
   [
-    'infrastructure/containerization/kubernetes/kubernetes-overview',
-    {
-      kubectl:
-      [
-        'infrastructure/containerization/kubernetes/kubectl/kubectl-overview',
-        'infrastructure/containerization/kubernetes/kubectl/installing-kubectl',
-      ],
-    },
+    'os/linux/linux-overview',
+    'os/linux/linux-syntax',
+    'os/linux/linux-commands',
+    'os/linux/linux-cheatsheet',
+    'os/linux/bash-scripting',
+    'os/linux/vi-cheatsheet',
+    'os/linux/regular-expression',
   ],
   monitor: 
   [
     'sre/monitoring/monitoring-pattern',
     'sre/monitoring/the-four-golden-signals',
+    'sre/monitoring/observability',
+    'sre/monitoring/mean-time',
     'sre/monitoring/monitoring-glossary',
   ],
   networking: 
@@ -104,7 +118,10 @@ module.exports = {
   ],
   reliability:
   [
+    'sre/reliability/application-resiliency',
+    'sre/reliability/resiliency-strategies',
     'sre/reliability/reliability-roadmap',
+    'sre/reliability/operational-healing',
     'sre/reliability/chaos-engineering'
   ],
   ruby: 
