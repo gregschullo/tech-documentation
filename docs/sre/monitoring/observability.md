@@ -11,10 +11,9 @@ Observability is a necessary component of an application because with ever incre
 
 ## Pillars of Observability
 
-Events - Immutable record of discrete events that happen over time.  
 Metrics - Numbers describing a particular process or activity measured over intervals of time.  
 Tracing - Data that shows which line of code is failing to gain better visibility at the individual user level for events that have occurred.  
-Logs - 
+Structured Logs - Logs admitted by each process and may contain a wide array of information.  
 
 ## Observability vs Monitoring
 
@@ -37,6 +36,8 @@ Observability as a culture is the degree to which a team or company values the a
 Code isn't done until you've built analytics to observe and support it.
 
 ## Modern Event Handling Techniques
+
+Events - Immutable record of discrete events that happen over time. 
 
 Three techniques used in handling events with the end goal of shared insights, a collaborative response, data-enabled IT, and intelligent operations.  
 
@@ -71,6 +72,7 @@ Events come in three forms - plain text, structured, and binary.
 
 ## Sources
 
-"Observability," Wikipedia, 2018  
-Ernest Mueller, "Monitoring and Observability," www.agileadmin.com  
-Splunk Beginners Guide to Observability  
+[Observability - Wikipedia](https://en.wikipedia.org/wiki/Observability)  
+[Monitoring and Observability, Ernest Mueller](www.agileadmin.com)  
+[Splunk Beginners Guide to Observability](https://www.splunk.com/en_us/form/beginners-guide-to-observability.html)  
+[Observability of Distributed Systems - Google Cloud Platform](https://www.youtube.com/watch?v=SoZZzB-yTOk&list=PLIivdWyY5sqJrKl7D2u-gmis8h9K66qoj&index=8)  

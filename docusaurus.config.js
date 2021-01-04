@@ -56,10 +56,6 @@ module.exports = {
               label: 'Java',
               to: 'docs/dev/java/java-overview',
             },
-            {
-              label: 'Angular',
-              to: 'docs/dev/angular/angularjs-overview',
-            },
           ],
         }, 
         {

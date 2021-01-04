@@ -3,7 +3,7 @@ id: be-a-better-sre
 title: Be A Better SRE
 ---
 
-Mentality over any skillset
+Mentality over any skill-set
 
 - Curiosity is most important. You can't teach curiosity or intrinsic motivation.
 
@@ -15,7 +15,7 @@ Want to solve problems
 
 Be curious
 
-Different backgrounds and different skillsets are healthy and encouraged.
+Different backgrounds and different skill-sets are healthy and encouraged.
 
 I think the best advice I can give upfront is to learn the business requirements of the application and how the business expects a user to interact with it - then comb through the application and question every minute detail that’s outside of the requirements. Focus on Utilization, Saturation and Errors that users face through the application workflows. Document everything, prioritize, and then just start fixing what you can.
 

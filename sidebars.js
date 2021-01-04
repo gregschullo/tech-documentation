@@ -3,10 +3,6 @@ module.exports = {
   [
     'sre/alerting/alerting-strategy',
   ],
-  angular: 
-  [
-    'dev/angular/angularjs-overview',
-  ],
   ansible: 
   {
 
@@ -63,11 +59,18 @@ module.exports = {
       ],
     },
     {
-        "Node.js":
-        [
-        'dev/javascript/node.js/node.js-overview',
-        ],
-      },
+      "Node.js":
+      [
+      'dev/javascript/node.js/node.js-overview',
+      ],
+    },
+    {
+      "Angular": 
+      [
+        'dev/javascript/angular/angular',
+        'dev/javascript/angular/angular-overview',
+      ],
+    },
   ],
   jaeger: 
   {

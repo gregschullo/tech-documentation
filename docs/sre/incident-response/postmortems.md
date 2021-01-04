@@ -288,3 +288,4 @@ Take Action
 [Google Postmortem Culture: Learning from Failure](https://landing.google.com/sre/sre-book/chapters/postmortem-culture/)  
 [Awesome SRE Postmortem](https://github.com/dastergon/awesome-sre#post-mortem)  
 [Etsy Blameless Postmortem](https://codeascraft.com/2012/05/22/blameless-postmortems/)  
+[Postmortems and Retrospectives - Google Cloud Platform](https://www.youtube.com/watch?v=UBe7U2b3tsA&list=PLIivdWyY5sqJrKl7D2u-gmis8h9K66qoj&index=10)
