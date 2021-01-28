@@ -3,9 +3,6 @@ id: resume-greg-schullo
 title: Résumé - Greg Schullo
 ---
 
-Gregory Jerome Schullo  
-1235 Saxon Way, Bozeman, Montana 59718 | (612) 248-9446 | greg.schullo@gmail.com  
-
 ## Education
 
 B.B.A - Management of Information Systems - University of Minnesota Duluth - Summer 2014.  
