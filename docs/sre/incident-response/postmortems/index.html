@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Postmortems | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Postmortems | Documentation"><meta data-react-helmet="true" name="description" content="Performing Postmortems after incidents is how we learn what we are doing right, where we can improve, and how to not make the same mistake again and again."><meta data-react-helmet="true" property="og:description" content="Performing Postmortems after incidents is how we learn what we are doing right, where we can improve, and how to not make the same mistake again and again."><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/sre/incident-response/postmortems"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/sre/incident-response/postmortems"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/c1ece219.1cb484f9.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/c1ece219.a18f9d0b.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -75,15 +75,15 @@ Practice makes perfect.  </p><h2><a aria-hidden="true" tabindex="-1" class="anch
 <a href="https://github.com/dastergon/awesome-sre#post-mortem" target="_blank" rel="noopener noreferrer">Awesome SRE Postmortem</a><br>
 <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/" target="_blank" rel="noopener noreferrer">Etsy Blameless Postmortem</a><br>
 <a href="https://www.youtube.com/watch?v=UBe7U2b3tsA&amp;list=PLIivdWyY5sqJrKl7D2u-gmis8h9K66qoj&amp;index=10" target="_blank" rel="noopener noreferrer">Postmortems and Retrospectives - Google Cloud Platform</a></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/sre/incident-response/incident-command-system"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Incident Command System</div></a></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#purpose" class="table-of-contents__link">Purpose</a></li><li><a href="#contents" class="table-of-contents__link">Contents</a></li><li><a href="#postmortem-basics-and-introduction" class="table-of-contents__link">Postmortem Basics and Introduction</a><ul><li><a href="#why-to-do-postmortems" class="table-of-contents__link">Why to Do Postmortems</a></li><li><a href="#when-to-do-postmortems" class="table-of-contents__link">When to Do Postmortems</a></li><li><a href="#who-is-responsible-for-the-postmortem" class="table-of-contents__link">Who is Responsible for the Postmortem</a></li><li><a href="#ownership-criteria" class="table-of-contents__link">Ownership Criteria</a></li></ul></li><li><a href="#blame-and-biases-in-the-workplace" class="table-of-contents__link">Blame and Biases in the Workplace</a><ul><li><a href="#why-blamelessness-is-hard" class="table-of-contents__link">Why Blamelessness is Hard</a></li><li><a href="#common-biases" class="table-of-contents__link">Common Biases</a></li><li><a href="#how-to-avoid-blame" class="table-of-contents__link">How to Avoid Blame</a></li></ul></li><li><a href="#introducing-postmortems-to-your-organization" class="table-of-contents__link">Introducing Postmortems to Your Organization</a><ul><li><a href="#psychological-safety" class="table-of-contents__link">Psychological Safety</a></li></ul></li><li><a href="#the-postmortem-report" class="table-of-contents__link">The Postmortem Report</a><ul><li><a href="#important-concepts-to-include-in-every-analysis" class="table-of-contents__link">Important Concepts to Include in Every Analysis</a></li><li><a href="#helpful-questions" class="table-of-contents__link">Helpful Questions</a></li><li><a href="#follow-up-actions" class="table-of-contents__link">Follow Up Actions</a></li><li><a href="#external-messaging" class="table-of-contents__link">External Messaging</a></li><li><a href="#postmortem-review" class="table-of-contents__link">Postmortem Review</a></li><li><a href="#dos-and-donts-of-postmortem-review" class="table-of-contents__link">Do&#39;s and Don&#39;ts of Postmortem Review</a></li></ul></li><li><a href="#putting-concept-into-practice" class="table-of-contents__link">Putting Concept into Practice</a></li><li><a href="#quick-tips-for-success" class="table-of-contents__link">Quick Tips for Success</a></li><li><a href="#summary" class="table-of-contents__link">Summary</a></li><li><a href="#other-postmortem-resources" class="table-of-contents__link">Other Postmortem Resources</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/c1ece219.1cb484f9.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/c1ece219.a18f9d0b.js"></script>
 </body>
 </html>

@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Observability | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Observability | Documentation"><meta data-react-helmet="true" name="description" content="Observability is instrumenting systems and applications to collect events, metrics, and logs. It&#x27;s designing and building applications with the idea that they will be watched and monitored."><meta data-react-helmet="true" property="og:description" content="Observability is instrumenting systems and applications to collect events, metrics, and logs. It&#x27;s designing and building applications with the idea that they will be watched and monitored."><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/sre/monitoring/observability"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/sre/monitoring/observability"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/1af513d3.70e76358.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/1af513d3.cf05e0f2.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -24,15 +24,15 @@ Structured Logs - Logs admitted by each process and may contain a wide array of 
 <a href="/docs/sre/monitoring/www.agileadmin.com">Monitoring and Observability, Ernest Mueller</a><br>
 <a href="https://www.splunk.com/en_us/form/beginners-guide-to-observability.html" target="_blank" rel="noopener noreferrer">Splunk Beginners Guide to Observability</a><br>
 <a href="https://www.youtube.com/watch?v=SoZZzB-yTOk&amp;list=PLIivdWyY5sqJrKl7D2u-gmis8h9K66qoj&amp;index=8" target="_blank" rel="noopener noreferrer">Observability of Distributed Systems - Google Cloud Platform</a>  </p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/sre/monitoring/the-four-golden-signals"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« The 4 Golden Signals</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/sre/monitoring/mean-time"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Mean Time »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#pillars-of-observability" class="table-of-contents__link">Pillars of Observability</a></li><li><a href="#observability-vs-monitoring" class="table-of-contents__link">Observability vs Monitoring</a></li><li><a href="#culture-of-observability" class="table-of-contents__link">Culture of Observability</a></li><li><a href="#modern-event-handling-techniques" class="table-of-contents__link">Modern Event Handling Techniques</a></li><li><a href="#metrics-that-matter" class="table-of-contents__link">Metrics that Matter</a></li><li><a href="#sources" class="table-of-contents__link">Sources</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/1af513d3.70e76358.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/1af513d3.cf05e0f2.js"></script>
 </body>
 </html>

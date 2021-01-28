@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Python Datatypes | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Python Datatypes | Documentation"><meta data-react-helmet="true" name="description" content="Integers"><meta data-react-helmet="true" property="og:description" content="Integers"><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/dev/python/python-datatypes"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/dev/python/python-datatypes"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/22234891.ea09c5d2.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/22234891.6d9662e5.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -23,15 +23,15 @@ float = 1.5e2 == 150</p><h2><a aria-hidden="true" tabindex="-1" class="anchor en
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token triple-quoted-string string" style="color:rgb(195, 232, 141)">                          is</span></div><div class="token-line" style="color:#bfc7d5"><span class="token triple-quoted-string string" style="display:inline-block;color:rgb(195, 232, 141)">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token triple-quoted-string string" style="color:rgb(195, 232, 141)">                          a</span></div><div class="token-line" style="color:#bfc7d5"><span class="token triple-quoted-string string" style="display:inline-block;color:rgb(195, 232, 141)">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token triple-quoted-string string" style="color:rgb(195, 232, 141)">                          test &quot;&quot;&quot;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span></div></div></div></div></div><p>Some characters can&#x27;t be directly included in a string. For example, double quotes can&#x27;t be in a string as it would cause the string to end prematurely . Characters like this must be escaped by placing a backslash ( \ ) before them.  </p><p>Concatenation - the process of adding two strings together. Even if your strings contain numbers, they are still added as strings rather than integers. Adding a string to a number produces an error.  </p><p>String Operations - Strings can also be multiplied by integers. This produces a repeated version of the original string. The order of the string and the integer doesn&#x27;t matter, but the string typically comes first. Strings can&#x27;t be multiplied by other strings or floats (even if the float is a whole number).  </p><p>Popular string methods</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button tabindex="0" type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div class="prism-code language-python codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token builtin" style="color:rgb(130, 170, 255)">len</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain"> gets length of a string</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">lower</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain"> make entire string lowercase</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">upper</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain"> make entire string uppercase</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">srt</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain"> turn a non string into a string</span></div></div></div></div></div><p>docstring - </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="booleans"></a>Booleans<a aria-hidden="true" tabindex="-1" class="hash-link" href="#booleans" title="Direct link to heading">#</a></h2><p>Variables that are set as either True or False</p><p>They can be created by comparing values, for instance by using the equal operator ==</p><p>Not equals ( != ) is another method of comparison </p><p>Greater Than ( &gt; ) and Less Than ( &lt; ) are other methods of comparison</p><p>Greater Than or Equal To ( &gt;= ) and Less Than or Equal To ( &lt;= ) are other methods of comparison</p><p>True corresponds to integer value 1</p><p>False corresponds to integer value 0</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/dev/python/python-syntax"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Python Syntax</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/dev/python/python-control-structures"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Python Control Structures »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#integers" class="table-of-contents__link">Integers</a></li><li><a href="#floats" class="table-of-contents__link">Floats</a></li><li><a href="#strings" class="table-of-contents__link">Strings</a></li><li><a href="#booleans" class="table-of-contents__link">Booleans</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/22234891.ea09c5d2.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/22234891.6d9662e5.js"></script>
 </body>
 </html>

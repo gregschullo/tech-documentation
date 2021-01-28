@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Monitoring Pattern | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Monitoring Pattern | Documentation"><meta data-react-helmet="true" name="description" content="Complex infrastructure and customer experiences are often difficult to instrument and measure holistically. When monitoring with application resiliency as the focus, it is vital to instrument monitoring so a thorough understanding of application infrastructure and transaction flow may be achieved. In other words, it is necessary to first understand where and why problems will and could occur before any type of resiliency practices may take place."><meta data-react-helmet="true" property="og:description" content="Complex infrastructure and customer experiences are often difficult to instrument and measure holistically. When monitoring with application resiliency as the focus, it is vital to instrument monitoring so a thorough understanding of application infrastructure and transaction flow may be achieved. In other words, it is necessary to first understand where and why problems will and could occur before any type of resiliency practices may take place."><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/sre/monitoring/monitoring-pattern"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/sre/monitoring/monitoring-pattern"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/cb5e9d3b.352b620a.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/cb5e9d3b.3b2cb945.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -23,15 +23,15 @@ The secondary goal of monitoring is to address what is broken and why. Through u
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Where failed requests are requests that are not successful or requests that return successfully, but not in an acceptable amount of time and where total requests are any and all observable requests.</span></div></div></div></div></div><p>Customer Success Rate is a more positive spin on Raw Error Rate. It is the inverse of Raw Error Rate... (1-RER) * 100 = Customer Success as a Percentage</p><p>More information on Raw Error Rate can be found on the <a href="https://hubconnect.uhg.com/groups/optum-system-reliability-engineering-sre/blog/2018/04/03/introducing-raw-error-rate" target="_blank" rel="noopener noreferrer">SRE HubConnect Blog</a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="mean-time-to-detect"></a>Mean Time to Detect<a aria-hidden="true" tabindex="-1" class="hash-link" href="#mean-time-to-detect" title="Direct link to heading">#</a></h2><p>Mean Time to Detect is a metric that measures the average time it takes to discover an issue or problem is occurring. Monitoring is the first and most essential component of having a low Mean Time to Detect as monitoring acts as the &quot;trip wire&quot; or notifier of a problem. The more accurate and detailed your monitoring is, the faster your mean time to detect score is, resulting in resolving issues or potential issues more quickly.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="vital-business-function-vbf-monitoring"></a>Vital Business Function (VBF) Monitoring<a aria-hidden="true" tabindex="-1" class="hash-link" href="#vital-business-function-vbf-monitoring" title="Direct link to heading">#</a></h2><p>These particular functions have been deemed essential to an application and the success of the business. It is extremely important that these functions perform well, so monitoring these should be priority over other functions or services.</p><p>Setting up monitoring to capture metrics surrounding error rate or increases in response time are beneficial to gaining insight quickly to when there may be an issue with a VBF, helping to reduce Mean Time to Detection (MTTD) and Mean Time to Restoration (MTTR). This helps ensure VBFs are performing well and giving a satisfactory customer experience.</p><p>More detailed information on Fundamental Monitoring Theory can be found at:<br>
 <a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/" target="_blank" rel="noopener noreferrer">Google SRE - Monitoring Distributed Systems</a><br>
 <a href="https://new-wiki.optum.com/display/EM/Fundamental+Monitoring+Theory" target="_blank" rel="noopener noreferrer">Optum Fundamental Monitoring Theory</a>  </p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/sre/monitoring/the-four-golden-signals"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">The 4 Golden Signals »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#monitoring" class="table-of-contents__link">Monitoring</a><ul><li><a href="#goal-of-monitoring" class="table-of-contents__link">Goal of Monitoring</a></li><li><a href="#a-monitoring-system-should" class="table-of-contents__link">A Monitoring System Should</a></li></ul></li><li><a href="#the-4-golden-signals" class="table-of-contents__link">The 4 Golden Signals</a></li><li><a href="#types-of-monitoring" class="table-of-contents__link">Types of Monitoring</a></li><li><a href="#raw-error-rate" class="table-of-contents__link">Raw Error Rate</a></li><li><a href="#mean-time-to-detect" class="table-of-contents__link">Mean Time to Detect</a></li><li><a href="#vital-business-function-vbf-monitoring" class="table-of-contents__link">Vital Business Function (VBF) Monitoring</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/cb5e9d3b.352b620a.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/cb5e9d3b.3b2cb945.js"></script>
 </body>
 </html>

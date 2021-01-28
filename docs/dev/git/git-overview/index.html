@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Git Overview | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Git Overview | Documentation"><meta data-react-helmet="true" name="description" content="Git is a versioning control software run at your local command line. Github is where code is stored and shared online and where you upload your repositories."><meta data-react-helmet="true" property="og:description" content="Git is a versioning control software run at your local command line. Github is where code is stored and shared online and where you upload your repositories."><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/dev/git/git-overview"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/dev/git/git-overview"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/c92de07d.f49c9bd1.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/c92de07d.b1fa6cb2.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -24,15 +24,15 @@ autocrlf = input</p><p>[user]
 name=&quot;Greg Schullo&quot;
 email=<a href="mailto:greg.schullo@gmail.com" target="_blank" rel="noopener noreferrer">greg.schullo@gmail.com</a></p><p>[push]
 default = simple</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#github-enterprise" class="table-of-contents__link">Github Enterprise</a><ul><li><a href="#what-is-github-enterprise" class="table-of-contents__link">What is GitHub Enterprise?</a></li></ul></li><li><a href="#repositories" class="table-of-contents__link">Repositories</a></li><li><a href="#exploring-a-github-enterprise-repository" class="table-of-contents__link">Exploring a GitHub Enterprise Repository</a></li><li><a href="#repository-navigation" class="table-of-contents__link">Repository Navigation</a></li><li><a href="#issues" class="table-of-contents__link">Issues</a></li><li><a href="#pages" class="table-of-contents__link">Pages</a></li><li><a href="#github-flow" class="table-of-contents__link">Github Flow</a></li><li><a href="#basic-commands" class="table-of-contents__link">Basic Commands</a></li><li><a href="#basic-branch-commands" class="table-of-contents__link">Basic Branch Commands</a></li><li><a href="#basic-log-commands" class="table-of-contents__link">Basic Log Commands</a></li><li><a href="#basic-tag-commands" class="table-of-contents__link">Basic Tag Commands</a></li><li><a href="#github-jekyll" class="table-of-contents__link">Github Jekyll</a></li><li><a href="#git-configuration-levels" class="table-of-contents__link">Git Configuration Levels</a></li><li><a href="#local-git-configuration" class="table-of-contents__link">Local Git Configuration</a><ul><li><a href="#checking-your-git-version" class="table-of-contents__link">Checking Your Git Version</a></li></ul></li><li><a href="#viewing-your-configurations" class="table-of-contents__link">Viewing Your Configurations</a></li><li><a href="#git-config-privacy-for-public-repos" class="table-of-contents__link">Git Config Privacy for Public Repos</a></li><li><a href="#viewing-local-history" class="table-of-contents__link">Viewing Local History</a><ul><li><a href="#using-git-log" class="table-of-contents__link">Using Git Log</a></li><li><a href="#leveraging-bash-aliases" class="table-of-contents__link">Leveraging Bash Aliases</a></li></ul></li><li><a href="#merge-conflicts" class="table-of-contents__link">Merge Conflicts</a></li><li><a href="#merge-strategies" class="table-of-contents__link">Merge Strategies</a></li><li><a href="#gitconfig" class="table-of-contents__link">.gitconfig</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/c92de07d.f49c9bd1.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/c92de07d.b1fa6cb2.js"></script>
 </body>
 </html>

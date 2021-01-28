@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.66">
 <title data-react-helmet="true">Linux Syntax | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Linux Syntax | Documentation"><meta data-react-helmet="true" name="description" content="Linux is a case sensitive operating system."><meta data-react-helmet="true" property="og:description" content="Linux is a case sensitive operating system."><meta data-react-helmet="true" property="og:url" content="https://docs.gregschullo.io/docs/os/linux/linux-syntax"><link data-react-helmet="true" rel="shortcut icon" href="/img/book.png"><link data-react-helmet="true" rel="canonical" href="https://docs.gregschullo.io/docs/os/linux/linux-syntax"><link rel="stylesheet" href="/styles.5cd1be22.css">
-<link rel="preload" href="/styles.715cfb84.js" as="script">
-<link rel="preload" href="/runtime~main.d21c3c9f.js" as="script">
-<link rel="preload" href="/main.aedac9c8.js" as="script">
-<link rel="preload" href="/1.912cefe9.js" as="script">
-<link rel="preload" href="/2.bc811ea3.js" as="script">
-<link rel="preload" href="/125.7b5f8046.js" as="script">
-<link rel="preload" href="/127.b873ed98.js" as="script">
-<link rel="preload" href="/935f2afb.a3eeed97.js" as="script">
-<link rel="preload" href="/17896441.958caa67.js" as="script">
-<link rel="preload" href="/1870fd7c.0df61a2c.js" as="script">
+<link rel="preload" href="/styles.9642065c.js" as="script">
+<link rel="preload" href="/runtime~main.6559e913.js" as="script">
+<link rel="preload" href="/main.ea73091c.js" as="script">
+<link rel="preload" href="/1.4419a756.js" as="script">
+<link rel="preload" href="/2.35b52601.js" as="script">
+<link rel="preload" href="/126.1f4139c0.js" as="script">
+<link rel="preload" href="/128.9b0b4616.js" as="script">
+<link rel="preload" href="/935f2afb.2a7dfed1.js" as="script">
+<link rel="preload" href="/17896441.a9aaf4be.js" as="script">
+<link rel="preload" href="/1870fd7c.b75daef4.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):window.matchMedia("(prefers-color-scheme: light)").matches?e("light"):e("dark")}()</script><div id="__docusaurus">
@@ -137,15 +137,15 @@ To change ownership of a file, you use the chown command.<br>
 Example: <code>chown stephen.accounting filename.txt</code>  </p><p>Removing Permissions  </p><ul><li>chmod o-r filename.txt (removes read permissions from the others)  </li><li>chmod g-w filename.txt (removes write permissions from groups)  </li><li>chmod u-r filename.txt (removes read permissions from users)  </li></ul><p>Adding Permissions  </p><ul><li>chmod o+r filename.txt (adds read permissions to others)  </li><li>chmod g+w filename.txt (adds write permissions to groups)  </li><li>chmod u+r filename.txt (adds read permissions to users)  </li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="symbolic-links"></a>Symbolic Links<a aria-hidden="true" tabindex="-1" class="hash-link" href="#symbolic-links" title="Direct link to heading">#</a></h2><p>Creates a pointer or link to an actual file.<br>
 ln -s file.txt myfilelink.txt<br>
 link -&gt; symbolic -&gt; file linking to -&gt; new file link name  </p><p>Useful for linking to files deep in the system  </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="system-files-special-files-and-sticky-bits"></a>System Files, Special Files, and Sticky Bits<a aria-hidden="true" tabindex="-1" class="hash-link" href="#system-files-special-files-and-sticky-bits" title="Direct link to heading">#</a></h2><p>Special directories and files  </p><ul><li>/var - contains files that change often, such as mail, logs, etc  </li><li>/var/tmp - contains files that do not get deleted on reboot  </li><li>/tmp - contains temporary files that get deleted on reboot.  <ul><li>Every user on a Linux system can write to or delete files on /tmp  </li></ul></li></ul><p>The problem with temporary folders that have 777 permissions.  </p><ul><li>We can add sticky bits to a folder which makes it so only users that create their own files and folders can delete theirs and not other users - even if the folder has 777 (rwx rwx rwx)  </li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/os/linux/linux-overview"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Linux Overview</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/os/linux/linux-commands"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Linux Commands »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#basic-commands" class="table-of-contents__link">Basic Commands</a></li><li><a href="#init-commands" class="table-of-contents__link">init Commands</a></li><li><a href="#network-commands" class="table-of-contents__link">Network Commands</a></li><li><a href="#shell-configuration-files" class="table-of-contents__link">Shell Configuration Files</a></li><li><a href="#globbing" class="table-of-contents__link">Globbing</a></li><li><a href="#quoting" class="table-of-contents__link">Quoting</a></li><li><a href="#formatting-commands" class="table-of-contents__link">Formatting Commands</a></li><li><a href="#working-with-options" class="table-of-contents__link">Working with Options</a></li><li><a href="#man" class="table-of-contents__link">Man</a></li><li><a href="#info-pages" class="table-of-contents__link">Info Pages</a></li><li><a href="#the-linux-filesystem" class="table-of-contents__link">The Linux Filesystem</a></li><li><a href="#linux-disk-file-systems" class="table-of-contents__link">Linux Disk File Systems</a></li><li><a href="#hidden-files" class="table-of-contents__link">Hidden Files</a></li><li><a href="#absolute-and-relative-paths" class="table-of-contents__link">Absolute and Relative Paths</a></li><li><a href="#files-and-directory" class="table-of-contents__link">Files and Directory</a></li><li><a href="#case-sensitivity" class="table-of-contents__link">Case Sensitivity</a></li><li><a href="#simple-globbing-and-quoting" class="table-of-contents__link">Simple Globbing and Quoting</a></li><li><a href="#archiving-files-and-directories" class="table-of-contents__link">Archiving Files and Directories</a></li><li><a href="#archives-and-compression" class="table-of-contents__link">Archives and Compression</a><ul><li><a href="#zip-syntax" class="table-of-contents__link">zip Syntax</a></li><li><a href="#gzip-syntax" class="table-of-contents__link">gzip Syntax</a></li><li><a href="#bzip2-syntax" class="table-of-contents__link">bzip2 Syntax</a></li><li><a href="#tar" class="table-of-contents__link">tar</a></li></ul></li><li><a href="#commands-revisited" class="table-of-contents__link">Commands (Revisited)</a></li><li><a href="#command-line-pipes" class="table-of-contents__link">Command Line Pipes</a></li><li><a href="#io-redirection" class="table-of-contents__link">I/O Redirection</a></li><li><a href="#regular-expressions-regex" class="table-of-contents__link">Regular Expressions (Regex)</a></li><li><a href="#basic-text-editors" class="table-of-contents__link">Basic Text Editors</a><ul><li><a href="#nano" class="table-of-contents__link">nano</a></li><li><a href="#vi" class="table-of-contents__link">vi</a></li></ul></li><li><a href="#hardware" class="table-of-contents__link">Hardware</a></li><li><a href="#kernel" class="table-of-contents__link">Kernel</a></li><li><a href="#processes" class="table-of-contents__link">Processes</a></li><li><a href="#root-and-standard-users" class="table-of-contents__link">Root and Standard Users</a></li><li><a href="#user-commands" class="table-of-contents__link">User Commands</a></li><li><a href="#group-commands" class="table-of-contents__link">Group Commands</a></li><li><a href="#filedirectory-permissions-and-owners" class="table-of-contents__link">File/Directory Permissions and Owners</a></li><li><a href="#symbolic-links" class="table-of-contents__link">Symbolic Links</a></li><li><a href="#system-files-special-files-and-sticky-bits" class="table-of-contents__link">System Files, Special Files, and Sticky Bits</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div class="margin-bottom--sm"><a href="https://github.com/gregschullo" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1zJy"><img class="footer__logo" alt="GitHub" src="/img/github.png"></a></div><div>Copyright © Greg Schullo 2021</div></div></div></footer></div>
-<script src="/styles.715cfb84.js"></script>
-<script src="/runtime~main.d21c3c9f.js"></script>
-<script src="/main.aedac9c8.js"></script>
-<script src="/1.912cefe9.js"></script>
-<script src="/2.bc811ea3.js"></script>
-<script src="/125.7b5f8046.js"></script>
-<script src="/127.b873ed98.js"></script>
-<script src="/935f2afb.a3eeed97.js"></script>
-<script src="/17896441.958caa67.js"></script>
-<script src="/1870fd7c.0df61a2c.js"></script>
+<script src="/styles.9642065c.js"></script>
+<script src="/runtime~main.6559e913.js"></script>
+<script src="/main.ea73091c.js"></script>
+<script src="/1.4419a756.js"></script>
+<script src="/2.35b52601.js"></script>
+<script src="/126.1f4139c0.js"></script>
+<script src="/128.9b0b4616.js"></script>
+<script src="/935f2afb.2a7dfed1.js"></script>
+<script src="/17896441.a9aaf4be.js"></script>
+<script src="/1870fd7c.b75daef4.js"></script>
 </body>
 </html>
