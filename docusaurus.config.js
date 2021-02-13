@@ -56,6 +56,10 @@ module.exports = {
               label: 'Java',
               to: 'docs/dev/java/java-overview',
             },
+            {
+              label: 'Swift',
+              to: 'docs/dev/swift/swift-overview',
+            },
           ],
         }, 
         {
@@ -117,6 +121,23 @@ module.exports = {
           ],
         },
         {
+          to: 'docs/qa/quality-assurance',
+          activeBasePath: 'docs',
+          label: 'QA',
+          position: 'left',
+          items:
+          [
+            {
+              label: 'Cypress',
+              to: 'docs/qa/cypress/cypress-overview',
+            },
+            {
+              label: 'onX',
+              to: 'docs/qa/onx/onx-notes',
+            },
+          ]
+        },
+        {
           to: 'docs/os/os-overview',
           activeBasePath: 'docs',
           label: 'OS',
@@ -151,6 +172,10 @@ module.exports = {
             {
               label: 'Business',
               to: 'docs/books/business-books/the-checklist-manifesto',
+            },
+            {
+              label: 'Economics & Finance',
+              to: 'docs/books/economics-finance-books/the-simple-path-to-wealth',
             },
           ],
         },

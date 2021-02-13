@@ -17,9 +17,11 @@ module.exports = {
     {
       Kubernetes:
       [
+        'infrastructure/containerization/kubernetes/kubernetes-introduction',
         'infrastructure/containerization/kubernetes/kubernetes-overview',
         'infrastructure/containerization/kubernetes/kubectl/kubectl-overview',
         'infrastructure/containerization/kubernetes/kubectl/installing-kubectl',
+        'infrastructure/containerization/kubernetes/minikube-overview',
       ],
       Docker:
       [
@@ -27,6 +29,12 @@ module.exports = {
         'infrastructure/containerization/docker/docker-commands',
       ],
     },
+  ],
+  cypress:
+  [
+    'qa/cypress/cypress-overview',
+    'qa/cypress/cypress-dashboards',
+    'qa/cypress/cypress-commands',
   ],
   elastic: 
   {
@@ -67,7 +75,6 @@ module.exports = {
     {
       "Angular": 
       [
-        'dev/javascript/angular/angular',
         'dev/javascript/angular/angular-overview',
       ],
     },
@@ -107,6 +114,10 @@ module.exports = {
         'infrastructure/networking/grpc',
       ]
     },
+  ],
+  onx:
+  [
+    'qa/onx/onx-notes',
   ],
   python: 
   [
@@ -162,5 +173,10 @@ module.exports = {
     'books/business-books/the-checklist-manifesto',
     'books/business-books/you-win-in-the-locker-room-first',
     'books/business-books/deep-diversity',
+  ],
+  economicsfinancebooks:
+  [
+    'books/economics-finance-books/the-simple-path-to-wealth',
+    'books/economics-finance-books/economics-explained',
   ],
 };

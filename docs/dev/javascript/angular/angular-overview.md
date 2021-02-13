@@ -3,65 +3,190 @@ id: angular-overview
 title: Angular Overview
 ---
 
-## High Level
+## Fundamentals of TypeScript and Object-Oriented Programming
 
-A **module** contains the different components of an AngularJS app
-A **controller** manages the app’s data
-An **expression** displays values on the page
-A **filter** formats the value of an expression
+TypeScript - superset of JavaScript  
 
-module (defines application) -> directive (extend HTML) -> model ->
+- strong typing
+- object-oriented features
+- compile-time errors
+- great tooling
 
-AngularJS is a JavaScript framework. It can be added to an HTML page with a `<script>` tag.  
-AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions.  
+All JavaScript code is valid TypeScript, but not all TypeScript is valid JavaScript.  
 
-AngularJS is a JavaScript framework written in JavaScript.
-AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.  
+### Type Annotations
 
-## NG Directives
+any  
+number  
+boolean  
+string  
+array  
+any array  
+enum  
 
-AngularJS extends HTML with ng-directives.
+**type assertion** - tell typescript what type a variable is.  
 
-The ng-app directive defines an AngularJS application.  
-The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.  
-The ng-bind directive binds application data to the HTML view.  
+### Arrow Functions
 
-AngularJS starts automatically when the web page has loaded.
-The ng-app directive tells AngularJS that the `<div>` element is the "owner" of an AngularJS application.
-The ng-model directive binds the value of the input field to the application variable name.
-The ng-bind directive binds the content of the `<p>` element to the application variable name.  
+Clean way to define functions in TypeScript.  
+`=>`  
+In C# arrow functions are called lambda expressions.  
 
-## AngularJS Directives
+### Interfaces
 
-AngularJS directives are HTML attributes with a prefix of ng.  
-The ng-init directive initializes AngularJS application variables.  
+**inline annotation** -  declaring type inline  
 
-## AngularJS Expressions
+Interfaces define the shape of an object.  
+Interfaces are only for declaration. No logic or algorithms (implementation) may be executed in an interface.  
 
-AngularJS expressions are written inside double braces: {{ expression }}.
-AngularJS will "output" data exactly where the expression is written:
+**cohesion** - things that are related should be grouped together.  
 
-AngularJS expressions bind AngularJS data to HTML the same way as the ng-bind directive.  
-AngularJS expressions can also be written inside a directive: ng-bind="expression".
+### Classes
 
-AngularJS will resolve the expression, and return the result exactly where the expression is written.
-AngularJS expressions are much like JavaScript expressions: They can contain literals, operators, and variables.
+A class groups variables (properties) and functions (methods) that are highly related.  
 
-Example {{ 5 + 5 }} or {{ firstName + " " + lastName }}
+**method** - a function that is part of a class.  
 
-## AngularJS Applications
+An object is an instance of a class.  
 
-AngularJS modules define AngularJS applications.  
-AngularJS controllers control AngularJS applications.  
-The ng-app directive defines the application, the ng-controller directive defines the controller.  
+When declaring a new object of a custom type, memory must be allocated for the newly created object.  
+Example: `let obj = new Object();`  
 
-## Scope
+### Constructors
 
-If we consider an AngularJS application to consist of:
+A constructor is a method that is called when an object is created.  
 
-View, which is the HTML.
-Model, which is the data available for the current view.
-Controller, which is the JavaScript function that makes/changes/removes/controls the data.
-Then the scope is the Model.
+`constructor()`  
 
-The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.
+The constructor can have parameters so new objects have some characteristics at the time of creation.  
+Parameters can have question marks (?) after them if they are optional parameters.  
+
+### Access Modifiers
+
+A keyword that can be applied to a member of a class to control its access from the outside.  
+
+There are three kinds of access modifiers in TypeScript.  
+
+- public
+- private
+- protected
+
+By default, public is used if not specified.  
+
+Access modifiers can be used in constructor parameters to shorten code.  
+
+### Properties
+
+Read more on properties
+
+### Modules
+
+**module** - each file can be thought of as a module. The `export` keyword is used to make a file available to other files. Outside files must then import the file to be used.  
+
+`import { Module } from './path/to/module';`
+
+## Angular Fundamentals
+
+### Components
+
+The heart of every angular application. A component encapsulates the data, the HTML markup, and the logic for a view.  
+
+Components may be broken into smaller components to make code more robust and easier to work with.  
+
+App or the root component is the main component of every angular app.  
+
+There are three elements in using a component.  
+
+- create a component
+- register the component in a module
+- add an element in an HTML markup
+
+To create a component, you must import the Component decorator from angular/core  
+
+```angular
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'componentName',
+    template: '' 
+})
+export class ComponentNameComponent {
+
+}
+```
+
+To register the component, add the component to the declarations array in the app.module.ts file.  
+
+A shortcut to more reliably create components, use the angular cli.  
+`ng g c <componentName>`  
+
+### Templates
+
+**string interpolation** - Look up definition  
+
+### Directives
+
+Directives are used to manipulate the DOM.  
+Example:  
+
+```angular
+<li *ngFor="let item of items">
+    {{ items }}
+</li>
+```  
+
+**DOM** - document object model.  
+
+#### Structural Directives
+
+Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.  
+
+### Services
+
+Decouples logic of a task from a component.  
+
+A service is a plain TypeScript class.  
+The service must be exported to be used.  
+Example: `export class serviceService {}`  
+
+**dependency injection** - registering dependencies in the providers array in the app.module.ts file. Dependencies are automatically applied at instantiation of an object when created with a constructor.  
+
+**singleton pattern** - a single instance of an object exists in memory.  
+
+angluar cli can be used to generate services in Angular.  
+`ng g s <serviceName>`  
+
+The @Injectable() decorator function is needed if the service has dependencies in its constructor.  
+The Injectable decorator tells Angular the class should be able to inject dependencies into its constructor.  
+
+## Displaying Data and Handling Events
+
+## Template-driven Forms
+
+## Reactive Forms
+
+## Consuming HTTP Services
+
+## Routing and Navigation
+
+
+
+## Authentication and Authorization
+
+## Deployment
+
+## Building Real-Time, Serverless Applications with Firebase
+
+## Animations
+
+## Angular Material
+
+## Redux
+
+## Unit Testing
+
+## Integration Testing
+
+## Angular Resources
+
+[Angular Tutorial for Beginners: Learn Angular & TypeScript - YouTube](https://www.youtube.com/watch?v=k5E2AVpwsko)  

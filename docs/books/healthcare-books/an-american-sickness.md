@@ -3,6 +3,7 @@ id: an-american-sickness
 title: An American Sickness
 ---
 
+[An American Sickness - Amazon](https://www.amazon.com/American-Sickness-Healthcare-Became-Business-ebook/dp/B01IOHQ9LO/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1612699929&sr=8-1)  
 About the Author, [Elisabeth Rosenthal](https://en.wikipedia.org/wiki/Elisabeth_Rosenthal)  
 
 Rules of Healthcare Today:
