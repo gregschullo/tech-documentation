@@ -2,7 +2,7 @@ module.exports = {
   title: 'Documentation',
   tagline: 'Tech Documentation and Writing',
   //url: 'https://gregschullo.github.io',
-  url: 'https://docs.gregschullo.io',
+  url: 'https://tech.schullo.io',
   //baseUrl: '/tech-documentation/',
   baseUrl: '/',
   favicon: 'img/book.png',
